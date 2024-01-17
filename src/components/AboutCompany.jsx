@@ -3,7 +3,7 @@ import builder from "../assets/photos/about-pic.png";
 const AboutCompany = () => {
   return (
     <>
-      <section className="bg-[#F8F8F8] py-[60px]">
+      <section className="bg-[#F8F8F8] md:py-[60px]">
         <div className="container mx-auto px-4 py-8 bg-[#F8F8F8]">
           <div className="flex flex-col md:flex-row gap-[42px] justify-center">
             <div className="w-full md:w-1/4 h-auto">

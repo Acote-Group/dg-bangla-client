@@ -1,7 +1,10 @@
 import AboutCompany from "../components/AboutCompany";
+import Achievements from "../components/Achievements";
 import BestServices from "../components/BestServices";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import OurClients from "../components/OurClients";
 import WhoWeAre from "../components/WhoWeAre";
 
 const Home = () => {
@@ -12,6 +15,9 @@ const Home = () => {
       <WhoWeAre />
       <AboutCompany />
       <BestServices />
+      {/* <Achievements /> */}
+      {/* <OurClients /> */}
+      <Footer />
     </>
   );
 };
