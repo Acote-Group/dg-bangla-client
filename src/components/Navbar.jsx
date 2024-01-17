@@ -76,7 +76,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <img
               src={logo}
-              className="flex-none text-xl font-semibold dark:text-white"
+              className="flex-none text-xl font-semibold dark:text-white w-[200px] h-[50px]"
               aria-label="Brand"
             />
 
