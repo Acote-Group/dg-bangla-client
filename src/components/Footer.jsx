@@ -23,9 +23,9 @@ const Footer = () => {
             <h5 className="font-semibold uppercase mb-4">Subscription</h5>
             <p className="mb-4">For more information, please join us.</p>
             <input
-              className="flex h-10 w-full rounded-sm border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mb-4"
-              placeholder="Your email address"
-              type="email"
+              type="text"
+              className="py-3 px-4 block w-full border-gray-200 rounded-sm text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 mb-4 text-black"
+              placeholder="Enter Your Email"
             />
             <button className="inline-flex items-center justify-center whitespace-nowrap px-6 py-3 bg-primary hover:bg-primary text-black font-semibold rounded-sm">
               Sign up

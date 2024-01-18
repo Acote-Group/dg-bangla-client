@@ -6,6 +6,7 @@ import GetConsultation from "../components/GetConsultation";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import OurClients from "../components/OurClients";
+import OurProject from "../components/OurProject";
 import WhoWeAre from "../components/WhoWeAre";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <BestServices />
       {/* <Achievements /> */}
       {/* <OurClients /> */}
+      <OurProject />
       <GetConsultation />
       <Footer />
     </>

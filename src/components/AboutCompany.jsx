@@ -33,7 +33,9 @@ const AboutCompany = () => {
                 spare parts importing, supplying &amp; servicing.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-start gap-2">
+                <div className="flex items-start gap-4">
+                  <div className="w-1 h-16 bg-[#EEE] hidden md:block"></div>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -44,7 +46,7 @@ const AboutCompany = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-primary w-6 h-6"
+                    className="text-primary w-7 h-7 flex-shrink-0"
                   >
                     <rect
                       width="16"
@@ -65,14 +67,20 @@ const AboutCompany = () => {
                     <path d="M8 10h.01"></path>
                     <path d="M8 14h.01"></path>
                   </svg>
+
                   <div>
-                    <h3 className="font-semibold font-roboto">Building</h3>
+                    <h3 className="font-semibold font-roboto hidden md:block">
+                      Building
+                    </h3>
                     <p className="text-gray-500 font-openSans text-sm">
                       Lorem ipsum dolor sit piscing sed diam nonmy end.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-2">
+
+                <div className="flex items-start gap-4">
+                  <div className="w-1 h-16 bg-[#EEE]"></div>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -83,7 +91,7 @@ const AboutCompany = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-primary w-6 h-6"
+                    className="text-primary w-6 h-6 flex-shrink-0"
                   >
                     <path d="M21 7v6h-6"></path>
                     <path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"></path>
@@ -95,7 +103,10 @@ const AboutCompany = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-2">
+
+                <div className="flex items-start gap-4">
+                  <div className="w-1 h-16 bg-[#EEE] hidden md:block"></div>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -106,7 +117,7 @@ const AboutCompany = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-primary w-6 h-6"
+                    className="text-primary w-6 h-6 flex-shrink-0"
                   >
                     <path d="M2 22v-5l5-5 5 5-5 5z"></path>
                     <path d="M9.5 14.5 16 8"></path>
@@ -119,7 +130,10 @@ const AboutCompany = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-2">
+
+                <div className="flex items-start gap-4">
+                  <div className="w-1 h-16 bg-[#EEE] hidden md:block"></div>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -130,7 +144,7 @@ const AboutCompany = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-primary w-6 h-6"
+                    className="text-primary w-6 h-6 flex-shrink-0"
                   >
                     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                     <polyline points="9 22 9 12 15 12 15 22"></polyline>
