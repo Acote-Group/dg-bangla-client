@@ -33,7 +33,7 @@ const OurProject = () => {
             >
               <button
                 type="button"
-                className="hs-tab-active:border-primary hs-tab-active:text-primary dark:hs-tab-active:text-primary py-1 pe-4 inline-flex items-center gap-x-2 border-transparent whitespace-nowrap text-black hover:text-primary focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:text-primary active text-center mx-auto font-poppins uppercase"
+                className="py-1 pe-4 inline-flex items-center gap-x-2 border-transparent whitespace-nowrap text-black hover:text-primary focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:text-primary active text-center mx-auto font-poppins uppercase"
                 id="vertical-tab-with-border-item-1"
                 data-hs-tab="#vertical-tab-with-border-1"
                 aria-controls="vertical-tab-with-border-1"

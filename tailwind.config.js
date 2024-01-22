@@ -32,7 +32,10 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#FFBC13",
+        primary: "#cc3b55",
+      },
+      backgroundImage: {
+        "banner-bg": "url('/src/assets/photos/gef.gif')",
       },
     },
   },

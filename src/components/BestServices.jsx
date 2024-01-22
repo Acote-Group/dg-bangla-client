@@ -15,7 +15,7 @@ const BestServices = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="font-inter font-[800] text-[18px] uppercase tracking-widest text-center">
               <h1>Best Services</h1>
-              <hr className="border-t-[6px] border-primary w-[13.5%] mx-auto -mt-[7px]" />
+              <hr className="border-t-[6px] border-primary w-[13.5%] mx-auto -mt-[4px]" />
             </div>
             <h2 className="text-[45px] font-bold text-center mb-12 font-inter">
               Unvarying Quality <span className="text-primary">Services</span>
@@ -32,7 +32,7 @@ const BestServices = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-yellow-500 h-12 w-12 mx-auto mb-4"
+                  className="text-primary h-12 w-12 mx-auto mb-4"
                 >
                   <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
                   <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
@@ -69,7 +69,7 @@ const BestServices = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-yellow-500 h-12 w-12 mx-auto mb-4"
+                  className="text-primary h-12 w-12 mx-auto mb-4"
                 >
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
                   <path d="m9 12 2 2 4-4"></path>
@@ -94,7 +94,7 @@ const BestServices = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-yellow-500 h-12 w-12 mx-auto mb-4"
+                  className="text-primary h-12 w-12 mx-auto mb-4"
                 >
                   <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
                   <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
@@ -122,7 +122,7 @@ const BestServices = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-yellow-500 h-12 w-12 mx-auto mb-4"
+                  className="text-primary h-12 w-12 mx-auto mb-4"
                 >
                   <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
                   <path d="M9 18h6"></path>
@@ -148,7 +148,7 @@ const BestServices = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-yellow-500 h-12 w-12 mx-auto mb-4"
+                  className="text-primary h-12 w-12 mx-auto mb-4"
                 >
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
@@ -175,7 +175,7 @@ const BestServices = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-yellow-500 h-12 w-12 mx-auto mb-4"
+                  className="text-primary h-12 w-12 mx-auto mb-4"
                 >
                   <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
                   <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>

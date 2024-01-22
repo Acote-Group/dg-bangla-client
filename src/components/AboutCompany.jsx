@@ -1,4 +1,5 @@
 import builder from "../assets/photos/about-pic.png";
+import black from "../assets/photos/black.png";
 
 const AboutCompany = () => {
   return (
@@ -10,12 +11,16 @@ const AboutCompany = () => {
               <img
                 src={builder}
                 alt="Construction Work"
-                className="rounded-lg"
-                //   width="450"
-                //   height="300"
-                //   style={{ aspectRatio: 450 / 300, objectPosition: "cover" }}
+                className="rounded-lg z-1 relative"
+              />
+
+              <img
+                src={black}
+                className="top-0 -z-10 -mt-[450px] -ml-2"
+                alt=""
               />
             </div>
+
             <div className="w-full md:w-1/2 space-y-4">
               <div className="font-inter font-[800] text-[18px] uppercase tracking-widest">
                 About Company
