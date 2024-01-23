@@ -1,5 +1,5 @@
 import { MoveRight } from "lucide-react";
-import banner from "../assets/photos/banner.png";
+import banner from "../assets/photos/banner-min.png";
 import {
   Facebook,
   Twitter,
@@ -16,8 +16,8 @@ const Hero = () => {
       <section className="bg-banner-bg bg-cover bg-no-repeat">
         <header className="flex flex-wrap sm:justify-start sm:flex-col w-full text-sm  dark:border-gray-700">
           {/* <!-- TopBar --> */}
-          <div className="mx-auto w-full h-[35x] px-4 sm:px-6 lg:px-8 bg-[#A8223B] hidden md:block">
-            <div className="max-w-[1360px] mx-auto flex items-center justify-between gap-x-5 w-full sm:pt-2 sm:pb-0 my-4">
+          <div className="mx-auto w-full h-[15x] px-4 sm:px-6 lg:px-8 bg-[#A8223B] hidden md:block">
+            <div className="max-w-[1360px] mx-auto flex items-center justify-between gap-x-5 w-full sm:pt-2 sm:pb-0 my-2">
               <div className="flex justify-center items-center gap-2">
                 <svg
                   width="20"
@@ -94,7 +94,7 @@ const Hero = () => {
           {/* <!-- End Topbar --> */}
 
           <nav
-            className="relative max-w-[1360px] w-full  mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-0 lg:px-0 xl:mx-auto dark:border-gray-700"
+            className="relative max-w-[1360px] w-full  mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-0 lg:px-0 xl:mx-auto dark:border-gray-700 my-3"
             aria-label="Global"
           >
             <div className="flex items-center justify-between">

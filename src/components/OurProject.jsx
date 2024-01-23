@@ -1,5 +1,3 @@
-import pic1 from "../assets/project/pic-1.png";
-import pic2 from "../assets/project/pic-2.png";
 import pic3 from "../assets/project/pic-3.png";
 import pic4 from "../assets/project/pic-4.png";
 import pic5 from "../assets/project/pic-5.png";
@@ -7,7 +5,8 @@ import pic6 from "../assets/project/pic-6.png";
 import pic7 from "../assets/project/pic-7.png";
 import pic8 from "../assets/project/pic-8.png";
 import pic9 from "../assets/project/pic-9.png";
-import pic10 from "../assets/project/pic-10.png";
+import projects from "../assets/photos/projects.png";
+
 const OurProject = () => {
   return (
     <>
@@ -24,7 +23,7 @@ const OurProject = () => {
         </div>
 
         <div className="mt-[60px] gap-6 flex">
-          <div className="w-[270px] p-[30px] space-y-[30px] border text-center font-inter font-[500] uppercase rounded-sm bg-[#F6F7F8] cursor-pointer">
+          <div className="w-[270px] h-fit p-[30px] space-y-[30px] border text-center font-inter font-[500] uppercase rounded-sm bg-[#F6F7F8] cursor-pointer">
             <nav
               className="flex flex-col space-y-[30px]"
               aria-label="Tabs"
@@ -166,17 +165,9 @@ const OurProject = () => {
           </div>
         </div>
 
-        {/* <div className="flex gap-14">
-          <div>
-            <img src={pic2} alt="" />
-          </div>
-          <div>
-            <img src={pic10} alt="" className="w-[600px] h-[167px]" />
-          </div>
-          <div>
-            <img src={pic1} alt="" />
-          </div>
-        </div> */}
+        <div className="-ml-[15%] -mt-[5%] hidden md:block">
+          <img src={projects} alt="" />
+        </div>
       </section>
     </>
   );

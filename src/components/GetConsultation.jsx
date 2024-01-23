@@ -21,7 +21,7 @@ const GetConsultation = () => {
           <div className="flex flex-col md:flex-row justify-between items-center w-auto lg:w-[60%]">
             <button
               type="button"
-              className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter font-semibold rounded-sm border border-transparent bg-primary text-black hover:bg-primary disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-primary dark:bg-white dark:text-black uppercase"
+              className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter font-semibold rounded-sm border border-transparent bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-primary dark:bg-white dark:text-black uppercase"
             >
               get a consultation <MoveRight fill="black" />
             </button>

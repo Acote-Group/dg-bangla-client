@@ -19,9 +19,9 @@ const Home = () => {
       <AboutCompany />
       <BestServices />
       <Achievements />
-      <OurClients />
       <OurProject />
       <Testimonial />
+      <OurClients />
       <GetConsultation />
       <Footer />
     </>
