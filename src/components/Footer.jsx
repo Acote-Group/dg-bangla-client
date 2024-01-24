@@ -2,7 +2,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <>
-      <footer className="bg-[#1a1a1a] text-white font-inter">
+      <footer className="bg-primary text-white font-inter">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
             <h5 className="font-semibold uppercase mb-4">Headquarter</h5>
@@ -33,12 +33,12 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className="border-t border-gray-700 py-4">
+        <div className=" bg-contactBg bg-cover bg-no-repeat py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-white">
               © {currentYear} DG Bangla. All rights reserved.
             </p>
-            <p className="text-sm text-gray-400 mt-4 sm:mt-0">DG Bangla</p>
+            <p className="text-sm text-white mt-4 sm:mt-0">DG Bangla</p>
           </div>
         </div>
       </footer>

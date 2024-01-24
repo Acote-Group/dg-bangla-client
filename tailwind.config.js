@@ -40,6 +40,8 @@ export default {
         circleBg: "url('/src/assets/photos/banner-bg.jpg')",
         testoBg: "url('/src/assets/photos/testo.png')",
         whoBg: "url('/src/assets/photos/whoBg.png')",
+        serviceBg2: "url('/src/assets/photos/serviceBg.png')",
+        contactBg: "url('/src/assets/photos/contact.png')",
       },
     },
   },

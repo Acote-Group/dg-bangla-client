@@ -37,7 +37,7 @@ const GetConsultation = () => {
                 <h1 className="font-inter text-white">Sales Representative</h1>
                 <div className="font-inter font-[600] text-[18px] uppercase tracking-widest text-center text-white">
                   <h1>+880244806615</h1>
-                  <hr className="border-t-[6px] border-primary w-full mx-auto -mt-[6px]" />
+                  <hr className="border-t-[6px] border-primary w-full mx-auto -mt-[3px]" />
                 </div>
               </div>
             </div>

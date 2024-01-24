@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Fade from "react-reveal/Fade";
 
 const Testimonial = () => {
   const responsive = {
@@ -23,30 +24,22 @@ const Testimonial = () => {
     <>
       <section className="bg-testoBg bg-no-repeat bg-cover py-[20px] ">
         <div className="w-auto max-w-[1620px] mx-auto">
-          <div className="flex flex-col items-center mb-16">
-            <h1 className="text-center font-roboto text-[32px] font-[600] uppercase mt-[80px] text-white">
-              What Our Client&apos;s Say
-            </h1>
+          <div className="flex justify-center gap-4 items-center mb-16">
+            <div className="flex flex-col">
+              <hr className="border-t-2 border-primary w-8 ml-auto" />
+              <hr className="border-t-2 border-primary w-5 mt-3 ml-auto" />
+            </div>
 
-            <svg
-              width="1146"
-              height="21"
-              viewBox="0 0 1146 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mt-4"
-            >
-              <rect
-                x="569.5"
-                y="7.5"
-                width="7"
-                height="7"
-                stroke="white"
-                strokeWidth="3"
-              />
-              <rect x="491" y="10" width="70" height="3" fill="#A8223B" />
-              <rect x="585" y="10" width="70" height="3" fill="#A8223B" />
-            </svg>
+            <Fade bottom>
+              <h1 className="font-roboto text-xl md:text-[35px] font-[700] uppercase text-white">
+                <span className="text-primary">What Our</span> Clients Say
+              </h1>
+            </Fade>
+
+            <div className="flex flex-col ">
+              <hr className="border-t-2 border-primary w-8" />
+              <hr className="border-t-2 border-primary w-5 mt-3" />
+            </div>
           </div>
 
           <Carousel

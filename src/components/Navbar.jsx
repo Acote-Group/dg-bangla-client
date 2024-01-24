@@ -6,15 +6,15 @@ import {
   Search,
 } from "lucide-react";
 import logo from "../assets/photos/logo.png";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
-      {/* <!-- ========== HEADER ========== --> */}
-      <header className="flex flex-wrap sm:justify-start sm:flex-col w-full bg-black text-sm  dark:bg-gray-800 dark:border-gray-700">
+      <header className="flex flex-wrap sm:justify-start sm:flex-col w-full text-sm">
         {/* <!-- TopBar --> */}
-        <div className="mx-auto w-full h-[35x] px-4 sm:px-6 lg:px-8 bg-primary">
-          <div className="max-w-[1620px] mx-auto flex items-center justify-between gap-x-5 w-full sm:pt-2 sm:pb-0 my-4">
+        <div className="mx-auto w-full h-[15x] px-4 sm:px-6 lg:px-8 bg-[#A8223B] hidden md:block">
+          <div className="max-w-[1360px] mx-auto flex items-center justify-between gap-x-5 w-full sm:pt-2 sm:pb-0 my-2">
             <div className="flex justify-center items-center gap-2">
               <svg
                 width="20"
@@ -54,23 +54,28 @@ const Navbar = () => {
                 </defs>
               </svg>
 
-              <h1 className="text-[12px] text-center font-inter">
+              <h1 className="text-[12px] text-center font-inter text-white">
                 Setting the Standard for Excellence in Bangladesh Construction.
               </h1>
             </div>
 
             <div className="flex justify-center items-center gap-6">
-              <Facebook size={18} strokeWidth={1} fill="black" />
-              <Twitter size={18} strokeWidth={1} fill="black" />
-              <Linkedin size={18} strokeWidth={1} fill="black" />
-              <MessageCircleIcon size={18} strokeWidth={1} fill="black" />
+              <Facebook size={18} strokeWidth={1} stroke="white" fill="white" />
+              <Twitter size={18} strokeWidth={1} stroke="white" fill="white" />
+              <Linkedin size={18} strokeWidth={1} stroke="white" fill="white" />
+              <MessageCircleIcon
+                size={18}
+                strokeWidth={1}
+                stroke="white"
+                fill="white"
+              />
             </div>
           </div>
         </div>
         {/* <!-- End Topbar --> */}
 
         <nav
-          className="relative max-w-[1680px] w-full bg-[#0B0B0B] mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto dark:bg-gray-800 dark:border-gray-700"
+          className="relative max-w-[1360px] w-full  mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-0 lg:px-0 xl:mx-auto dark:border-gray-700 mb-3"
           aria-label="Global"
         >
           <div className="flex items-center justify-between">
@@ -128,20 +133,20 @@ const Navbar = () => {
             id="navbar-collapse-with-animation"
             className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
           >
-            <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7">
-              <a
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary"
-                href="#"
+            <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7 font-semibold">
+              <NavLink
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                to="/"
                 aria-current="page"
               >
                 Home
-              </a>
-              <a
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary"
-                href="#"
+              </NavLink>
+              <NavLink
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                to="/services"
               >
                 Services
-              </a>
+              </NavLink>
 
               <a
                 className="text-white font-inter md:py-6 dark:text-white hover:text-primary"
@@ -162,7 +167,7 @@ const Navbar = () => {
                 Contact
               </a>
 
-              <Search strokeWidth={2} size={25} color="white" />
+              {/* <Search strokeWidth={2} size={25} color="white" /> */}
 
               {/* <div className="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
                 <button
@@ -306,7 +311,7 @@ const Navbar = () => {
 
               <button
                 type="button"
-                className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter font-semibold rounded-sm border border-transparent bg-primary text-black hover:bg-primary disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-primary dark:bg-white dark:text-black"
+                className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter rounded-sm  bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-primary dark:bg-white dark:text-black"
               >
                 Contact Us
               </button>
@@ -314,7 +319,6 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
-      {/* <!-- ========== END HEADER ========== --> */}
     </>
   );
 };
