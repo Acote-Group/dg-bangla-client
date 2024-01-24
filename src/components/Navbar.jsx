@@ -148,12 +148,12 @@ const Navbar = () => {
                 Services
               </NavLink>
 
-              <a
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary"
-                href="#"
+              <NavLink
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                to="/about-us"
               >
-                About
-              </a>
+                About Us
+              </NavLink>
               <a
                 className="text-white font-inter md:py-6 dark:text-white hover:text-primary"
                 href="#"

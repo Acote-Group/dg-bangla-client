@@ -1,30 +1,27 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import ContactUs from "../components/ContactUs";
-import OurServices from "../components/OurServices";
-import LatestProjects from "../components/LatestProjects";
+import WhyChooseUs from "../components/WhyChooseUs";
 
-const Services = () => {
+const About = () => {
   return (
     <>
       <section>
-        <div className="w-full h-[300px] bg-serviceBg2 bg-cover bg-no-repeat">
+        <div className="w-full h-[300px] bg-aboutBg bg-cover bg-no-repeat">
           <Navbar />
           <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
-            Services
+            About Us
           </h1>
         </div>
 
-        {/* Our Services Section */}
-        <div className="container max-w-[1360px] mx-auto mt-[22px]">
-          <div className="font-openSans font-bold">
+        <div className="container max-w-[1360px] mx-auto mt-[22px] pb-[80px]">
+          <div className="font-openSans font-bold px-6">
             <ol
               className="flex items-center whitespace-nowrap"
               aria-label="Breadcrumb"
             >
               <li className="inline-flex items-center">
                 <Link
-                  className="flex items-center text-gray-500 hover:text-primary focus:outline-none focus:text-primary dark:focus:text-blue-500"
+                  className="flex items-center text-gray-500 hover:text-primary focus:outline-none"
                   to="/"
                 >
                   <svg
@@ -64,21 +61,18 @@ const Services = () => {
                 className="inline-flex items-center font-bold text-primary truncate dark:text-gray-200"
                 aria-current="page"
               >
-                Services
+                About
               </li>
             </ol>
           </div>
+        </div>
 
-          <OurServices />
+        <div className="w-full bg-whyBg bg-cover bg-no-repeat md:py-[80px]">
+          <WhyChooseUs />
         </div>
       </section>
-
-      {/* Latest Projects Section */}
-      <LatestProjects />
-
-      <ContactUs />
     </>
   );
 };
 
-export default Services;
+export default About;
