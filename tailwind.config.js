@@ -43,6 +43,7 @@ export default {
         serviceBg2: "url('/src/assets/photos/serviceBg.png')",
         contactBg: "url('/src/assets/photos/contact.png')",
         aboutBg: "url('/src/assets/photos/aboutBg.png')",
+        aboutBg2: "url('/src/assets/photos/aboutBg2.jpg')",
         whyBg: "url('/src/assets/photos/whyBg.jpg')",
       },
     },

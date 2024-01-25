@@ -28,7 +28,7 @@ const Footer = () => {
               className="py-3 px-4 block w-full border-gray-200 rounded-sm text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 mb-4 text-black"
               placeholder="Enter Your Email"
             />
-            <button className="inline-flex items-center justify-center whitespace-nowrap px-6 py-3 bg-gradient-to-r from-rose-800 to-rose-600 hover:bg-primary text-white font-semibold rounded-sm">
+            <button className="inline-flex items-center justify-center whitespace-nowrap px-6 py-3 bg-gradient-to-r from-rose-500 to-pink-700 hover:bg-primary text-white font-semibold rounded-sm shadow-lg">
               Sign up
             </button>
           </div>

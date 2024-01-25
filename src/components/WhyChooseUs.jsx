@@ -9,7 +9,7 @@ import v6 from "../assets/service/v6.png";
 const WhyChooseUs = () => {
   return (
     <>
-      <section>
+      <section className="">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <div className="flex justify-center gap-4 items-center">

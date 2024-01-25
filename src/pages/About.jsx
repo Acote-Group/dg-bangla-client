@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import WhyChooseUs from "../components/WhyChooseUs";
+import AwesomeFacts from "../components/AwesomeFacts";
+import OurTeam from "../components/OurTeam";
+import waveLine from "../assets/photos/waveLine2.png";
+import ContactUs from "../components/ContactUs";
 
 const About = () => {
   return (
@@ -70,6 +74,11 @@ const About = () => {
         <div className="w-full bg-whyBg bg-cover bg-no-repeat md:py-[80px]">
           <WhyChooseUs />
         </div>
+
+        <AwesomeFacts />
+        <OurTeam />
+        <img src={waveLine} alt="" />
+        <ContactUs />
       </section>
     </>
   );
