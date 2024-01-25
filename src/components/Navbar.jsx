@@ -164,16 +164,16 @@ const Navbar = () => {
               </NavLink>
               <NavLink
                 className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
-                to="/our-team"
+                to="/team"
               >
                 Team
               </NavLink>
-              <a
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary"
-                href="#"
+              <NavLink
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                to="/contact"
               >
                 Contact
-              </a>
+              </NavLink>
 
               {/* <Search strokeWidth={2} size={25} color="white" /> */}
 
@@ -317,12 +317,13 @@ const Navbar = () => {
                 </button>
               </div>
 
-              <button
+              <Link
+                to="/contact"
                 type="button"
                 className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter rounded-sm  bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-primary dark:bg-white dark:text-black"
               >
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
         </nav>

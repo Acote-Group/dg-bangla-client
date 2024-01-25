@@ -70,7 +70,7 @@ const Team = () => {
           </div>
         </div>
 
-        <section className="bg-teamBg2 bg-cover bg-no-repeat py-16">
+        <section className="bg-teamBg2 bg-cover bg-no-repeat pt-16 pb-32">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center mb-[25px]">
               <div className="flex justify-center gap-4 items-center">

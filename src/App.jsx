@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import ScrollToTop from "react-scroll-to-top";
 import Team from "./pages/Team";
+import Contact from "./pages/Contact";
 
 function App() {
   const location = useLocation();
@@ -23,7 +24,8 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/our-team" element={<Team />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
       <ScrollToTop

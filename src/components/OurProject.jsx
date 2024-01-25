@@ -11,7 +11,7 @@ const OurProject = () => {
   return (
     <>
       <section className=" w-auto max-w-7xl mx-auto my-[160px]">
-        <div className="flex justify-start gap-4 items-center">
+        <div className="flex justify-center md:justify-start gap-4 items-center">
           <h1 className="font-roboto font-[500] text-[38px] uppercase tracking-widest">
             <span className="text-primary font-[300]">Our</span> Projects
           </h1>
@@ -22,10 +22,10 @@ const OurProject = () => {
           </div>
         </div>
 
-        <div className="mt-[60px] gap-6 flex">
-          <div className="w-[270px] h-fit p-[30px] space-y-[30px] border text-center font-inter font-[500] uppercase rounded-sm bg-[#F6F7F8] cursor-pointer">
+        <div className="mt-[60px] gap-6 md:flex">
+          <div className="w-auto md:w-[270px] h-fit p-[30px] space-y-[30px] border text-center font-inter font-[500] uppercase rounded-sm bg-[#F6F7F8] cursor-pointer">
             <nav
-              className="flex flex-col space-y-[30px]"
+              className="flex flex-col space-y-4 md:space-y-[30px]"
               aria-label="Tabs"
               role="tablist"
               data-hs-tabs-vertical="true"
@@ -107,7 +107,7 @@ const OurProject = () => {
               id="vertical-tab-with-border-1"
               role="tabpanel"
               aria-labelledby="vertical-tab-with-border-item-1"
-              className="mx-auto grid grid-cols-4 gap-6"
+              className="grid grid-cols-1 md:grid-cols-4 gap-6 justify-center mx-auto w-1/2 md:w-full mt-6 md:mt-0"
             >
               <div>
                 <img src={pic5} alt="" />
