@@ -6,6 +6,9 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Footer from "./components/Footer";
 import About from "./pages/About";
+import Projects from "./pages/Projects";
+import ScrollToTop from "react-scroll-to-top";
+import Team from "./pages/Team";
 
 function App() {
   const location = useLocation();
@@ -19,8 +22,17 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/our-team" element={<Team />} />
       </Routes>
       <Footer />
+      <ScrollToTop
+        color="#FFFF"
+        width="40px"
+        smooth
+        className="!bg-primary"
+        // style={{"border-radius": "100px"}}
+      />
     </>
   );
 }

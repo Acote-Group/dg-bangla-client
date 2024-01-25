@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import logo from "../assets/photos/logo.png";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -79,12 +80,13 @@ const Navbar = () => {
           aria-label="Global"
         >
           <div className="flex items-center justify-between">
-            <img
-              src={logo}
-              className="flex-none text-xl font-semibold dark:text-white w-[200px] h-[50px]"
-              aria-label="Brand"
-            />
-
+            <Link to="/">
+              <img
+                src={logo}
+                className="flex-none text-xl font-semibold dark:text-white w-[200px] h-[50px]"
+                aria-label="Brand"
+              />
+            </Link>
             {/* toggle btn  */}
             <div className="md:hidden">
               <button
@@ -154,12 +156,18 @@ const Navbar = () => {
               >
                 About Us
               </NavLink>
-              <a
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary"
-                href="#"
+              <NavLink
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                to="/projects"
               >
                 Projects
-              </a>
+              </NavLink>
+              <NavLink
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                to="/our-team"
+              >
+                Team
+              </NavLink>
               <a
                 className="text-white font-inter md:py-6 dark:text-white hover:text-primary"
                 href="#"

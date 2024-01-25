@@ -24,7 +24,7 @@ const Testimonial = () => {
     <>
       <section className="bg-testoBg bg-no-repeat bg-cover py-[20px] ">
         <div className="w-auto max-w-[1620px] mx-auto">
-          <div className="flex justify-center gap-4 items-center mb-16">
+          <div className="flex justify-center gap-4 items-center my-16">
             <div className="flex flex-col">
               <hr className="border-t-2 border-primary w-8 ml-auto" />
               <hr className="border-t-2 border-primary w-5 mt-3 ml-auto" />

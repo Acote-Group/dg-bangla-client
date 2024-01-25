@@ -1,5 +1,11 @@
 import waveLine from "../assets/photos/wave-line.png";
 import waveLine2 from "../assets/photos/waveLine2.png";
+import p1 from "../assets/project/p1.png";
+import p2 from "../assets/project/p2.png";
+import p3 from "../assets/project/p3.png";
+import p4 from "../assets/project/p4.png";
+import p5 from "../assets/project/p5.png";
+import p6 from "../assets/project/p6.png";
 import Fade from "react-reveal/Fade";
 
 const LatestProjects = () => {
@@ -168,13 +174,14 @@ const LatestProjects = () => {
                 role="tabpanel"
                 aria-labelledby="horizontal-scroll-tab-item-2"
               >
-                <p className="text-gray-500 dark:text-gray-400">
-                  This is the{" "}
-                  <em className="font-semibold text-gray-800 dark:text-gray-200">
-                    second
-                  </em>{" "}
-                  item's tab body.
-                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-none p-2 md:p-0">
+                  <img className="w-full h-auto object-cover" src={p1} />
+                  <img className="w-full h-auto object-cover" src={p2} />
+                  <img className="w-full h-auto object-cover" src={p3} />
+                  <img className="w-full h-auto object-cover" src={p4} />
+                  <img className="w-full h-auto object-cover" src={p5} />
+                  <img className="w-full h-auto object-cover" src={p6} />
+                </div>
               </div>
               <div
                 id="horizontal-scroll-tab-3"
@@ -182,13 +189,14 @@ const LatestProjects = () => {
                 role="tabpanel"
                 aria-labelledby="horizontal-scroll-tab-item-3"
               >
-                <p className="text-gray-500 dark:text-gray-400">
-                  This is the{" "}
-                  <em className="font-semibold text-gray-800 dark:text-gray-200">
-                    third
-                  </em>{" "}
-                  item's tab body.
-                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-none p-2 md:p-0">
+                  <img className="w-full h-auto object-cover" src={p1} />
+                  <img className="w-full h-auto object-cover" src={p2} />
+                  <img className="w-full h-auto object-cover" src={p3} />
+                  <img className="w-full h-auto object-cover" src={p4} />
+                  <img className="w-full h-auto object-cover" src={p5} />
+                  <img className="w-full h-auto object-cover" src={p6} />
+                </div>
               </div>
               <div
                 id="horizontal-scroll-tab-4"
@@ -196,13 +204,14 @@ const LatestProjects = () => {
                 role="tabpanel"
                 aria-labelledby="horizontal-scroll-tab-item-4"
               >
-                <p className="text-gray-500 dark:text-gray-400">
-                  This is the{" "}
-                  <em className="font-semibold text-gray-800 dark:text-gray-200">
-                    fourth
-                  </em>{" "}
-                  item's tab body.
-                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-none p-2 md:p-0">
+                  <img className="w-full h-auto object-cover" src={p1} />
+                  <img className="w-full h-auto object-cover" src={p2} />
+                  <img className="w-full h-auto object-cover" src={p3} />
+                  <img className="w-full h-auto object-cover" src={p4} />
+                  <img className="w-full h-auto object-cover" src={p5} />
+                  <img className="w-full h-auto object-cover" src={p6} />
+                </div>
               </div>
               <div
                 id="horizontal-scroll-tab-5"
@@ -210,13 +219,14 @@ const LatestProjects = () => {
                 role="tabpanel"
                 aria-labelledby="horizontal-scroll-tab-item-5"
               >
-                <p className="text-gray-500 dark:text-gray-400">
-                  This is the{" "}
-                  <em className="font-semibold text-gray-800 dark:text-gray-200">
-                    fifth
-                  </em>{" "}
-                  item's tab body.
-                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-none p-2 md:p-0">
+                  <img className="w-full h-auto object-cover" src={p1} />
+                  <img className="w-full h-auto object-cover" src={p2} />
+                  <img className="w-full h-auto object-cover" src={p3} />
+                  <img className="w-full h-auto object-cover" src={p4} />
+                  <img className="w-full h-auto object-cover" src={p5} />
+                  <img className="w-full h-auto object-cover" src={p6} />
+                </div>
               </div>
             </div>
           </div>
