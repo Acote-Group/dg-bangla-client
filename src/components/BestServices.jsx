@@ -18,7 +18,7 @@ const BestServices = () => {
               </h2>
             </Fade>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4 md:mb-0">
               <Fade left>
                 <div className="bg-white rounded-lg shadow-lg text-center transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                   <svg

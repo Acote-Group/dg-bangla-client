@@ -67,9 +67,7 @@ const AboutCompany = () => {
                     </svg>
 
                     <div>
-                      <h3 className="font-semibold font-roboto hidden md:block">
-                        Building
-                      </h3>
+                      <h3 className="font-semibold font-roboto">Building</h3>
                       <p className="text-gray-500 font-openSans text-sm">
                         Lorem ipsum dolor sit piscing sed diam nonmy end.
                       </p>
@@ -77,7 +75,7 @@ const AboutCompany = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-1 h-16 bg-[#EEE]"></div>
+                    <div className="w-1 h-16 bg-[#EEE] hidden md:block"></div>
 
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

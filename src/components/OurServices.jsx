@@ -9,7 +9,7 @@ import service6 from "../assets/service/service6.png";
 const OurServices = () => {
   return (
     <>
-      <div className="text-center text-2xl sm:text-3xl font-bold uppercase tracking-widest  font-roboto md:mt-[95px]">
+      <div className="text-center text-2xl sm:text-3xl font-bold uppercase tracking-widest font-roboto md:mt-[95px]">
         <div className="flex justify-center gap-4 items-center">
           <div className="flex flex-col">
             <hr className="border-t-2 border-primary w-8 ml-auto" />

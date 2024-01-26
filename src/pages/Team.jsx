@@ -11,7 +11,7 @@ const Team = () => {
       <section>
         <div className="w-full h-[300px] bg-teamBg bg-cover bg-no-repeat">
           <Navbar />
-          <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
+          <h1 className="text-4xl md:text-[60px] font-poppins uppercase text-white text-center font-semibold">
             Management Team
           </h1>
         </div>

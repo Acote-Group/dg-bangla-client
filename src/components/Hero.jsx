@@ -34,7 +34,7 @@ const Hero = () => {
                 <div className="mt-7 md:grid md:grid-cols-2 md:gap-3 w-fit">
                   <button
                     type="button"
-                    className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter font-semibold rounded-sm bg-gradient-to-r from-rose-700 to-rose-500 hover:bg-primary disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 text-white uppercase"
+                    className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter font-semibold rounded-sm bg-gradient-to-r from-rose-700 to-rose-500 hover:shadow-lg transition-shadow duration-300 ease-in-out focus:outline-none focus:ring-1 focus:ring-primary dark:focus:ring-1 dark:focus:ring-primary text-white uppercase"
                   >
                     See All Services <MoveRight fill="black" />
                   </button>
