@@ -164,18 +164,18 @@ const Navbar = () => {
               >
                 Home
               </NavLink>
-              <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
-                to="/services"
-              >
-                Services
-              </NavLink>
 
               <NavLink
                 className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
                 to="/about-us"
               >
                 About Us
+              </NavLink>
+              <NavLink
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                to="/services"
+              >
+                Services
               </NavLink>
               <NavLink
                 className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
@@ -196,7 +196,7 @@ const Navbar = () => {
                 Contact
               </NavLink>
 
-              <div>
+              {/* <div>
                 <button
                   type="button"
                   className="hs-dark-mode-active:hidden block hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
@@ -217,6 +217,7 @@ const Navbar = () => {
                     <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
                   </svg>
                 </button>
+
                 <button
                   type="button"
                   className="hs-dark-mode-active:block hidden hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500"
@@ -246,7 +247,7 @@ const Navbar = () => {
                     <path d="m19.07 4.93-1.41 1.41" />
                   </svg>
                 </button>
-              </div>
+              </div> */}
 
               <Link
                 to="/contact"

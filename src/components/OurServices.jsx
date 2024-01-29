@@ -28,10 +28,11 @@ const OurServices = () => {
           </div>
         </div>
 
-        <p className="text-center font-openSans text-[#767676] mt-2 normal-case w-[80%] mx-auto text-sm">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-          ever since the 1500s.
+        <p className="text-center font-openSans text-[#767676] normal-case mx-auto mt-6 text-sm font-normal w-[80%] tracking-normal">
+          DG-Bangla isn't just raising skylines - we're shaping the future of
+          Bangladesh's business landscape. From state-of-the-art office towers
+          to innovative logistics centers, we deliver commercial projects that
+          empower businesses and communities.
         </p>
       </div>
 

@@ -92,9 +92,10 @@ const Team = () => {
               </div>
 
               <p className="text-center font-openSans text-white mt-2 normal-case w-[50%] mx-auto">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry&apos;s standard
-                dummy text ever since the 1500s.
+                At DG-Bangla, our team isn't just building structures, we're
+                building a better Bangladesh. Fueled by passion and relentless
+                drive, we're a diverse group of architects, engineers, and
+                visionaries pushing the boundaries of innovation.
               </p>
             </div>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-fit mx-auto">

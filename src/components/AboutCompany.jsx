@@ -69,7 +69,8 @@ const AboutCompany = () => {
                     <div>
                       <h3 className="font-semibold font-roboto">Building</h3>
                       <p className="text-gray-500 font-openSans text-sm">
-                        Lorem ipsum dolor sit piscing sed diam nonmy end.
+                        Expert design and construction services for any project,
+                        big or small.
                       </p>
                     </div>
                   </div>
@@ -95,7 +96,8 @@ const AboutCompany = () => {
                     <div>
                       <h3 className="font-semibold font-roboto">Renovation</h3>
                       <p className="text-gray-500 font-openSans text-sm">
-                        Lorem ipsum dolor sit piscing sed diam nonmy end.
+                        Breathe new life into existing spaces with our skilled
+                        renovation services.
                       </p>
                     </div>
                   </div>
@@ -122,7 +124,8 @@ const AboutCompany = () => {
                     <div>
                       <h3 className="font-semibold font-roboto">Digging</h3>
                       <p className="text-gray-500 font-openSans text-sm">
-                        Lorem ipsum dolor sit piscing sed diam nonmy end.
+                        Handle any excavation or earthmoving need with our
+                        advanced equipment and expertise.
                       </p>
                     </div>
                   </div>
@@ -148,7 +151,8 @@ const AboutCompany = () => {
                     <div>
                       <h3 className="font-semibold font-roboto">Interior</h3>
                       <p className="text-gray-500 font-openSans text-sm">
-                        Lorem ipsum dolor sit piscing sed diam nonmy end.
+                        Craft beautiful and functional living spaces that
+                        reflect your uniq
                       </p>
                     </div>
                   </div>

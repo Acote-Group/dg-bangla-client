@@ -23,7 +23,7 @@ const OurProject = () => {
         </div>
 
         <div className="mt-[60px] gap-6 md:flex">
-          <div className="w-auto md:w-[270px] h-fit p-[30px] space-y-[30px] border text-center font-inter font-[500] uppercase rounded-sm bg-[#F6F7F8] cursor-pointer">
+          <div className="w-auto md:w-[270px] h-auto md:h-[460px] p-[30px]  border text-center font-inter font-[500] uppercase rounded-sm bg-[#F6F7F8] cursor-pointer">
             <nav
               className="flex flex-col space-y-4 md:space-y-[30px]"
               aria-label="Tabs"
@@ -136,39 +136,69 @@ const OurProject = () => {
 
           <div
             id="vertical-tab-with-border-2"
-            className="hidden"
             role="tabpanel"
             aria-labelledby="vertical-tab-with-border-item-2"
+            className="hidden grid grid-cols-1 md:grid-cols-4 gap-6 justify-center mx-auto w-1/2 md:w-full mt-6 md:mt-0"
           >
-            <p className="text-gray-500 dark:text-gray-400">
-              This is the{" "}
-              <em className="font-semibold text-gray-800 dark:text-gray-200">
-                second
-              </em>{" "}
-              item's tab body.
-            </p>
+            <div>
+              <img src={pic5} alt="" />
+            </div>
+            <div>
+              <img src={pic3} alt="" />
+            </div>
+            <div>
+              <img src={pic4} alt="" />
+            </div>
+
+            <div>
+              <img src={pic6} alt="" />
+            </div>
+            <div>
+              <img src={pic7} alt="" />
+            </div>
+            <div>
+              <img src={pic8} alt="" />
+            </div>
+            <div>
+              <img src={pic9} alt="" />
+            </div>
           </div>
 
           <div
             id="vertical-tab-with-border-3"
-            className="hidden"
+            className="hidden grid grid-cols-1 md:grid-cols-4 gap-6 justify-center mx-auto w-1/2 md:w-full mt-6 md:mt-0"
             role="tabpanel"
             aria-labelledby="vertical-tab-with-border-item-3"
           >
-            <p className="text-gray-500 dark:text-gray-400">
-              This is the{" "}
-              <em className="font-semibold text-gray-800 dark:text-gray-200">
-                third
-              </em>{" "}
-              item's tab body.
-            </p>
+            <div>
+              <img src={pic5} alt="" />
+            </div>
+            <div>
+              <img src={pic3} alt="" />
+            </div>
+            <div>
+              <img src={pic4} alt="" />
+            </div>
+
+            <div>
+              <img src={pic6} alt="" />
+            </div>
+            <div>
+              <img src={pic7} alt="" />
+            </div>
+            <div>
+              <img src={pic8} alt="" />
+            </div>
+            <div>
+              <img src={pic9} alt="" />
+            </div>
           </div>
         </div>
-
-        <div className="-ml-[15%] -mt-[5%] hidden md:block">
-          <img src={projects} alt="" />
-        </div>
       </section>
+
+      <div className="-mt-[10%] hidden md:block">
+        <img src={projects} alt="" />
+      </div>
     </>
   );
 };

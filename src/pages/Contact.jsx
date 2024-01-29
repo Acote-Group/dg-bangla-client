@@ -96,7 +96,7 @@ const Contact = () => {
               </div>
 
               {/* :CONTACT FORM CONTAINER */}
-              <div className="order-3 md:order-2 col-span-full md:col-span-1 py-5 md:py-10 px-6">
+              <div className="order-3 md:order-2 col-span-full md:col-span-1 py-5 md:py-10">
                 <form
                   action=""
                   className="mx-auto max-w-xl space-y-4 font-roboto"
@@ -182,10 +182,12 @@ const Contact = () => {
                   </h2>
                   {/* ::Text */}
                   <p className="text-sm text-gray-500">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Facilis unde, voluptatibus nemo molestiae iure, repudiandae
-                    quaerat ipsam, labore sed dolorem nisi odit at esse ullam
-                    suscipit quidem necessitatibus aut modi.
+                    DG. Bangla is a rapidly growing, youth owned company in the
+                    ﬁeld of Civil Construction and Electro-Mechanical
+                    Engineering in roadways, yards, dredging, low land
+                    development, Electriﬁcation through means of heavy earth
+                    moving equipment/machinery and logistics, having Registered
+                    Ofﬁce at Dhaka and Branch Ofﬁce at Chittagong.
                   </p>
                   {/* ::Email contact */}
                   <a
@@ -195,9 +197,16 @@ const Contact = () => {
                     <Mail className="mr-2 w-5 text-gray-400" />
                     info@dg-bangla.com
                   </a>
+                  <a
+                    href="#mail"
+                    className="inline-flex items-center text-sm text-primary font-semibold hover:text-blue-500"
+                  >
+                    <Mail className="mr-2 w-5 text-gray-400" />
+                    info.dgbangla@gmail.com
+                  </a>
                   {/* ::Address */}
                   <p className="text-sm text-gray-500 leading-6">
-                    6th floor, H, Rose Pool, <br /> 557 R# 9 <br /> Dhaka 1216
+                    House-456, Road 6 <br /> Avenue- 06, Mirpur DOHS
                   </p>
                   {/* ::Socials */}
                   <div className="flex items-center">

@@ -11,24 +11,25 @@ const Achievements = () => {
                 100 <span className="text-[24px]">+</span>
               </span>
               <span className="mt-4 text-[#C2C2C2] font-[800] font-inter">
-                Project completed
+                Projects Completed
                 <hr className="border-t-[6px] border-primary w-28" />
               </span>
               <p className="mt-2 text-sm font-inter text-white">
-                Our interested acceptance our reasonable companions an.
+                Delivering innovative solutions for diverse industries since
+                2012.
               </p>
             </div>
 
             <div className="flex flex-col items-start justify-center p-6 border border-white rounded w-64 h-64 transform md:translate-y-4 mb-4 md:mb-0">
               <span className="text-[70px] font-inter text-white">
-                2001 <span className="text-[24px]">#</span>
+                2012 <span className="text-[24px]">#</span>
               </span>
               <span className="mt-4 text-[#C2C2C2] font-[800] font-inter">
                 Established
                 <hr className="border-t-[6px] border-primary w-28" />
               </span>
               <p className="mt-2 text-sm font-inter text-white">
-                Our interested acceptance our reasonable companions an.
+                Building a legacy of excellence for over two decades.
               </p>
             </div>
 
@@ -37,13 +38,12 @@ const Achievements = () => {
                 500 <span className="text-[24px]">+</span>
               </span>
               <span className="mt-4 text-[#C2C2C2] font-[800] font-inter">
-                Total Employee
+                Talented Employees
                 <hr className="border-t-[6px] border-primary w-28" />
               </span>
               <p className="mt-2 text-sm font-inter text-white">
-                Our interested acceptance our reasonable companions an.
+                Empowering a diverse team of experts to drive innovation.
               </p>
-              {/* <div className="mt-4 w-16 h-1 bg-yellow-300"></div> */}
             </div>
 
             <div className="flex flex-col items-start justify-center p-6 border border-white rounded w-64 h-64 transform md:translate-y-4">
@@ -51,11 +51,11 @@ const Achievements = () => {
                 529 <span className="text-[24px]">+</span>
               </span>
               <span className="mt-4 text-[#C2C2C2] font-[800] font-inter">
-                Award Won
+                Awards Won
                 <hr className="border-t-[6px] border-primary w-28" />
               </span>
               <p className="mt-2 text-sm font-inter text-white">
-                Our interested acceptance our reasonable companions an.
+                Celebrating a commitment to quality and client satisfaction.
               </p>
             </div>
           </div>

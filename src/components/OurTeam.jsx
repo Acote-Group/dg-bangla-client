@@ -1,7 +1,9 @@
 import w1 from "../assets/team/w1.png";
 import w2 from "../assets/team/w2.png";
 import w3 from "../assets/team/w3.png";
-import w4 from "../assets/team/w4.png";
+import t1 from "../assets/team/t1.png";
+import t2 from "../assets/team/t2.png";
+import t3 from "../assets/team/t3.png";
 import Fade from "react-reveal/Fade";
 
 const OurTeam = () => {
@@ -78,14 +80,15 @@ const OurTeam = () => {
               </div>
             </div>
             <p className="text-center font-openSans text-[#767676] mt-2 normal-case w-[80%] mx-auto">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s.
+              At DG-Bangla, our team isn't just building structures, we're
+              building a better Bangladesh. Fueled by passion and relentless
+              drive, we're a diverse group of architects, engineers, and
+              visionaries pushing the boundaries of innovation.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex flex-col items-start bg-[#f2f2f2]">
-              <img alt="Richard Wagner" className="w-fit" src={w1} />
+              <img alt="Richard Wagner" className="w-fit" src={t1} />
               <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
                 <FacebookIcon className="text-white" />
                 <LinkedinIcon className="text-white" />
@@ -93,14 +96,14 @@ const OurTeam = () => {
               </div>
               <div className="p-[20px] text-start">
                 <h3 className="text-lg font-medium text-gray-800">
-                  RICHARD WAGNER
+                  Dilruba Akhter
                 </h3>
-                <p className="text-gray-600">Building Worker</p>
+                <p className="text-gray-600">HR, Admin</p>
               </div>
             </div>
 
             <div className="flex flex-col items-start bg-[#f2f2f2]">
-              <img alt="Richard Wagner" className="w-fit" src={w2} />
+              <img alt="Richard Wagner" className="w-fit" src={t2} />
               <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
                 <FacebookIcon className="text-white" />
                 <LinkedinIcon className="text-white" />
@@ -108,14 +111,14 @@ const OurTeam = () => {
               </div>
               <div className="p-[20px] text-start">
                 <h3 className="text-lg font-medium text-gray-800 uppercase">
-                  lisa anderson
+                  Proprietor Engr. Arsad Parvez
                 </h3>
-                <p className="text-gray-600 font-openSans">Building Worker</p>
+                <p className="text-gray-600 font-openSans">CEO & Founder</p>
               </div>
             </div>
 
             <div className="flex flex-col items-start bg-[#f2f2f2]">
-              <img alt="Richard Wagner" className="w-fit" src={w3} />
+              <img alt="Richard Wagner" className="w-fit" src={t3} />
               <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
                 <FacebookIcon className="text-white" />
                 <LinkedinIcon className="text-white" />
@@ -123,13 +126,15 @@ const OurTeam = () => {
               </div>
               <div className="p-[20px] text-start">
                 <h3 className="text-lg font-medium text-gray-800 uppercase">
-                  tommy atkins
+                  Md. Saiful Islam
                 </h3>
-                <p className="text-gray-600 font-openSans">Building Worker</p>
+                <p className="text-gray-600 font-openSans">
+                  Finance & Accounts
+                </p>
               </div>
             </div>
 
-            <div className="flex flex-col items-start bg-[#f2f2f2]">
+            {/* <div className="flex flex-col items-start bg-[#f2f2f2]">
               <img alt="Richard Wagner" className="w-fit" src={w1} />
               <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
                 <FacebookIcon className="text-white" />
@@ -142,7 +147,7 @@ const OurTeam = () => {
                 </h3>
                 <p className="text-gray-600 font-openSans">Building Worker</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

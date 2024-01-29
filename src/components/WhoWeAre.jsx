@@ -27,22 +27,25 @@ const WhoWeAre = () => {
 
         <div className="mt-4 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 justify-between sm:gap-4 max-w-[1280px] mx-auto px-6 sm:px-4">
           <Fade left cascade>
-            <div className="md:col-span-1 mr-4 mt-16 bg-whoBg bg-cover bg-no-repeat w-[365px] h-[380px]">
+            <div className="md:col-span-1 mr-4 mt-16 bg-whoBg bg-cover bg-no-repeat w-auto md:w-[365px] h-auto md:h-[380px]">
               <div className="p-6">
                 <h2 className="text-[34px] sm:text-2xl font-roboto">
                   Our <span className="font-bold">Mission</span>
                 </h2>
                 <p className="mt-2 sm:mt-4 text-justify font-poppins text-sm">
-                  Lorem ipsum available, but the majority have suffered
-                  alteration in some form, by ious veris ons have evolved over
-                  the years, sometimes by accident
+                  We commit to leaving a legacy of progress by developing local
+                  skills for uninterrupted economic freedom and volunteering our
+                  time and talent to the societies where we run. This means
+                  serving the greatest ethical standards and being measured by
+                  the enduring quality of our projects. They are what customers
+                  expect, and how we deliver.
                 </p>
                 <ul className="mt-4 sm:mt-6 space-y-1 sm:space-y-2 font-poppins text-sm font-[500]">
-                  <li>› Construction Management</li>
-                  <li>› Pre Construction Services</li>
-                  <li>› Contract Administration</li>
-                  <li>› Implementation</li>
-                  <li>› Leed consultation</li>
+                  <li>› Developing local skills</li>
+                  <li>› Volunteerism</li>
+                  <li>› Ethical commitment</li>
+                  <li>› Project quality focus</li>
+                  <li>› Performance measurement</li>
                 </ul>
                 <button className="inline-flex items-center justify-between rounded-md text-sm font-medium h-10 px-4 py-2 mt-4 sm:mt-6 float-right hover:text-primary font-poppins">
                   Read More ›
@@ -70,22 +73,25 @@ const WhoWeAre = () => {
           </div>
 
           <Fade right cascade>
-            <div className="md:col-span-1 mt-4 sm:mt-8 md:mt-16 ml-4 bg-whoBg bg-cover bg-no-repeat w-[365px] h-[380px]">
+            <div className="md:col-span-1 mt-4 sm:mt-8 md:mt-16 ml-4 bg-whoBg bg-cover bg-no-repeat w-auto md:w-[365px] h-auto md:h-[380px]">
               <div className="p-6">
                 <h2 className="text-[34px] sm:text-2xl font-roboto">
                   Our <span className="font-bold">Vision</span>
                 </h2>
                 <p className="mt-2 sm:mt-4 font-poppins text-justify text-sm">
-                  Lorem ipsum available, but the majority have suffered
-                  alteration in some form, by ious veris ons have evolved over
-                  the years, sometimes by accident
+                  Though we started as the local construction service company,
+                  we dream to be the world’s premier engineering, construction,
+                  and project management business by achieving outstanding
+                  results for our consumers, developing satisfying careers for
+                  our characters, and earning a satisfactory proﬁt on the value
+                  we give.
                 </p>
                 <ul className="mt-4 sm:mt-6 space-y-1 sm:space-y-2 font-poppins text-sm font-[500]">
-                  <li>› Construction Management</li>
-                  <li>› Pre Construction Services</li>
-                  <li>› Contract Administration</li>
-                  <li>› Implementation</li>
-                  <li>› Leed consultation</li>
+                  <li>› Customer centric focus</li>
+                  <li>› Employee dedication</li>
+                  <li>› Value driven profit</li>
+                  <li>› Balanced approach</li>
+                  <li>› Lead consultation</li>
                 </ul>
                 <button className="inline-flex items-center justify-between rounded-md text-sm font-medium h-10 px-4 py-2 mt-4 sm:mt-6 float-right hover:text-primary font-poppins">
                   Read More ›

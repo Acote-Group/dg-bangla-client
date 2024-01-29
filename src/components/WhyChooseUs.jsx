@@ -30,9 +30,11 @@ const WhyChooseUs = () => {
               </div>
             </div>
             <p className="text-center font-openSans text-[#767676] mt-2 normal-case w-[80%] mx-auto">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s.
+              We have been taking a leading role in providing construction
+              services with an uncompromised commitment to Quality, Health,
+              Safety, and Environment. We do this through the combination of an
+              open relationship with our employees based on mutual trust,
+              transparency, accountability, and discipline.
             </p>
           </div>
 
@@ -40,57 +42,75 @@ const WhyChooseUs = () => {
             <div className="text-center p-[30px] bg-white rounded-lg shadow-md">
               <img src={v1} alt="" className="mx-auto mb-4" />
 
-              <h3 className="text-xl font-semibold mb-2">BEST QUALITY</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                UNCOMPROMISING QUALITY
+              </h3>
               <p className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry has been the Ipsum dummy of the printing indus.
+                DG-Bangla adheres to the strictest international standards,
+                ensuring every project is built with unwavering excellence and
+                durability.
               </p>
             </div>
 
             <div className="text-center p-[30px] bg-white rounded-lg shadow-md">
               <img src={v2} alt="" className="mx-auto mb-4" />
 
-              <h3 className="text-xl font-semibold mb-2">INTEGRITY</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                INTEGRITY IN EVERY STEP
+              </h3>
               <p className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry has been the Ipsum dummy of the printing indus.
+                We uphold ethical practices and transparency in all our
+                operations, fostering trust and long-lasting relationships with
+                our clients.
               </p>
             </div>
 
             <div className="text-center p-[30px] bg-white rounded-lg shadow-md">
               <img src={v3} alt="" className="mx-auto mb-4" />
 
-              <h3 className="text-xl font-semibold mb-2">STRATEGY</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                INNOVATIVE STRATEGIES
+              </h3>
               <p className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry has been the Ipsum dummy of the printing indus.
+                We embrace cutting-edge technologies and techniques to deliver
+                projects that exceed expectations and drive progress in
+                Bangladesh's construction landscape.
               </p>
             </div>
             <div className="text-center p-[30px] bg-white rounded-lg shadow-md">
               <img src={v4} alt="" className="mx-auto mb-4" />
 
-              <h3 className="text-xl font-semibold mb-2">SAFETY</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                SAFETY FIRST, ALWAYS
+              </h3>
               <p className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry has been the Ipsum dummy of the printing indus.
+                We prioritize the wellbeing of our workforce and the communities
+                we serve, upholding stringent safety standards at every stage of
+                construction.
               </p>
             </div>
             <div className="text-center p-[30px] bg-white rounded-lg shadow-md">
               <img src={v5} alt="" className="mx-auto mb-4" />
 
-              <h3 className="text-xl font-semibold mb-2">COMMUNITY</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                BUILDING A STRONGER BANGLADESH
+              </h3>
               <p className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry has been the Ipsum dummy of the printing indus.
+                We are committed to contributing to the nation's development
+                through sustainable construction practices, creating jobs, and
+                empowering local communities.
               </p>
             </div>
             <div className="text-center p-[30px] bg-white rounded-lg shadow-md">
               <img src={v6} alt="" className="mx-auto mb-4" />
 
-              <h3 className="text-xl font-semibold mb-2">SUSTAINABILITY</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                GREEN VISION FOR THE FUTURE
+              </h3>
               <p className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry has been the Ipsum dummy of the printing indus.
+                We prioritize environmentally conscious construction methods,
+                minimizing our impact on the environment and contributing to a
+                sustainable future for Bangladesh.
               </p>
             </div>
           </div>

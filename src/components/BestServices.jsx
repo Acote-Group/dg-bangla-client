@@ -69,10 +69,11 @@ const BestServices = () => {
                     <h3 className="text-lg font-semibold mb-2 font-roboto">
                       BEST QUALITY
                     </h3>
-                    <p className="text-gray-600 font-openSans">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text.
+                    <p className="text-gray-600 font-openSans text-justify">
+                      At DG-Bangla, we prioritize delivering the highest quality
+                      construction and electrical solutions. Our commitment to
+                      excellence ensures that every project meets and exceeds
+                      industry standards.
                     </p>
                   </div>
 
@@ -134,10 +135,11 @@ const BestServices = () => {
                     <h3 className="text-lg font-semibold mb-2 font-roboto">
                       SAFETY
                     </h3>
-                    <p className="text-gray-600 font-openSans">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text.
+                    <p className="text-gray-600 font-openSans text-justify">
+                      Safety is our top priority at DG-Bangla. We adhere to the
+                      highest safety standards to create a secure work
+                      environment, ensuring the well-being of our team and the
+                      communities we serve.
                     </p>
                   </div>
 
@@ -202,10 +204,11 @@ const BestServices = () => {
                     <h3 className="text-lg font-semibold mb-2 font-roboto">
                       INTEGRITY
                     </h3>
-                    <p className="text-gray-600 font-openSans">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text.
+                    <p className="text-gray-600 font-openSans text-justify">
+                      DG-Bangla upholds the highest level of integrity in all
+                      our dealings. Our transparent and ethical practices build
+                      trust with clients, partners, and the community, fostering
+                      long-lasting relationships.
                     </p>
                   </div>
 
@@ -268,10 +271,12 @@ const BestServices = () => {
                     <h3 className="text-lg font-semibold mb-2 font-roboto">
                       STRATEGY
                     </h3>
-                    <p className="text-gray-600 font-openSans">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text.
+                    <p className="text-gray-600 font-openSans text-justify">
+                      At DG-Bangla, our strategy is built on a foundation of
+                      meticulous planning and innovative solutions. We approach
+                      every project with a strategic mindset, ensuring
+                      efficiency, cost-effectiveness, and successful project
+                      outcomes.
                     </p>
                   </div>
 
@@ -335,10 +340,12 @@ const BestServices = () => {
                     <h3 className="text-lg font-semibold mb-2 font-roboto">
                       COMMUNITY
                     </h3>
-                    <p className="text-gray-600 font-openSans">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text.
+                    <p className="text-gray-600 font-openSans text-justify">
+                      DG-Bangla is deeply committed to the communities we
+                      operate in. Beyond construction and electrical solutions,
+                      we actively engage with and contribute to the well-being
+                      of local communities, fostering a positive impact and
+                      sustainable development.
                     </p>
                   </div>
 
@@ -400,10 +407,12 @@ const BestServices = () => {
                     <h3 className="text-lg font-semibold mb-2 font-roboto">
                       SUSTAINABILITY
                     </h3>
-                    <p className="text-gray-600 font-openSans">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text.
+                    <p className="text-gray-600 font-openSans text-justify">
+                      DG-Bangla is committed to environmental stewardship. Our
+                      sustainability practices aim to minimize the ecological
+                      footprint of our projects. Through the use of eco-friendly
+                      materials and energy-efficient solutions, we contribute to
+                      a sustainable and greener future.
                     </p>
                   </div>
 

@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <>
       <section className="bg-banner-bg bg-cover bg-no-repeat">
-        <Navbar />
+        <Navbar className="sticky" />
 
         {/* Hero */}
         <div className="w-auto mx-auto px-4 md:px-0">
@@ -19,9 +19,8 @@ const Hero = () => {
                 <h1 className="text-white font-inter">
                   From Foundations to Finishes
                 </h1>
-                <h1 className="block text-3xl font-bold text-white sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white font-inter">
-                  Building Better
-                  <span className="text-primary block">Futures</span>
+                <h1 className="block text-3xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-rose-500 text-transparent bg-clip-text sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white font-inter">
+                  Building Better <br /> Futures
                 </h1>
                 <h1 className="mt-3 text-sm font-inter text-white dark:text-white text-balance">
                   Have you skipped how great construction tastes? It is not the

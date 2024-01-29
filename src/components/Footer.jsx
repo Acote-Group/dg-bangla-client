@@ -6,7 +6,9 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
             <h5 className="font-semibold uppercase mb-4">Headquarter</h5>
-            <p>Rose Pool (6th), H# 557, R# 9, Mirpur DOHS, Dhaka</p>
+            <p>
+              House-456, Road 6, Avenue- 06, <br /> Mirpur DOHS
+            </p>
             <p className="my-4">+880244806615</p>
             <a className="text-primary hover:text-primary" href="#">
               Find us on map
@@ -14,7 +16,9 @@ const Footer = () => {
           </div>
           <div>
             <h5 className="font-semibold uppercase mb-4">Sales Offices</h5>
-            <p>Rose Pool (6th), H# 557, R# 9, Mirpur DOHS, Dhaka</p>
+            <p>
+              House-456, Road 6, Avenue- 06, <br /> Mirpur DOHS
+            </p>
             <p className="my-4">+880244806615</p>
             <a className="text-primary hover:text-primary" href="#">
               Find us on map

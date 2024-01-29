@@ -8,6 +8,13 @@
   @apply border-primary;
 } */
 
+.photos img {
+  width: 50%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
