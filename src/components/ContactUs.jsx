@@ -11,8 +11,7 @@ const ContactUs = () => {
             </h1>
 
             <p className="font-openSans text-white text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse viverra mauris eget tortor.
+              We are available for 24/7. Reach out to us if you have any queries
             </p>
           </div>
 

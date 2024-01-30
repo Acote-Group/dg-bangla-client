@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/photos/logo.png";
 import { MoveRight } from "lucide-react";
 
@@ -14,14 +15,14 @@ const GetConsultation = () => {
           />
 
           <h1 className="font-inter text-white text-[60px] font-[800] text-center md:text-left">
-            Live Better and Beautiful
+            Want To Discuss Your Project?
           </h1>
 
           {/* Rearrange elements for smaller screens */}
           <div className="flex flex-col md:flex-row justify-between items-center w-auto lg:w-[60%]">
-            <a
+            <Link
               className="group relative inline-flex items-center overflow-hidden rounded bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3 text-white focus:outline-none focus:ring"
-              href="/download"
+              to="/contact"
             >
               <span className="absolute -end-full transition-all group-hover:end-4">
                 <MoveRight fill="black" />
@@ -30,7 +31,7 @@ const GetConsultation = () => {
               <span className="uppercase font-medium transition-all group-hover:me-4">
                 get a consultation
               </span>
-            </a>
+            </Link>
 
             <div className="flex items-center gap-4 mt-4 md:mt-0">
               <img

@@ -98,14 +98,16 @@ const Testimonial = () => {
               </svg>
 
               <h1 className="leading-loose text-white font-openSans text-sm text-center w-3/4">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy .
+                I recently had the pleasure of hiring DG-Bangla for a
+                construction project, and I must say they exceeded my
+                expectations. Their attention to detail and commitment to
+                quality craftsmanship are unparalleled.
               </h1>
 
               <div className="mt-6 -mx-2 flex flex-col justify-center">
                 <div className="mx-2">
                   <h1 className="font-semibold text-white dark:text-white font-openSans text-center">
-                    Robbert
+                    Mr. Karim Ahmed
                   </h1>
                 </div>
 
@@ -144,14 +146,15 @@ const Testimonial = () => {
               </svg>
 
               <h1 className="leading-loose text-white font-openSans text-sm text-center w-3/4">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy .
+                DG-Bangla transformed my house into a dream home! Their
+                construction team worked diligently to bring my vision to life,
+                ensuring every detail was perfect.
               </h1>
 
               <div className="mt-6 -mx-2 flex flex-col justify-center">
                 <div className="mx-2">
                   <h1 className="font-semibold text-white dark:text-white font-openSans text-center">
-                    Michael
+                    Mr. Rashed
                   </h1>
                 </div>
 
@@ -190,14 +193,16 @@ const Testimonial = () => {
               </svg>
 
               <h1 className="leading-loose text-white font-openSans text-sm text-center w-3/4">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy .
+                As a business owner, partnering with DG-Bangla was a
+                game-changer for our projects. Their construction expertise,
+                coupled with their electrical capabilities, provided us with a
+                one-stop solution for our development needs.
               </h1>
 
               <div className="mt-6 -mx-2 flex flex-col justify-center">
                 <div className="mx-2">
                   <h1 className="font-semibold text-white dark:text-white font-openSans text-center">
-                    Jim
+                    Mr. Samuel
                   </h1>
                 </div>
 
