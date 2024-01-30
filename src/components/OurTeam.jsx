@@ -86,53 +86,60 @@ const OurTeam = () => {
               visionaries pushing the boundaries of innovation.
             </p>
           </div>
+
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="flex flex-col items-start bg-[#f2f2f2]">
-              <img alt="Richard Wagner" className="w-fit" src={t1} />
-              <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
-                <FacebookIcon className="text-white" />
-                <LinkedinIcon className="text-white" />
-                <TwitterIcon className="text-white" />
+            <Fade left>
+              <div className="flex flex-col items-start bg-[#f2f2f2]">
+                <img alt="Richard Wagner" className="w-fit" src={t1} />
+                <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
+                  <FacebookIcon className="text-white" />
+                  <LinkedinIcon className="text-white" />
+                  <TwitterIcon className="text-white" />
+                </div>
+                <div className="p-[20px] text-start">
+                  <h3 className="text-lg font-medium text-gray-800">
+                    Dilruba Akhter
+                  </h3>
+                  <p className="text-gray-600">HR, Admin</p>
+                </div>
               </div>
-              <div className="p-[20px] text-start">
-                <h3 className="text-lg font-medium text-gray-800">
-                  Dilruba Akhter
-                </h3>
-                <p className="text-gray-600">HR, Admin</p>
-              </div>
-            </div>
+            </Fade>
 
-            <div className="flex flex-col items-start bg-[#f2f2f2]">
-              <img alt="Richard Wagner" className="w-fit" src={t2} />
-              <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
-                <FacebookIcon className="text-white" />
-                <LinkedinIcon className="text-white" />
-                <TwitterIcon className="text-white" />
+            <Fade top>
+              <div className="flex flex-col items-start bg-[#f2f2f2]">
+                <img alt="Richard Wagner" className="w-fit" src={t2} />
+                <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
+                  <FacebookIcon className="text-white" />
+                  <LinkedinIcon className="text-white" />
+                  <TwitterIcon className="text-white" />
+                </div>
+                <div className="p-[20px] text-start">
+                  <h3 className="text-lg font-medium text-gray-800 uppercase">
+                    Proprietor Engr. Arsad Parvez
+                  </h3>
+                  <p className="text-gray-600 font-openSans">CEO & Founder</p>
+                </div>
               </div>
-              <div className="p-[20px] text-start">
-                <h3 className="text-lg font-medium text-gray-800 uppercase">
-                  Proprietor Engr. Arsad Parvez
-                </h3>
-                <p className="text-gray-600 font-openSans">CEO & Founder</p>
-              </div>
-            </div>
+            </Fade>
 
-            <div className="flex flex-col items-start bg-[#f2f2f2]">
-              <img alt="Richard Wagner" className="w-fit" src={t3} />
-              <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
-                <FacebookIcon className="text-white" />
-                <LinkedinIcon className="text-white" />
-                <TwitterIcon className="text-white" />
+            <Fade right>
+              <div className="flex flex-col items-start bg-[#f2f2f2]">
+                <img alt="Richard Wagner" className="w-fit" src={t3} />
+                <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
+                  <FacebookIcon className="text-white" />
+                  <LinkedinIcon className="text-white" />
+                  <TwitterIcon className="text-white" />
+                </div>
+                <div className="p-[20px] text-start">
+                  <h3 className="text-lg font-medium text-gray-800 uppercase">
+                    Md. Saiful Islam
+                  </h3>
+                  <p className="text-gray-600 font-openSans">
+                    Finance & Accounts
+                  </p>
+                </div>
               </div>
-              <div className="p-[20px] text-start">
-                <h3 className="text-lg font-medium text-gray-800 uppercase">
-                  Md. Saiful Islam
-                </h3>
-                <p className="text-gray-600 font-openSans">
-                  Finance & Accounts
-                </p>
-              </div>
-            </div>
+            </Fade>
 
             {/* <div className="flex flex-col items-start bg-[#f2f2f2]">
               <img alt="Richard Wagner" className="w-fit" src={w1} />

@@ -19,12 +19,18 @@ const GetConsultation = () => {
 
           {/* Rearrange elements for smaller screens */}
           <div className="flex flex-col md:flex-row justify-between items-center w-auto lg:w-[60%]">
-            <button
-              type="button"
-              className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter font-semibold rounded-sm border border-transparent bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-primary dark:bg-white dark:text-black uppercase"
+            <a
+              className="group relative inline-flex items-center overflow-hidden rounded bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3 text-white focus:outline-none focus:ring"
+              href="/download"
             >
-              get a consultation <MoveRight fill="black" />
-            </button>
+              <span className="absolute -end-full transition-all group-hover:end-4">
+                <MoveRight fill="black" />
+              </span>
+
+              <span className="uppercase font-medium transition-all group-hover:me-4">
+                get a consultation
+              </span>
+            </a>
 
             <div className="flex items-center gap-4 mt-4 md:mt-0">
               <img

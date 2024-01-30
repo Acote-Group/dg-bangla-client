@@ -7,10 +7,9 @@ const Hero = () => {
   return (
     <>
       <section className="bg-banner-bg bg-cover bg-no-repeat">
-        <Navbar className="sticky" />
-
         {/* Hero */}
-        <div className="w-auto mx-auto px-4 md:px-0 backdrop-opacity-0 bg-opacity-none backdrop-blur-none bg-transparent">
+        <div className="w-auto mx-auto px-4 md:px-0 bg-black bg-opacity-50">
+          <Navbar />
           {/* left text field */}
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 xl:gap-20 md:items-center">

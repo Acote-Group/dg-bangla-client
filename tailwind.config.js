@@ -35,7 +35,7 @@ export default {
         primary: "#A8223B",
       },
       backgroundImage: {
-        "banner-bg": "url('/src/assets/gifs/gof2.gif')",
+        "banner-bg": "url('/src/assets/photos/ngif.gif')",
         serviceBg: "url('/src/assets/photos/service.png')",
         circleBg: "url('/src/assets/photos/banner-bg.jpg')",
         testoBg: "url('/src/assets/photos/testoBg.jpg')",

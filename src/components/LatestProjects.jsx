@@ -1,11 +1,5 @@
 import waveLine from "../assets/photos/wave-line.png";
 import waveLine2 from "../assets/photos/waveLine2.png";
-import p1 from "../assets/project/p1.png";
-import p2 from "../assets/project/p2.png";
-import p3 from "../assets/project/p3.png";
-import p4 from "../assets/project/p4.png";
-import p5 from "../assets/project/p5.png";
-import p6 from "../assets/project/p6.png";
 import lp1 from "../assets/lp/lp1.jpg";
 import lp2 from "../assets/lp/lp2.jpg";
 import lp3 from "../assets/lp/lp3.jpg";
@@ -22,6 +16,24 @@ import lp13 from "../assets/lp/lp13.jpg";
 import lp14 from "../assets/lp/lp14.jpg";
 import lp15 from "../assets/lp/lp15.jpg";
 import lp16 from "../assets/lp/lp16.jpg";
+import lp17 from "../assets/lp/lp17.jpg";
+import lp18 from "../assets/lp/lp18.jpg";
+import lp19 from "../assets/lp/lp19.jpg";
+import lp20 from "../assets/lp/lp20.jpg";
+import lp21 from "../assets/lp/lp21.jpg";
+import lp22 from "../assets/lp/lp22.jpg";
+import lp23 from "../assets/lp/lp23.jpg";
+import lp24 from "../assets/lp/lp24.jpg";
+import lp25 from "../assets/lp/lp25.jpg";
+import lp26 from "../assets/lp/lp26.jpg";
+import lp27 from "../assets/lp/lp27.jpg";
+import lp28 from "../assets/lp/lp28.jpg";
+import lp29 from "../assets/lp/lp29.jpg";
+import lp30 from "../assets/lp/lp30.jpg";
+import lp31 from "../assets/lp/lp31.jpg";
+import lp32 from "../assets/lp/lp32.jpg";
+import lp33 from "../assets/lp/lp33.jpg";
+import lp34 from "../assets/lp/lp34.jpg";
 
 import Fade from "react-reveal/Fade";
 
@@ -58,7 +70,7 @@ const LatestProjects = () => {
               proudly presents its latest projects, showcasing a commitment to
               innovation, precision, and superior quality. From state-of-the-art
               commercial developments to cutting-edge electrical installations,
-              each project reflects DG-Bangla's dedication to delivering
+              each project reflects DG-Bangla&apos;s dedication to delivering
               exceptional results
             </p>
           </div>
@@ -118,7 +130,18 @@ const LatestProjects = () => {
                 aria-controls="horizontal-scroll-tab-5"
                 role="tab"
               >
-                Interior
+                Interior <span className="hidden md:block">&nbsp;</span> /
+              </button>
+
+              <button
+                type="button"
+                className="hs-tab-active:font-semibold hs-tab-active:text-primary py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent whitespace-nowrap text-gray-500 hover:text-primary focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none dark:text-gray-400 dark:hover:text-blue-500 font-openSans uppercase text-sm md:text-base font-semibold"
+                id="horizontal-scroll-tab-item-6"
+                data-hs-tab="#horizontal-scroll-tab-6"
+                aria-controls="horizontal-scroll-tab-6"
+                role="tab"
+              >
+                Residential
               </button>
             </div>
 
@@ -333,6 +356,7 @@ const LatestProjects = () => {
                   </div>
                 </div>
               </div>
+
               <div
                 id="horizontal-scroll-tab-3"
                 className="hidden"
@@ -350,7 +374,7 @@ const LatestProjects = () => {
                       <div className="flex flex-wrap content-center">
                         <img
                           src={lp13}
-                          className="w-full rounded-tr-3xl rounded-bl-3xl clip"
+                          className="w-full rounded-tr-3xl rounded-bl-3xl "
                           alt=""
                         />
                       </div>
@@ -413,8 +437,8 @@ const LatestProjects = () => {
                     <a href="#" className="relative">
                       <div className="flex flex-wrap content-center">
                         <img
-                          src={lp8}
-                          className="w-full rounded-tr-3xl rounded-bl-3xl"
+                          src={lp17}
+                          className=" rounded-tr-3xl rounded-bl-3xl w-[450px] h-[250px]"
                           alt=""
                         />
                       </div>
@@ -429,7 +453,7 @@ const LatestProjects = () => {
                     <a href="#" className="relative">
                       <div className="flex flex-wrap content-center">
                         <img
-                          src={lp4}
+                          src={lp18}
                           className="w-full rounded-tr-3xl rounded-bl-3xl"
                           alt=""
                         />
@@ -438,34 +462,323 @@ const LatestProjects = () => {
                   </div>
                 </div>
               </div>
+
               <div
                 id="horizontal-scroll-tab-4"
                 className="hidden"
                 role="tabpanel"
                 aria-labelledby="horizontal-scroll-tab-item-4"
               >
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-none p-2 md:p-0">
-                  <img className="w-full h-auto object-cover" src={p1} />
-                  <img className="w-full h-auto object-cover" src={p2} />
-                  <img className="w-full h-auto object-cover" src={p3} />
-                  <img className="w-full h-auto object-cover" src={p4} />
-                  <img className="w-full h-auto object-cover" src={p5} />
-                  <img className="w-full h-auto object-cover" src={p6} />
+                <div className="grid grid-cols-1 md:grid-cols-3 p-2 md:p-0 gap-4">
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Electro-mechanical Works at PCT
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp19}
+                          className="rounded-tr-3xl rounded-bl-3xl w-[w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        PPFT Land Development_1
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp20}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        PPFT Land Development_2
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp21}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Land Development by Sand Pile
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp22}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Level Checking for yard
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp23}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Boring works for Earthing System
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp24}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
+
               <div
                 id="horizontal-scroll-tab-5"
                 className="hidden"
                 role="tabpanel"
                 aria-labelledby="horizontal-scroll-tab-item-5"
               >
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-none p-2 md:p-0">
-                  <img className="w-full h-auto object-cover" src={p1} />
-                  <img className="w-full h-auto object-cover" src={p2} />
-                  <img className="w-full h-auto object-cover" src={p3} />
-                  <img className="w-full h-auto object-cover" src={p4} />
-                  <img className="w-full h-auto object-cover" src={p5} />
-                  <img className="w-full h-auto object-cover" src={p6} />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-none p-2 md:p-0 gap-4">
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Electro-mechanical Works at PCT
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp25}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        PPFT Land Development_1
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp26}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        PPFT Land Development_2
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp27}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Land Development by Sand Pile
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp28}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Level Checking for yard
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp29}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Boring works for Earthing System
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp30}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="horizontal-scroll-tab-6"
+                className="hidden"
+                role="tabpanel"
+                aria-labelledby="horizontal-scroll-tab-item-6"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-none p-2 md:p-0 gap-4">
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Electro-mechanical Works at PCT
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp31}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        PPFT Land Development_1
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp32}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        PPFT Land Development_2
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp33}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Land Development by Sand Pile
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp34}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Level Checking for yard
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp28}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <a className="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300 text-primary font-inter">
+                      <h1 className="tracking-wider font-semibold">
+                        Boring works for Earthing System
+                      </h1>
+                    </a>
+                    <a href="#" className="relative">
+                      <div className="flex flex-wrap content-center">
+                        <img
+                          src={lp21}
+                          className="w-full rounded-tr-3xl rounded-bl-3xl w-[450px] h-[260px]"
+                          alt=""
+                        />
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

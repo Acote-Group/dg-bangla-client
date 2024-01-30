@@ -97,7 +97,7 @@ const OurClients = () => {
           additionalTransfrom={0}
           arrows={false}
           autoPlay
-          autoPlaySpeed={2}
+          autoPlaySpeed={3}
           centerMode={false}
           className="photos md:mb-10"
           containerClass="container-with-dots"
