@@ -83,7 +83,7 @@ const BestServices = () => {
                     viewBox="0 0 14 14"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="float-right"
+                    className="float-right bottom-0 fixed right-0"
                   >
                     <mask id="path-1-inside-1_481_3507" fill="white">
                       <path d="M7 6.88989L14 0V14H0L7 6.88989Z" />
@@ -149,7 +149,7 @@ const BestServices = () => {
                     viewBox="0 0 14 14"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="float-right"
+                    className="float-right bottom-0 fixed right-0"
                   >
                     <mask id="path-1-inside-1_481_3507" fill="white">
                       <path d="M7 6.88989L14 0V14H0L7 6.88989Z" />
@@ -218,7 +218,7 @@ const BestServices = () => {
                     viewBox="0 0 14 14"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="float-right"
+                    className="float-right bottom-0 fixed right-0"
                   >
                     <mask id="path-1-inside-1_481_3507" fill="white">
                       <path d="M7 6.88989L14 0V14H0L7 6.88989Z" />
@@ -286,7 +286,7 @@ const BestServices = () => {
                     viewBox="0 0 14 14"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="float-right"
+                    className="float-right bottom-0 fixed right-0"
                   >
                     <mask id="path-1-inside-1_481_3507" fill="white">
                       <path d="M7 6.88989L14 0V14H0L7 6.88989Z" />
@@ -355,7 +355,7 @@ const BestServices = () => {
                     viewBox="0 0 14 14"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="float-right"
+                    className="float-right bottom-0 fixed right-0"
                   >
                     <mask id="path-1-inside-1_481_3507" fill="white">
                       <path d="M7 6.88989L14 0V14H0L7 6.88989Z" />
@@ -422,7 +422,7 @@ const BestServices = () => {
                     viewBox="0 0 14 14"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="float-right"
+                    className="float-right bottom-0 fixed right-0"
                   >
                     <mask id="path-1-inside-1_481_3507" fill="white">
                       <path d="M7 6.88989L14 0V14H0L7 6.88989Z" />

@@ -5,6 +5,7 @@ import AwesomeFacts from "../components/AwesomeFacts";
 import OurTeam from "../components/OurTeam";
 import waveLine from "../assets/photos/waveLine2.png";
 import ContactUs from "../components/ContactUs";
+import MileStone from "../components/MileStone";
 
 const About = () => {
   return (
@@ -78,6 +79,7 @@ const About = () => {
         <AwesomeFacts />
         <OurTeam />
         <img src={waveLine} alt="" />
+        <MileStone />
         <ContactUs />
       </section>
     </>

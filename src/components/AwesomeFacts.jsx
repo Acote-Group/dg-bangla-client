@@ -9,26 +9,19 @@ const AwesomeFacts = () => {
                 The Construction Company
               </h2>
               <h1 className="text-[60px] font-semibold uppercase">
-                Awesome Facts
+                About DG Bangla
               </h1>
               <p className="mt-4 text-sm md:text-base font-openSans">
-                <span className="font-semibold">Uncompromising Quality:</span>{" "}
-                We adhere to the highest international standards, ensuring every
-                project stands the test of time.{" "}
-                <span className="font-semibold">Innovation at its Core:</span>{" "}
-                We embrace cutting-edge technologies and techniques to deliver
-                projects that are not only functional but also forward-thinking,
-                contributing to Bangladesh's infrastructure development.{" "}
-                <span className="font-semibold">
-                  Building a Sustainable Future:
-                </span>{" "}
-                We prioritize environmentally conscious construction methods,
-                minimizing our impact and paving the way for a greener
-                Bangladesh.{" "}
-                <span className="font-semibold">Investing in People: </span> We
-                are committed to fostering a safe and inclusive work
-                environment, empowering our workforce and contributing to the
-                nation's skilled labor force.
+                DG. Bangla is a rapidly growing, youth owned company in the ﬁeld
+                of Civil Construction and Electro-Mechanical Engineering in
+                roadways, yards, dredging, low land development, Electriﬁcation
+                through means of heavy earth moving equipment/machinery and
+                logistics, having Registered Ofﬁce at Dhaka and Branch Ofﬁce at
+                Chittagong. We have been taking a leading role in providing
+                construction services with an uncompromised commitment to
+                Quality, Health, Safety, and Environment. We do this through the
+                combination of an open relationship with our employees based on
+                mutual trust, transparency, accountability, and discipline.
               </p>
             </div>
 

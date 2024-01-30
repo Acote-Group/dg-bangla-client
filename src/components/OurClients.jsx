@@ -99,7 +99,7 @@ const OurClients = () => {
           autoPlay
           autoPlaySpeed={2}
           centerMode={false}
-          className="photos mb-10"
+          className="photos md:mb-10"
           containerClass="container-with-dots"
           customTransition="all 3s linear"
           dotListClass=""

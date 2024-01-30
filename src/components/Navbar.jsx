@@ -252,10 +252,19 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 type="button"
-                className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter rounded-sm  bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-primary dark:bg-white dark:text-black w-fit md:w-auto"
+                className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter rounded-sm  bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary w-fit md:w-auto relative overflow-hidden group hover:bg-gradient-to-r hover:from-red-800 hover:to-pink-600 hover:ring-2 hover:ring-offset-2 hover:ring-red-700 transition-all ease-out duration-300 mr-1"
               >
-                Contact Us
+                <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                <span className="relative">Contact Us</span>
               </Link>
+
+              {/* <a
+                href="#_"
+                className="relative rounded px-5 py-2.5 overflow-hidden group bg-green-500 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300"
+              >
+                <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                <span className="relative">Button Text</span>
+              </a> */}
             </div>
           </div>
         </nav>

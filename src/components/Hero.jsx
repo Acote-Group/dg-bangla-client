@@ -10,7 +10,7 @@ const Hero = () => {
         <Navbar className="sticky" />
 
         {/* Hero */}
-        <div className="w-auto mx-auto px-4 md:px-0">
+        <div className="w-auto mx-auto px-4 md:px-0 backdrop-opacity-0 bg-opacity-none backdrop-blur-none bg-transparent">
           {/* left text field */}
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 xl:gap-20 md:items-center">
@@ -31,12 +31,25 @@ const Hero = () => {
 
                 {/* */}
                 <div className="mt-7 md:grid md:grid-cols-2 md:gap-3 w-fit">
-                  <button
+                  {/* <button
                     type="button"
                     className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter font-semibold rounded-sm bg-gradient-to-r from-rose-700 to-rose-500 hover:shadow-lg transition-shadow duration-300 ease-in-out focus:outline-none focus:ring-1 focus:ring-primary dark:focus:ring-1 dark:focus:ring-primary text-white uppercase"
                   >
                     See All Services <MoveRight fill="black" />
-                  </button>
+                  </button> */}
+
+                  <a
+                    className="group relative inline-flex items-center overflow-hidden rounded bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3 text-white focus:outline-none focus:ring"
+                    href="/download"
+                  >
+                    <span className="absolute -end-full transition-all group-hover:end-4">
+                      <MoveRight fill="black" />
+                    </span>
+
+                    <span className="uppercase font-medium transition-all group-hover:me-4">
+                      See All Services
+                    </span>
+                  </a>
                 </div>
               </div>
             </Fade>
