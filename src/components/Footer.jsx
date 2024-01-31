@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h5 className="font-semibold uppercase mb-4">Headquarter</h5>
             <p>
-              House-456, Road 6, Avenue- 06, <br /> Mirpur DOHS
+              House-456, Road 6, Avenue- 06, <br /> Mirpur DOHS, Dhaka
             </p>
             <p className="my-4">+880244806615</p>
             <a className="text-primary hover:text-primary" href="#">
@@ -19,7 +19,7 @@ const Footer = () => {
           <div>
             <h5 className="font-semibold uppercase mb-4">Sales Offices</h5>
             <p>
-              House-456, Road 6, Avenue- 06, <br /> Mirpur DOHS
+              House-456, Road 6, Avenue- 06, <br /> Mirpur DOHS, Dhaka
             </p>
             <p className="my-4">+880244806615</p>
             <a className="text-primary hover:text-primary" href="#">

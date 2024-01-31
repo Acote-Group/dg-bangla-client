@@ -1,6 +1,3 @@
-import w1 from "../assets/team/w1.png";
-import w2 from "../assets/team/w2.png";
-import w3 from "../assets/team/w3.png";
 import t1 from "../assets/team/t1.png";
 import t2 from "../assets/team/t2.png";
 import t3 from "../assets/team/t3.png";

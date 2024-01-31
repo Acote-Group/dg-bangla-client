@@ -59,7 +59,7 @@ const OurServices = () => {
                   />
                 </svg>
 
-                <h1 className="text-[25px] font-[300] font-roboto">
+                <h1 className="md:text-[25px] font-[300] font-roboto">
                   Civil Work
                 </h1>
                 <p className="font-openSans text-white text-[12px]">
@@ -106,7 +106,7 @@ const OurServices = () => {
                   />
                 </svg>
 
-                <h1 className="text-[25px] font-[300] font-roboto">
+                <h1 className="md:text-[25px] font-[300] font-roboto">
                   Yard & Road Work
                 </h1>
                 <p className="font-openSans text-white text-[12px]">
@@ -153,7 +153,7 @@ const OurServices = () => {
                   />
                 </svg>
 
-                <h1 className="text-[20px] font-[300] font-roboto leading-tight">
+                <h1 className="md:text-[20px] font-[300] font-roboto leading-tight">
                   Dredging & Ground Improvement work
                 </h1>
                 <p className="font-openSans text-white text-[12px]">
@@ -201,7 +201,7 @@ const OurServices = () => {
                   />
                 </svg>
 
-                <h1 className="text-[20px] font-[300] font-roboto leading-tight">
+                <h1 className="md:text-[20px] font-[300] font-roboto leading-tight">
                   Electro Mechanical Work
                 </h1>
                 <p className="font-openSans text-white text-[12px]">
@@ -248,7 +248,7 @@ const OurServices = () => {
                   />
                 </svg>
 
-                <h1 className="text-[25px] font-[300] font-roboto">
+                <h1 className="md:text-[25px] font-[300] font-roboto">
                   Automation
                 </h1>
                 <p className="font-openSans text-white text-[12px]">
@@ -294,7 +294,7 @@ const OurServices = () => {
                   />
                 </svg>
 
-                <h1 className="text-[20px] font-[300] font-roboto">
+                <h1 className="md:text-[20px] font-[300] font-roboto">
                   River Bank Protection
                 </h1>
                 <p className="font-openSans text-white text-[12px]">

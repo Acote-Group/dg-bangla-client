@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { Mail } from "lucide-react";
 import { useRef } from "react";
+import { MapPin } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const Contact = () => {
   const nameRef = useRef();
@@ -175,7 +177,7 @@ const Contact = () => {
 
               {/* :CONTACT INFOS CONTAINER */}
               <div className="order-2 md:order-3 col-span-full md:col-span-1 py-5 md:py-10 px-6 font-inter">
-                <div className="mx-auto max-w-xl flex flex-col space-y-5">
+                <div className="mx-auto max-w-xl flex flex-col space-y-2">
                   {/* ::Title Contact Us */}
                   <h2 className="text-4xl font-semibold uppercase text-primary">
                     Location
@@ -189,25 +191,36 @@ const Contact = () => {
                     moving equipment/machinery and logistics, having Registered
                     Ofﬁce at Dhaka and Branch Ofﬁce at Chittagong.
                   </p>
+                  {/* phone number  */}
+                  <a
+                    href="#mail"
+                    className="inline-flex items-center text-sm text-primary font-semibold hover:text-blue-500"
+                  >
+                    <Phone className="mr-2 w-5 text-gray-400" />
+                    +880244806615
+                  </a>
                   {/* ::Email contact */}
                   <a
                     href="#mail"
                     className="inline-flex items-center text-sm text-primary font-semibold hover:text-blue-500"
                   >
                     <Mail className="mr-2 w-5 text-gray-400" />
-                    info@dg-bangla.com
+                    info@dg-bangla.com <br />
+                    info.dgbangla@gmail.com
                   </a>
-                  <a
+                  {/* <a
                     href="#mail"
                     className="inline-flex items-center text-sm text-primary font-semibold hover:text-blue-500"
                   >
                     <Mail className="mr-2 w-5 text-gray-400" />
                     info.dgbangla@gmail.com
-                  </a>
+                  </a> */}
                   {/* ::Address */}
-                  <p className="text-sm text-gray-500 leading-6">
+                  <p className="text-sm leading-6 inline-flex items-center text-primary font-semibold">
+                    <MapPin className="mr-2 w-5 text-gray-400" />
                     House-456, Road 6 <br /> Avenue- 06, Mirpur DOHS
                   </p>
+
                   {/* ::Socials */}
                   <div className="flex items-center">
                     {/* :Twitter */}
