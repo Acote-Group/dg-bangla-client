@@ -11,7 +11,7 @@ const MileStone = () => {
           </div>
 
           <Fade bottom>
-            <h1 className="font-roboto text-[35px] font-[700] uppercase">
+            <h1 className="font-roboto text-2xl md:text-[35px] font-[700] uppercase">
               <span className="text-primary">our</span> milestones
             </h1>
           </Fade>

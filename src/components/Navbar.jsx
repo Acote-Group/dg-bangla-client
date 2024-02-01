@@ -158,7 +158,7 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7 font-semibold">
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
                 to="/"
                 aria-current="page"
               >
@@ -166,31 +166,31 @@ const Navbar = () => {
               </NavLink>
 
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
                 to="/about-us"
               >
                 About Us
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
                 to="/services"
               >
                 Services
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
                 to="/projects"
               >
                 Projects
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
                 to="/team"
               >
                 Team
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
                 to="/contact"
               >
                 Contact
