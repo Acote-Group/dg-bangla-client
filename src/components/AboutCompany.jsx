@@ -6,7 +6,7 @@ const AboutCompany = () => {
   return (
     <>
       <section className="bg-[#F8F8F8] md:py-[60px]">
-        <div className="float-right top-0 hidden md:block">
+        <div className="float-right top-0 hidden 2xl:block">
           <img src={about} alt="" />
         </div>
 

@@ -5,7 +5,7 @@ import { MoveRight } from "lucide-react";
 const GetConsultation = () => {
   return (
     <>
-      <section className="bg-[#232222]">
+      <section className="bg-[#232222] max-w-[1920px] mx-auto">
         <div className="container w-auto max-w-[1227px] mx-auto px-4 md:px-0 space-y-6 py-[60px]">
           {/* Logo stays centered on all screens */}
           <img

@@ -1,20 +1,4 @@
-import pic3 from "../assets/project/pic-3.png";
-import pic4 from "../assets/project/pic-4.png";
-import pic5 from "../assets/project/pic-5.png";
-import pic6 from "../assets/project/pic-6.png";
-import pic7 from "../assets/project/pic-7.png";
-import pic8 from "../assets/project/pic-8.png";
-import pic9 from "../assets/project/pic-9.png";
-import projects from "../assets/photos/projects.png";
 import lp1 from "../assets/lp/lp1.jpg";
-import lp2 from "../assets/lp/lp2.jpg";
-import lp3 from "../assets/lp/lp3.jpg";
-import lp4 from "../assets/lp/lp4.jpg";
-import lp5 from "../assets/lp/lp5.jpg";
-import lp6 from "../assets/lp/lp6.jpg";
-import lp7 from "../assets/lp/lp7.jpg";
-import lp8 from "../assets/lp/lp8.jpg";
-import lp9 from "../assets/lp/lp9.jpg";
 import lp10 from "../assets/lp/lp10.jpg";
 import lp11 from "../assets/lp/lp11.jpg";
 import lp12 from "../assets/lp/lp12.jpg";
@@ -25,6 +9,7 @@ import lp16 from "../assets/lp/lp16.jpg";
 import lp17 from "../assets/lp/lp17.jpg";
 import lp18 from "../assets/lp/lp18.jpg";
 import lp19 from "../assets/lp/lp19.jpg";
+import lp2 from "../assets/lp/lp2.jpg";
 import lp20 from "../assets/lp/lp20.jpg";
 import lp21 from "../assets/lp/lp21.jpg";
 import lp22 from "../assets/lp/lp22.jpg";
@@ -35,16 +20,30 @@ import lp26 from "../assets/lp/lp26.jpg";
 import lp27 from "../assets/lp/lp27.jpg";
 import lp28 from "../assets/lp/lp28.jpg";
 import lp29 from "../assets/lp/lp29.jpg";
+import lp3 from "../assets/lp/lp3.jpg";
 import lp30 from "../assets/lp/lp30.jpg";
 import lp31 from "../assets/lp/lp31.jpg";
 import lp32 from "../assets/lp/lp32.jpg";
 import lp33 from "../assets/lp/lp33.jpg";
-import lp34 from "../assets/lp/lp34.jpg";
+import lp4 from "../assets/lp/lp4.jpg";
+import lp5 from "../assets/lp/lp5.jpg";
+import lp6 from "../assets/lp/lp6.jpg";
+import lp7 from "../assets/lp/lp7.jpg";
+import lp8 from "../assets/lp/lp8.jpg";
+import lp9 from "../assets/lp/lp9.jpg";
+import projects from "../assets/photos/projects.png";
+import pic3 from "../assets/project/pic-3.png";
+import pic4 from "../assets/project/pic-4.png";
+import pic5 from "../assets/project/pic-5.png";
+import pic6 from "../assets/project/pic-6.png";
+import pic7 from "../assets/project/pic-7.png";
+import pic8 from "../assets/project/pic-8.png";
+import pic9 from "../assets/project/pic-9.png";
 
 const OurProject = () => {
   return (
     <>
-      <section className=" w-auto max-w-7xl mx-auto my-[160px]">
+      <section className="w-auto max-w-6xl 2xl:max-w-7xl mx-auto my-[160px]">
         <div className="flex justify-center md:justify-start gap-4 items-center">
           <h1 className="font-roboto font-[500] text-[38px] uppercase tracking-widest">
             <span className="text-primary font-[300]">Our</span> Projects
@@ -502,11 +501,11 @@ const OurProject = () => {
             </div>
           </div>
         </div>
-      </section>
 
-      <div className="-mt-[10%] hidden md:block">
-        <img src={projects} alt="" />
-      </div>
+        <div className="-mt-[10%] hidden 2xl:block -ml-[15%]">
+          <img src={projects} alt="" />
+        </div>
+      </section>
     </>
   );
 };

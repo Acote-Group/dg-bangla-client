@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import WhyChooseUs from "../components/WhyChooseUs";
-import AwesomeFacts from "../components/AwesomeFacts";
-import OurTeam from "../components/OurTeam";
 import waveLine from "../assets/photos/waveLine2.png";
+import AwesomeFacts from "../components/AwesomeFacts";
 import ContactUs from "../components/ContactUs";
 import MileStone from "../components/MileStone";
+import Navbar from "../components/Navbar";
+import OurTeam from "../components/OurTeam";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 const About = () => {
   return (
     <>
-      <section>
+      <section className="max-w-[1920px] mx-auto">
         <div className="w-full h-[300px] bg-aboutBg bg-cover bg-no-repeat">
           <Navbar />
           <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">

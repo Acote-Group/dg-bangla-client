@@ -1,10 +1,7 @@
-import i1 from "../assets/clients/p1.jpg";
-import i2 from "../assets/clients/p2.jpg";
-import i3 from "../assets/clients/p3.jpg";
-import i4 from "../assets/clients/p4.jpg";
-import i5 from "../assets/clients/p5.jpg";
-import i6 from "../assets/clients/p6.jpg";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import l1 from "../assets/clients/l1.jpg";
+import l10 from "../assets/clients/l10.png";
 import l2 from "../assets/clients/l2.jpg";
 import l3 from "../assets/clients/l3.jpg";
 import l4 from "../assets/clients/l4.jpg";
@@ -13,9 +10,12 @@ import l6 from "../assets/clients/l6.png";
 import l7 from "../assets/clients/l7.png";
 import l8 from "../assets/clients/l8.png";
 import l9 from "../assets/clients/l9.jpg";
-import l10 from "../assets/clients/l10.png";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import i1 from "../assets/clients/p1.jpg";
+import i2 from "../assets/clients/p2.jpg";
+import i3 from "../assets/clients/p3.jpg";
+import i4 from "../assets/clients/p4.jpg";
+import i5 from "../assets/clients/p5.jpg";
+import i6 from "../assets/clients/p6.jpg";
 
 const OurClients = () => {
   const responsive = {
@@ -47,7 +47,7 @@ const OurClients = () => {
   return (
     <>
       {/* <!-- Clients --> */}
-      <div className="max-w-[1620px] px-4 py-10 sm:px-6 lg:px-8 lg:pt-10 mx-auto">
+      <div className="max-w-[1620px] px-4 py-10 sm:px-6 lg:px-8 lg:pt-10 mx-auto h-fit">
         {/* <!-- Title --> */}
         {/* <div className="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mb-6 text-6xl font-roboto font-bold">
           <h2 className="text-primary dark:text-gray-400">Our Alliances</h2>

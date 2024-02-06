@@ -97,7 +97,7 @@ const Navbar = () => {
         {/* <!-- End Topbar --> */}
 
         <nav
-          className="relative max-w-[1360px] w-full  mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-0 lg:px-0 xl:mx-auto dark:border-gray-700 mb-3"
+          className="relative 2xl:max-w-[1360px] w-full  mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-0 lg:px-6 2xl:px-0 xl:mx-auto dark:border-gray-700 mb-3"
           aria-label="Global"
         >
           <div className="flex items-center justify-between">

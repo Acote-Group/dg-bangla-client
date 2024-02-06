@@ -1,7 +1,7 @@
+import Fade from "react-reveal/Fade";
 import t1 from "../assets/team/t1.png";
 import t2 from "../assets/team/t2.png";
 import t3 from "../assets/team/t3.png";
-import Fade from "react-reveal/Fade";
 
 const OurTeam = () => {
   const people = [

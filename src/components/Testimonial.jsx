@@ -22,7 +22,7 @@ const Testimonial = () => {
   };
   return (
     <>
-      <section className="bg-testoBg bg-no-repeat bg-cover py-[20px] ">
+      <section className="bg-testoBg bg-no-repeat bg-cover py-[20px] max-w-[1920px] mx-auto">
         <div className="w-auto max-w-[1620px] mx-auto">
           <div className="flex justify-center gap-4 items-center my-16">
             <div className="flex flex-col">
@@ -31,7 +31,7 @@ const Testimonial = () => {
             </div>
 
             <Fade bottom>
-              <h1 className="font-roboto text-xl md:text-[35px] font-[700] uppercase text-white">
+              <h1 className="font-roboto md:text-[35px] font-[700] uppercase text-white">
                 <span className="text-primary">What Our</span> Clients Say
               </h1>
             </Fade>

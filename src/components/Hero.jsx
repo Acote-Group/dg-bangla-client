@@ -1,20 +1,20 @@
 import { MoveRight } from "lucide-react";
-import banner from "../assets/photos/banner-min.png";
 import Fade from "react-reveal/Fade";
+import banner from "../assets/photos/banner-min.png";
 import Navbar from "../components/Navbar";
 
 const Hero = () => {
   return (
     <>
-      <section className="bg-banner-bg bg-cover bg-no-repeat">
+      <section className="max-w-[1920px] mx-auto bg-banner-bg bg-cover bg-no-repeat">
         {/* Hero */}
-        <div className="w-auto mx-auto px-4 md:px-0 bg-black bg-opacity-50">
+        <div className="w-full mx-auto px-4 md:px-0 bg-black bg-opacity-50">
           <Navbar />
-          {/* left text field */}
 
+          {/* left text field */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 xl:gap-20 md:items-center">
             <Fade left cascade>
-              <div className="md:col-span-1 md:ml-[315px]">
+              <div className="md:col-span-1 md:ml-[100px] 2xl:ml-[315px]">
                 <h1 className="text-white font-inter">
                   From Foundations to Finishes
                 </h1>
