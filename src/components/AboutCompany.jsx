@@ -1,41 +1,55 @@
+import { MoveRight } from "lucide-react";
 import builder from "../assets/photos/worker2.png";
-import about from "../assets/photos/about.png";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 
 const AboutCompany = () => {
   return (
     <>
-      <section className="bg-[#F8F8F8] md:py-[60px]">
-        <div className="float-right top-0 hidden 2xl:block">
-          <img src={about} alt="" />
-        </div>
-
-        <div className="container mx-auto px-4 py-8 bg-[#F8F8F8]">
-          <div className="flex flex-col md:flex-row gap-[42px] justify-center">
-            <Fade left>
-              <div className="w-full md:w-1/4 h-auto">
-                <img src={builder} alt="Construction Work" className="" />
-              </div>
-            </Fade>
+      <section className="bg-acBg bg-no-repeat bg-cover md:py-[60px]">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row gap-[42px] justify-center items-center">
+            <div>
+              <Fade left>
+                <div className="w-full h-auto">
+                  <img src={builder} alt="Construction Work" className="" />
+                </div>
+              </Fade>
+            </div>
 
             <div className="w-full md:w-1/2 space-y-4">
               <Fade right cascade>
-                <div className="font-inter font-[800] text-[18px] uppercase tracking-widest">
+                <div className="font-ubuntu font-[700] text-[18px] uppercase leading-[25px]">
                   About Company
-                  <hr className="border-t-[6px] border-primary w-28" />
+                  <hr className="border-t-[2px] border-primary w-28" />
                 </div>
-                <h1 className="text-[40px] font-[500] font-inter max-w-[560px]">
-                  Government Contractor For Civil &amp; Electrical Works
+                <h1 className="text-[44px] font-[500] font-ubuntu leading-[65px]">
+                  We are Commitment to Innovation <br /> in Construction and
+                  Engineering
                 </h1>
-                <p className="text-[#767676] font-openSans text-sm max-w-[660px] text-justify">
-                  Starting from 2012 to now, we have far gone a long way &amp;
-                  progressing rapidly. Today, we disclose us as an experienced
-                  &amp; multi-dimensional company that provides not only your
-                  complete property design &amp; construction solutions but also
-                  growing quickly to provide all electrical works, equipment
-                  &amp; spare parts importing, supplying &amp; servicing.
+                <p className="font-ubuntu leading-[26px] text-balance">
+                  Starting from 2012 to now, we have far gone a long way
+                  progressing rapidly. Today we disclose us as an experienced
+                  multi-dimensional company that provides not only your complete
+                  property design construction solutions but also growing
+                  quickly to provide all electrical works, equipment spare parts
+                  importing supplying servicing.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <Link
+                  className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mt-[40px]"
+                  to="/about-us"
+                >
+                  <span className="absolute -end-full transition-all group-hover:end-4">
+                    <MoveRight fill="black" />
+                  </span>
+
+                  <span className="uppercase font-medium transition-all group-hover:me-4">
+                    Explore More
+                  </span>
+                </Link>
+
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-start gap-4">
                     <div className="w-1 h-16 bg-[#EEE] hidden md:block"></div>
 
@@ -72,8 +86,8 @@ const AboutCompany = () => {
                     </svg>
 
                     <div>
-                      <h3 className="font-semibold font-roboto">Building</h3>
-                      <p className="text-gray-500 font-openSans text-sm">
+                      <h3 className="font-semibold font-ubuntu">Building</h3>
+                      <p className="text-gray-500 font-ubuntu text-sm">
                         Expert design and construction services for any project,
                         big or small.
                       </p>
@@ -99,8 +113,8 @@ const AboutCompany = () => {
                       <path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"></path>
                     </svg>
                     <div>
-                      <h3 className="font-semibold font-roboto">Renovation</h3>
-                      <p className="text-gray-500 font-openSans text-sm">
+                      <h3 className="font-semibold font-ubuntu">Renovation</h3>
+                      <p className="text-gray-500 font-ubuntu text-sm">
                         Breathe new life into existing spaces with our skilled
                         renovation services.
                       </p>
@@ -127,8 +141,8 @@ const AboutCompany = () => {
                       <path d="m17 2 5 5-.5.5a3.53 3.53 0 0 1-5 0s0 0 0 0a3.53 3.53 0 0 1 0-5L17 2"></path>
                     </svg>
                     <div>
-                      <h3 className="font-semibold font-roboto">Digging</h3>
-                      <p className="text-gray-500 font-openSans text-sm">
+                      <h3 className="font-semibold font-ubuntu">Digging</h3>
+                      <p className="text-gray-500 font-ubuntu text-sm">
                         Handle any excavation or earthmoving need with our
                         advanced equipment and expertise.
                       </p>
@@ -154,14 +168,14 @@ const AboutCompany = () => {
                       <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </svg>
                     <div>
-                      <h3 className="font-semibold font-roboto">Interior</h3>
-                      <p className="text-gray-500 font-openSans text-sm">
+                      <h3 className="font-semibold font-ubuntu">Interior</h3>
+                      <p className="text-gray-500 font-ubuntu text-sm">
                         Craft beautiful and functional living spaces that
                         reflect your uniq
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </Fade>
             </div>
           </div>

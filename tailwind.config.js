@@ -25,10 +25,7 @@ export default {
     },
 
     fontFamily: {
-      inter: ["Inter", "sans-serif"],
-      roboto: ["Roboto", "sans-serif"],
-      poppins: ["Poppins", "sans-serif"],
-      openSans: ["Open Sans", "sans-serif"],
+      ubuntu: ["Ubuntu", "sans-serif"],
     },
     extend: {
       colors: {
@@ -37,6 +34,9 @@ export default {
       backgroundImage: {
         "banner-bg": "url('/src/assets/photos/ngif.gif')",
         serviceBg: "url('/src/assets/photos/service.png')",
+        wwaBg: "url('/src/assets/bg/wwa.png')",
+        acBg: "url('/src/assets/bg/ac.png')",
+        counterBg: "url('/src/assets/bg/counter.png')",
         circleBg: "url('/src/assets/photos/banner-bg.jpg')",
         testoBg: "url('/src/assets/photos/testoBg.jpg')",
         whoBg: "url('/src/assets/photos/whoBg.png')",

@@ -5,40 +5,205 @@ import service3 from "../assets/service/service3.png";
 import service4 from "../assets/service/service4.png";
 import service5 from "../assets/service/service5.png";
 import service6 from "../assets/service/service6.png";
+import { MoveRight } from "lucide-react";
 
 const OurServices = () => {
   return (
     <>
-      <div className="text-center text-2xl sm:text-3xl font-bold uppercase tracking-widest font-roboto md:mt-[95px]">
-        <div className="flex justify-center gap-4 items-center">
-          <div className="flex flex-col">
-            <hr className="border-t-2 border-primary w-8 ml-auto" />
-            <hr className="border-t-2 border-primary w-5 mt-3 ml-auto" />
+      <section className="container max-w-[1360px] mx-auto mt-[22px]">
+        <div className="text-center md:mt-[95px]">
+          <div className="flex justify-center gap-4 items-center">
+            <div className="flex flex-col">
+              <hr className="border-t-2 border-primary w-8 ml-auto" />
+              <hr className="border-t-2 border-primary w-5 mt-3 ml-auto" />
+            </div>
+
+            <Fade bottom>
+              <h1 className="text-[38px] font-[500] font-ubuntu leading-[44px]">
+                <span className="text-primary">OUR</span> SERVICES
+              </h1>
+            </Fade>
+
+            <div className="flex flex-col ">
+              <hr className="border-t-2 border-primary w-8" />
+              <hr className="border-t-2 border-primary w-5 mt-3" />
+            </div>
           </div>
 
-          <Fade bottom>
-            <h1>
-              <span className="text-primary">OUR</span> SERVICES
-            </h1>
-          </Fade>
-
-          <div className="flex flex-col ">
-            <hr className="border-t-2 border-primary w-8" />
-            <hr className="border-t-2 border-primary w-5 mt-3" />
-          </div>
+          <p className="text-center font-ubuntu text-[#767676] mx-auto mt-6 text-sm font-normal w-[80%] leading-[24px]">
+            DG-Bangla isn't just raising skylines - we're shaping the future of
+            Bangladesh's business landscape. From state-of-the-art office towers
+            to innovative logistics centers, we deliver commercial projects that
+            empower businesses and communities.
+          </p>
         </div>
 
-        <p className="text-center font-openSans text-[#767676] normal-case mx-auto mt-6 text-sm font-normal w-[80%] tracking-normal">
-          DG-Bangla isn't just raising skylines - we're shaping the future of
-          Bangladesh's business landscape. From state-of-the-art office towers
-          to innovative logistics centers, we deliver commercial projects that
-          empower businesses and communities.
-        </p>
-      </div>
+        <div className="my-[60px]">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <a
+              className="flex flex-col group bg-white overflow-hidden transition"
+              href="#"
+            >
+              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+                <img
+                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  src={service1}
+                  alt="Image Description"
+                />
+              </div>
+              <div className="py-[30px] pb-[50px]">
+                <h3 className="text-lg font-semibold text-primary font-roboto">
+                  Civil Construction
+                </h3>
+                <p className="mt-1 text-[#767676] font-openSans">
+                  Transforming visions into reality, our Civil Construction
+                  services lay the foundation for a resilient future in
+                  Bangladesh.
+                </p>
+              </div>
+            </a>
 
-      <div className="my-[70px]">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <Fade left>
+            <a
+              className="flex flex-col group bg-white overflow-hidden transition"
+              href="#"
+            >
+              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+                <img
+                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  src={service2}
+                  alt="Image Description"
+                />
+              </div>
+              <div className="py-[30px] pb-[50px]">
+                <h3 className="text-lg font-semibold text-primary font-roboto">
+                  Yard & Road Construction
+                </h3>
+                <p className="mt-1 text-[#767676] font-openSans">
+                  Navigating the path to progress, our Yard & Road Construction
+                  expertise paves the way for connectivity and sustainable
+                  development.
+                </p>
+              </div>
+            </a>
+
+            <a
+              className="flex flex-col group bg-white overflow-hidden transition"
+              href="#"
+            >
+              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+                <img
+                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  src={service3}
+                  alt="Image Description"
+                />
+              </div>
+              <div className="py-[30px] pb-[50px]">
+                <h3 className="text-lg font-semibold text-primary font-roboto">
+                  Dredging & Ground Improvement
+                </h3>
+                <p className="mt-1 text-[#767676] font-openSans">
+                  Shaping landscapes and fortifying foundations, our Dredging &
+                  Ground Improvement services redefine stability and resilience
+                  in every project.
+                </p>
+              </div>
+            </a>
+
+            <a
+              className="flex flex-col group bg-white overflow-hidden transition"
+              href="#"
+            >
+              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+                <img
+                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  src={service4}
+                  alt="Image Description"
+                />
+              </div>
+              <div className="py-[30px] pb-[50px]">
+                <h3 className="text-lg font-semibold text-primary font-roboto">
+                  Electro-Mechanical
+                </h3>
+                <p className="mt-1 text-[#767676] font-openSans">
+                  Powering progress with precision, our Electro-Mechanical
+                  solutions bring innovation and efficiency to the heart of
+                  construction in Bangladesh.
+                </p>
+              </div>
+            </a>
+
+            <a
+              className="flex flex-col group bg-white overflow-hidden transition"
+              href="#"
+            >
+              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+                <img
+                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  src={service5}
+                  alt="Image Description"
+                />
+              </div>
+              <div className="py-[30px] pb-[50px]">
+                <h3 className="text-lg font-semibold text-primary font-roboto">
+                  Automation
+                </h3>
+                <p className="mt-1 text-[#767676] font-openSans">
+                  Embrace the future with our Automation services, where
+                  cutting-edge technology meets construction excellence for a
+                  smarter and more efficient built environment.
+                </p>
+              </div>
+            </a>
+
+            <a
+              className="flex flex-col group bg-white overflow-hidden transition"
+              href="#"
+            >
+              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+                <img
+                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  src={service6}
+                  alt="Image Description"
+                />
+              </div>
+              <div className="py-[30px] pb-[50px]">
+                <h3 className="text-lg font-semibold text-primary font-roboto">
+                  River Bank Protection
+                </h3>
+                <p className="mt-1 text-[#767676] font-openSans">
+                  Guardians of Bangladesh&apos;s waterways, our River Bank
+                  Protection initiatives ensure the preservation of natural
+                  beauty and safeguard against erosion, securing a sustainable
+                  future.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div className="flex justify-center md:mt-[60px] md:mb-[120px]">
+            <a
+              className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mx-auto justify-center"
+              href="/download"
+            >
+              <span className="absolute -end-full transition-all group-hover:end-4">
+                <MoveRight fill="black" />
+              </span>
+
+              <span className="uppercase font-medium transition-all group-hover:me-4">
+                Explore More
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default OurServices;
+
+{
+  /* <Fade left>
             <div className="relative">
               <a className="absolute inset-0 z-10 bg-black text-center flex flex-col justify-center w-[48%] opacity-100 bg-opacity-70 duration-300 text-white font-inter space-y-6 p-2">
                 <svg
@@ -318,149 +483,5 @@ const OurServices = () => {
                 </div>
               </a>
             </div>
-          </Fade>
-
-          {/* <a
-            className="flex flex-col group bg-white overflow-hidden transition"
-            href="#"
-          >
-            <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
-              <img
-                className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={service1}
-                alt="Image Description"
-              />
-            </div>
-            <div className="py-[30px] pb-[50px]">
-              <h3 className="text-lg font-semibold text-primary font-roboto">
-                Civil Construction
-              </h3>
-              <p className="mt-1 text-[#767676] font-openSans">
-                Transforming visions into reality, our Civil Construction
-                services lay the foundation for a resilient future in
-                Bangladesh.
-              </p>
-            </div>
-          </a>
-
-          <a
-            className="flex flex-col group bg-white overflow-hidden transition"
-            href="#"
-          >
-            <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
-              <img
-                className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={service2}
-                alt="Image Description"
-              />
-            </div>
-            <div className="py-[30px] pb-[50px]">
-              <h3 className="text-lg font-semibold text-primary font-roboto">
-                Yard & Road Construction
-              </h3>
-              <p className="mt-1 text-[#767676] font-openSans">
-                Navigating the path to progress, our Yard & Road Construction
-                expertise paves the way for connectivity and sustainable
-                development.
-              </p>
-            </div>
-          </a>
-
-          <a
-            className="flex flex-col group bg-white overflow-hidden transition"
-            href="#"
-          >
-            <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
-              <img
-                className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={service3}
-                alt="Image Description"
-              />
-            </div>
-            <div className="py-[30px] pb-[50px]">
-              <h3 className="text-lg font-semibold text-primary font-roboto">
-                Dredging & Ground Improvement
-              </h3>
-              <p className="mt-1 text-[#767676] font-openSans">
-                Shaping landscapes and fortifying foundations, our Dredging &
-                Ground Improvement services redefine stability and resilience in
-                every project.
-              </p>
-            </div>
-          </a>
-
-          <a
-            className="flex flex-col group bg-white overflow-hidden transition"
-            href="#"
-          >
-            <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
-              <img
-                className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={service4}
-                alt="Image Description"
-              />
-            </div>
-            <div className="py-[30px] pb-[50px]">
-              <h3 className="text-lg font-semibold text-primary font-roboto">
-                Electro-Mechanical
-              </h3>
-              <p className="mt-1 text-[#767676] font-openSans">
-                Powering progress with precision, our Electro-Mechanical
-                solutions bring innovation and efficiency to the heart of
-                construction in Bangladesh.
-              </p>
-            </div>
-          </a>
-
-          <a
-            className="flex flex-col group bg-white overflow-hidden transition"
-            href="#"
-          >
-            <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
-              <img
-                className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={service5}
-                alt="Image Description"
-              />
-            </div>
-            <div className="py-[30px] pb-[50px]">
-              <h3 className="text-lg font-semibold text-primary font-roboto">
-                Automation
-              </h3>
-              <p className="mt-1 text-[#767676] font-openSans">
-                Embrace the future with our Automation services, where
-                cutting-edge technology meets construction excellence for a
-                smarter and more efficient built environment.
-              </p>
-            </div>
-          </a>
-
-          <a
-            className="flex flex-col group bg-white overflow-hidden transition"
-            href="#"
-          >
-            <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
-              <img
-                className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={service6}
-                alt="Image Description"
-              />
-            </div>
-            <div className="py-[30px] pb-[50px]">
-              <h3 className="text-lg font-semibold text-primary font-roboto">
-                River Bank Protection
-              </h3>
-              <p className="mt-1 text-[#767676] font-openSans">
-                Guardians of Bangladesh&apos;s waterways, our River Bank
-                Protection initiatives ensure the preservation of natural beauty
-                and safeguard against erosion, securing a sustainable future.
-              </p>
-            </div>
-          </a> */}
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default OurServices;
+          </Fade> */
+}

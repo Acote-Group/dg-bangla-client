@@ -1,4 +1,3 @@
-import { Facebook, Twitter, Linkedin, MessageCircleIcon } from "lucide-react";
 import logo from "../assets/photos/logo.png";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -61,7 +60,7 @@ const Navbar = () => {
                 </defs>
               </svg>
 
-              <h1 className="text-[12px] text-center font-inter text-white">
+              <h1 className="text-[12px] text-center font-ubuntu text-white">
                 Setting the Standard for Excellence in Bangladesh Construction.
               </h1>
             </div>
@@ -109,7 +108,7 @@ const Navbar = () => {
         {/* <!-- End Topbar --> */}
 
         <nav
-          className="relative 2xl:max-w-[1360px] w-full mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-[20px] md:px-0 lg:px-6 2xl:px-0 xl:mx-auto dark:border-gray-700"
+          className="relative max-w-[1360px] w-full mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-[20px] md:px-0 lg:px-6 2xl:px-0 xl:mx-auto"
           aria-label="Global"
         >
           <div className="flex items-center justify-between">
@@ -168,9 +167,9 @@ const Navbar = () => {
             id="navbar-collapse-with-animation"
             className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
           >
-            <div className="flex flex-col gap-y-4 gap-x-0 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7 font-inter font-[400]">
+            <div className="flex flex-col gap-y-4 gap-x-0 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-[45px] md:mt-0 md:ps-7 font-ubuntu font-[400]">
               <NavLink
-                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
+                className="text-white font-ubuntu md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/"
                 aria-current="page"
               >
@@ -178,31 +177,31 @@ const Navbar = () => {
               </NavLink>
 
               <NavLink
-                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
+                className="text-white font-ubuntu md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/about-us"
               >
                 About Us
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
+                className="text-white font-ubuntu md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/services"
               >
                 Services
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
+                className="text-white font-ubuntu md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/projects"
               >
                 Projects
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
+                className="text-white font-ubuntu md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/team"
               >
                 Team
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
+                className="text-white font-ubuntu md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/contact"
               >
                 Contact
@@ -264,7 +263,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 type="button"
-                className="py-3.5 px-6 inline-flex items-center gap-x-2 text-sm font-inter  bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary w-fit md:w-auto relative overflow-hidden group hover:bg-gradient-to-r hover:from-red-800 hover:to-pink-600 hover:ring-2 hover:ring-offset-2 hover:ring-red-700 transition-all ease-out duration-300 mr-1"
+                className="py-3.5 px-6 inline-flex items-center gap-x-2 text-sm font-ubuntu  bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary w-fit md:w-auto relative overflow-hidden group hover:bg-gradient-to-r hover:from-red-800 hover:to-pink-600 hover:ring-2 hover:ring-offset-2 hover:ring-red-700 transition-all ease-out duration-300 mr-1"
               >
                 <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 <span className="relative">Contact Us</span>
