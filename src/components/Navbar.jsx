@@ -4,11 +4,19 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  window.addEventListener("scroll", function () {
+    var navbar = document.querySelector("header");
+    if (window.scrollY > 0) {
+      navbar.style.backgroundColor = "black";
+    } else {
+      navbar.style.backgroundColor = "transparent";
+    }
+  });
   return (
     <>
-      <header className="flex flex-wrap sm:justify-start sm:flex-col w-full text-sm">
+      <header className="flex flex-wrap sm:justify-start sm:flex-col w-full fixed z-50 top-0">
         {/* <!-- TopBar --> */}
-        <div className="mx-auto w-full h-[15x] px-4 sm:px-6 lg:px-8 bg-[#A8223B] hidden md:block">
+        {/* <div className="mx-auto w-full h-[15x] px-4 sm:px-6 lg:px-8 bg-[#A8223B] hidden md:block">
           <div className="max-w-[1360px] mx-auto flex items-center justify-between gap-x-5 w-full sm:pt-2 sm:pb-0 my-2">
             <div className="flex justify-center items-center gap-2">
               <svg
@@ -93,18 +101,18 @@ const Navbar = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <!-- End Topbar --> */}
 
         <nav
-          className="relative 2xl:max-w-[1360px] w-full  mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-0 lg:px-6 2xl:px-0 xl:mx-auto dark:border-gray-700 mb-3"
+          className="relative 2xl:max-w-[1360px] w-full mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-0 lg:px-6 2xl:px-0 xl:mx-auto dark:border-gray-700"
           aria-label="Global"
         >
           <div className="flex items-center justify-between">
             <Link to="/">
               <img
                 src={logo}
-                className="flex-none text-xl font-semibold dark:text-white w-[200px] h-[50px]"
+                className="flex-none text-xl font-semibold dark:text-white w-[238px] h-[58px]"
                 aria-label="Brand"
               />
             </Link>

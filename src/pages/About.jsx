@@ -11,8 +11,9 @@ const About = () => {
   return (
     <>
       <section className="max-w-[1920px] mx-auto">
-        <div className="w-full h-[300px] bg-aboutBg bg-cover bg-no-repeat">
-          <Navbar />
+        <Navbar />
+
+        <div className="w-full h-[300px] bg-aboutBg bg-cover bg-no-repeat pt-[10rem]">
           <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
             About Us
           </h1>

@@ -54,7 +54,7 @@ const Hero = () => {
             </Fade>
 
             {/* right image  */}
-            <div className="mt-[25px] -mb-[65px] rounded-sm">
+            <div className="-mb-[65px] rounded-sm pt-32">
               <Fade right>
                 <img className="w-full" src={banner} alt="Image Description" />
               </Fade>

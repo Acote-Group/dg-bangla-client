@@ -7,8 +7,8 @@ import LatestProjects from "../components/LatestProjects";
 const Services = () => {
   return (
     <>
-      <section>
-        <div className="w-full h-[300px] bg-serviceBg2 bg-cover bg-no-repeat">
+      <section className="max-w-[1920px] mx-auto">
+        <div className="w-full h-[300px] bg-serviceBg2 bg-cover bg-no-repeat pt-[10rem]">
           <Navbar />
           <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
             Services

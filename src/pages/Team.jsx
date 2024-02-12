@@ -8,9 +8,9 @@ import Fade from "react-reveal/Fade";
 const Team = () => {
   return (
     <>
-      <section>
-        <div className="w-full h-[300px] bg-teamBg bg-cover bg-no-repeat">
-          <Navbar />
+      <section className="max-w-[1920px] mx-auto">
+        <Navbar />
+        <div className="w-full h-[300px] bg-teamBg bg-cover bg-no-repeat pt-[10rem]">
           <h1 className="text-4xl md:text-[60px] font-poppins uppercase text-white text-center font-semibold">
             Management Team
           </h1>
@@ -92,9 +92,9 @@ const Team = () => {
               </div>
 
               <p className="text-center font-openSans text-white mt-2 normal-case w-[50%] mx-auto">
-                At DG-Bangla, our team isn't just building structures, we're
+                At DG-Bangla, our team isn&apos;t just building structures, were
                 building a better Bangladesh. Fueled by passion and relentless
-                drive, we're a diverse group of architects, engineers, and
+                drive, we&apos;re a diverse group of architects, engineers, and
                 visionaries pushing the boundaries of innovation.
               </p>
             </div>

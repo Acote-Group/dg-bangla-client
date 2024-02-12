@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 const WhoWeAre = () => {
   return (
     <>
-      <div className="py-4 sm:py-8 my-32">
+      <section className="py-4 sm:py-8 my-32">
         <div className="text-center text-2xl sm:text-3xl font-bold uppercase tracking-widest  font-roboto">
           <div className="flex justify-center gap-4 items-center">
             <div className="flex flex-col">
@@ -114,7 +114,7 @@ const WhoWeAre = () => {
             </div>
           </Fade>
         </div>
-      </div>
+      </section>
     </>
   );
 };

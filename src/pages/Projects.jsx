@@ -7,9 +7,9 @@ import ContactUs from "../components/ContactUs";
 const Projects = () => {
   return (
     <>
-      <section>
-        <div className="w-full h-[300px] bg-serviceBg2 bg-cover bg-no-repeat">
-          <Navbar />
+      <section className="max-w-[1920px] mx-auto">
+        <Navbar />
+        <div className="w-full h-[300px] bg-serviceBg2 bg-cover bg-no-repeat pt-[10rem]">
           <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
             Projects
           </h1>

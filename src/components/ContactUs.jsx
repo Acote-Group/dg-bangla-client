@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ContactUs = () => {
   return (
     <>
-      <section className="bg-contactBg bg-cover bg-no-repeat">
+      <section className="bg-contactBg bg-cover bg-no-repeat max-w-[1920px] mx-auto">
         <div className="container max-w-[1260px] mx-auto px-4 md:px-6 py-[30px] md:flex justify-between items-center">
           <div className="space-y-3">
             <h1 className="text-white font-roboto text-lg uppercase font-semibold ">

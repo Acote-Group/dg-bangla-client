@@ -6,9 +6,9 @@ import { MapPin } from "lucide-react";
 import { Phone } from "lucide-react";
 
 const Contact = () => {
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const messageRef = useRef();
+  // const nameRef = useRef();
+  // const emailRef = useRef();
+  // const messageRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,9 +18,10 @@ const Contact = () => {
   };
   return (
     <>
-      <section>
-        <div className="w-full h-[300px] bg-aboutBg bg-cover bg-no-repeat">
-          <Navbar />
+      <section className="max-w-[1920px] mx-auto">
+        <Navbar />
+
+        <div className="w-full h-[300px] bg-aboutBg bg-cover bg-no-repeat pt-[10rem]">
           <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
             Contact Us
           </h1>

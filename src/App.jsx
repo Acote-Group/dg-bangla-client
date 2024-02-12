@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-
 import "preline/preline";
 import ScrollToTop from "react-scroll-to-top";
 import Footer from "./components/Footer";

@@ -40,7 +40,7 @@ import Fade from "react-reveal/Fade";
 const LatestProjects = () => {
   return (
     <>
-      <section className="w-auto">
+      <section className="max-w-[1920px] mx-auto">
         <div className="hidden md:block mb-6">
           <img src={waveLine} alt="" />
         </div>
