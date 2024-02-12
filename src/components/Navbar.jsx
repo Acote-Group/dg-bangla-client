@@ -8,8 +8,12 @@ const Navbar = () => {
     var navbar = document.querySelector("header");
     if (window.scrollY > 0) {
       navbar.style.backgroundColor = "black";
+      // navbar.style.paddingTop = "10px";
+      // navbar.style.paddingBottom = "10px";
     } else {
       navbar.style.backgroundColor = "transparent";
+      // navbar.style.paddingTop = "30px";
+      // navbar.style.paddingBottom = "30px";
     }
   });
   return (
@@ -105,15 +109,15 @@ const Navbar = () => {
         {/* <!-- End Topbar --> */}
 
         <nav
-          className="relative 2xl:max-w-[1360px] w-full mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-0 lg:px-6 2xl:px-0 xl:mx-auto dark:border-gray-700"
+          className="relative 2xl:max-w-[1360px] w-full mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-[20px] md:px-0 lg:px-6 2xl:px-0 xl:mx-auto dark:border-gray-700"
           aria-label="Global"
         >
           <div className="flex items-center justify-between">
             <Link to="/">
               <img
                 src={logo}
-                className="flex-none text-xl font-semibold dark:text-white w-[238px] h-[58px]"
-                aria-label="Brand"
+                className="flex-none text-xl font-semibold flex-shrink-0"
+                aria-label="Brand Logo"
               />
             </Link>
             {/* toggle btn  */}
@@ -164,9 +168,9 @@ const Navbar = () => {
             id="navbar-collapse-with-animation"
             className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
           >
-            <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7 font-semibold">
+            <div className="flex flex-col gap-y-4 gap-x-0 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:ps-7 font-inter font-[400]">
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/"
                 aria-current="page"
               >
@@ -174,31 +178,31 @@ const Navbar = () => {
               </NavLink>
 
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/about-us"
               >
                 About Us
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/services"
               >
                 Services
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/projects"
               >
                 Projects
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/team"
               >
                 Team
               </NavLink>
               <NavLink
-                className="text-white font-inter md:py-6 dark:text-white hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-t-4 aria-[current=page]:border-primary"
+                className="text-white font-inter md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/contact"
               >
                 Contact
@@ -260,7 +264,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 type="button"
-                className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-inter rounded-sm  bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary w-fit md:w-auto relative overflow-hidden group hover:bg-gradient-to-r hover:from-red-800 hover:to-pink-600 hover:ring-2 hover:ring-offset-2 hover:ring-red-700 transition-all ease-out duration-300 mr-1"
+                className="py-3.5 px-6 inline-flex items-center gap-x-2 text-sm font-inter  bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary w-fit md:w-auto relative overflow-hidden group hover:bg-gradient-to-r hover:from-red-800 hover:to-pink-600 hover:ring-2 hover:ring-offset-2 hover:ring-red-700 transition-all ease-out duration-300 mr-1"
               >
                 <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 <span className="relative">Contact Us</span>
