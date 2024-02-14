@@ -30,11 +30,27 @@ function App() {
       </Routes>
       <Footer />
       <ScrollToTop
-        color="#FFFF"
-        width="40px"
         smooth
-        className="!bg-primary"
-        // style={{"border-radius": "100px"}}
+        component={
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="#ffff"
+              className="w-8 h-8 mx-auto"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m4.5 15.75 7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </div>
+        }
+        className="!bg-primary !w-14 !h-14"
+        style={{ "border-radius": "100px" }}
       />
     </>
   );

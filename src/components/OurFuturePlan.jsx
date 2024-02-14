@@ -73,7 +73,10 @@ export default function OurFuturePlan() {
               into a leading global engineering, construction, and project
               management company. Our vision encompasses delivering unparalleled
               outcomes to clients, nurturing rewarding professional paths, and
-              creating profitable value.
+              creating profitable value. Our journey calls for expanding
+              internationally in engineering, surpassing customer expectations,
+              empowering fulfilling careers, and achieving profitability through
+              exceptional workmanship across all domains.
             </p>
           </div>
         </div>

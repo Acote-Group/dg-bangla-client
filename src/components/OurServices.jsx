@@ -56,9 +56,8 @@ const OurServices = () => {
                   Civil Construction
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu">
-                  Transforming visions into reality, our Civil Construction
-                  services lay the foundation for a resilient future in
-                  Bangladesh.
+                  Transforming dreams into reality, we build the foundations for
+                  a strong and resilient Bangladesh.
                 </p>
               </div>
             </a>
@@ -79,9 +78,8 @@ const OurServices = () => {
                   Yard & Road Construction
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu">
-                  Navigating the path to progress, our Yard & Road Construction
-                  expertise paves the way for connectivity and sustainable
-                  development.
+                  Connecting communities and paving the way for progress with
+                  our expertise in yard and road construction.
                 </p>
               </div>
             </a>
@@ -102,9 +100,9 @@ const OurServices = () => {
                   Electro-Mechanical
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu">
-                  Powering progress with precision, our Electro-Mechanical
-                  solutions bring innovation and efficiency to the heart of
-                  construction in Bangladesh.
+                  Lighting up the future with precision, our electro-mechanical
+                  solutions are at the heart of efficient and innovative
+                  construction.
                 </p>
               </div>
             </a>
@@ -125,9 +123,9 @@ const OurServices = () => {
                   Automation
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu">
-                  Embrace the future with our Automation services, where
-                  cutting-edge technology meets construction excellence for a
-                  smart & efficient built environment.
+                  Embrace the future with smart buildings! Our automation
+                  services integrate cutting-edge technology with construction
+                  excellence.
                 </p>
               </div>
             </a>
@@ -148,8 +146,8 @@ const OurServices = () => {
                   River Bank Protection
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu">
-                  Protecting Bangladesh's waterways: Our River Bank Protection
-                  initiatives preserve beauty, prevent erosion, and ensure a
+                  Safeguarding Bangladesh's most vital arteries, our river bank
+                  protection initiatives preserve beauty and ensure a
                   sustainable future.
                 </p>
               </div>
@@ -171,9 +169,9 @@ const OurServices = () => {
                   Dredging & Ground Improvement
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu">
-                  Shaping landscapes and fortifying foundations, our Dredging &
-                  Ground Improvement services redefine stability and resilience
-                  in every project.
+                  From shaping landscapes to strengthening foundations, we
+                  ensure stability and resilience with our dredging and ground
+                  improvement services.
                 </p>
               </div>
             </a>

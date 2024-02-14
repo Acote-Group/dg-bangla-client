@@ -34,12 +34,15 @@ const WhoWeAre = () => {
                     Our <span className="font-bold">Mission</span>
                   </h2>
                   <p className="mt-2 sm:mt-4 text-justify font-poppins text-sm">
-                    We commit to leaving a legacy of progress by developing
-                    local skills for uninterrupted economic freedom and
-                    volunteering our time and talent to the societies where we
-                    run. This means serving the greatest ethical standards and
-                    being measured by the enduring quality of our projects. They
-                    are what customers expect, and how we deliver.
+                    We prioritize the growth of talent and actively engage in
+                    deliberate efforts within the communities we serve. Our
+                    loyal commitment to upholding the highest ethical standards
+                    is reflected in the enduring quality of our projects,
+                    consistently meeting and exceeding customer expectations.
+                    Through our dedication to developing international skills
+                    for economic empowerment and contributing in the societies
+                    where we operate, we aim for making a positive and lasting
+                    impact.
                   </p>
                   <ul className="mt-4 sm:mt-6 space-y-1 sm:space-y-2 font-poppins text-sm font-[500]">
                     <li>› Developing local skills</li>
@@ -80,12 +83,15 @@ const WhoWeAre = () => {
                     Our <span className="font-bold">Vision</span>
                   </h2>
                   <p className="mt-2 sm:mt-4 font-poppins text-justify text-sm">
-                    Though we started as the local construction service company,
-                    we dream to be the world’s premier engineering,
-                    construction, and project management business by achieving
-                    outstanding results for our consumers, developing satisfying
-                    careers for our characters, and earning a satisfactory proﬁt
-                    on the value we give.
+                    We started as a grassroots construction service, aiming to
+                    evolve into a leading global engineering, construction, and
+                    project management company. Our vision encompasses
+                    delivering unparalleled outcomes to clients, nurturing
+                    rewarding professional paths, and creating profitable value.
+                    Our journey calls for expanding internationally in
+                    engineering, surpassing customer expectations, empowering
+                    fulfilling careers, and achieving profitability through
+                    exceptional workmanship across all domains.
                   </p>
                   <ul className="mt-4 sm:mt-6 space-y-1 sm:space-y-2 font-poppins text-sm font-[500]">
                     <li>› Customer centric focus</li>

@@ -28,12 +28,12 @@ const AboutCompany = () => {
                   Engineering
                 </h1>
                 <p className="font-ubuntu leading-[26px] text-balance">
-                  Starting from 2012 to now, we have far gone a long way
-                  progressing rapidly. Today we disclose us as an experienced
-                  multi-dimensional company that provides not only your complete
-                  property design construction solutions but also growing
-                  quickly to provide all electrical works, equipment spare parts
-                  importing supplying servicing.
+                  Since 2012, we have made significant paces and are advancing
+                  rapidly. Presently, we present ourselves as an experienced and
+                  diverse company offering comprehensive property design and
+                  construction solutions, while also expanding into electrical
+                  works, equipment & spare parts importing, supply, and
+                  servicing.
                 </p>
 
                 <Link

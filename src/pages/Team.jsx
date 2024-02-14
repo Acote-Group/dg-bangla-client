@@ -78,7 +78,7 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="bg-teamBg2 bg-cover bg-no-repeat pt-16 pb-32">
+        <div className="pt-16 pb-32 font-ubuntu">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center mb-[25px]">
               <div className="flex justify-center gap-4 items-center">
@@ -88,7 +88,7 @@ const Team = () => {
                 </div>
 
                 <Fade bottom>
-                  <h1 className="font-roboto text-[35px] font-[700] uppercase text-white">
+                  <h1 className="leading-[44px] text-[38px] font-[700] uppercase">
                     <span className="text-primary">Our</span> Team
                   </h1>
                 </Fade>
@@ -99,38 +99,45 @@ const Team = () => {
                 </div>
               </div>
 
-              <p className="text-center font-openSans text-white mt-2 normal-case w-[50%] mx-auto">
-                At DG-Bangla, our team isn&apos;t just building structures, were
-                building a better Bangladesh. Fueled by passion and relentless
-                drive, we&apos;re a diverse group of architects, engineers, and
-                visionaries pushing the boundaries of innovation.
+              <p className="text-center mt-2 normal-case w-[80%] mx-auto">
+                A dynamic group of dedicated professionals driven by passion and
+                expertise. With a shared commitment to excellence, our team
+                brings a diverse range of skills and experiences to the table,
+                ensuring unparalleled quality in every project we undertake.
               </p>
             </div>
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-fit mx-auto">
-              <div className="text-center pb-4 bg-[#FBFBFB] mt-6">
+
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 w-fit mx-auto">
+              <div className="text-center bg-[#FBFBFB] mt-6">
                 <img
                   alt="Dilruba Akhter"
                   className="mx-auto object-cover"
                   src={t1}
                 />
-                <div className="">
-                  <h3 className="mt-4 text-xl font-semibold text-gray-600 font-roboto">
+                <div className="border-l-8 border-primary py-4 text-start pl-8 hover:bg-primary hover:text-white group">
+                  <h3 className="text-xl font-semibold font-roboto">
                     Dilruba Akhter
                   </h3>
-                  <p className="text-gray-600 font-poppins">HR, Admin</p>
+                  <p className="text-[#6E6E6E] group-hover:text-white">
+                    HR, Admin
+                  </p>
                 </div>
               </div>
 
-              <div className="text-center bg-primary pb-4 text-white">
+              <div className="text-center pb-4">
                 <img
                   alt="Engr. Arsad Parvez"
                   className="mx-auto object-cover"
                   src={t2}
                 />
-                <h3 className="mt-4 text-xl font-semibold font-roboto">
-                  Proprietor Engr. Arsad Parvez
-                </h3>
-                <p className="font-openSans">CEO & Founder</p>
+                <div className="border-l-8 border-primary py-4 text-start pl-8 hover:bg-primary hover:text-white group">
+                  <h3 className="text-xl font-semibold font-roboto">
+                    Proprietor Engr. Arsad Parvez
+                  </h3>
+                  <p className="text-[#6E6E6E] group-hover:text-white">
+                    CEO & Founder
+                  </p>
+                </div>
               </div>
 
               <div className="text-center bg-[#FBFBFB] pb-4 mt-6">
@@ -139,12 +146,15 @@ const Team = () => {
                   className="mx-auto object-cover"
                   src={t3}
                 />
-                <h3 className="mt-4 text-xl font-semibold text-gray-600 font-roboto">
-                  Md. Saiful Islam
-                </h3>
-                <p className="text-gray-600 font-openSans">
-                  Finance & Accounts
-                </p>
+
+                <div className="border-l-8 border-primary py-4 text-start pl-8 hover:bg-primary hover:text-white group">
+                  <h3 className="text-xl font-semibold font-roboto">
+                    Md. Saiful Islam
+                  </h3>
+                  <p className="text-[#6E6E6E] group-hover:text-white">
+                    Finance & Accounts
+                  </p>
+                </div>
               </div>
             </div>
           </div>

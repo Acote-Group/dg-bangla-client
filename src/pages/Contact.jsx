@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import { Mail } from "lucide-react";
 // import { useRef } from "react";
 import { MapPin } from "lucide-react";
-import { Phone } from "lucide-react";
 import { MoveRight } from "lucide-react";
 
 const Contact = () => {
@@ -88,10 +87,10 @@ const Contact = () => {
           </div>
         </div>
         <div className="container max-w-[1360px] mx-auto my-16">
-          <div className="relative mx-auto w-full max-w-7xl bg-white text-gray-700">
+          <div className="relative mx-auto w-full max-w-7xl bg-white">
             <div>
               <h1 className="text-[48px] font-bold text-center">
-                Let's talk with Us
+                Let's Talk With Us
               </h1>
             </div>
             <div className="grid grid-cols-2">
@@ -192,12 +191,13 @@ const Contact = () => {
                     </h2>
                     {/* ::Text */}
                     <p className="text-gray-800 mt-4">
-                      DG. Bangla is a rapidly growing, youth owned company in
-                      the ﬁeld of Civil Construction and Electro-Mechanical
-                      Engineering in roadways, yards, dredging, low land
-                      development, Electriﬁcation through means of heavy earth
-                      moving equipment/machinery and logistics, having
-                      Registered Ofﬁce at Dhaka and Branch Ofﬁce at Chittagong.
+                      DG Bangla isn't just any company. We're a young, dynamic
+                      force in the civil construction and electro-mechanical
+                      engineering space, making waves in roadways, yards,
+                      dredging, low land development, and electrification. With
+                      heavy machinery, logistics know-how, and offices in Dhaka
+                      and Chittagong, we're equipped to tackle any
+                      infrastructure challenge Bangladesh throws our way.
                     </p>
                   </div>
 
@@ -324,18 +324,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-{
-  /* <div className="order-1 col-span-full">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.520873909715!2d90.36903372928711!3d23.835630871608267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c183d498a4b3%3A0xda95028271d4dd76!2sDG.%20Bangla!5e0!3m2!1sen!2sbd!4v1706532782544!5m2!1sen!2sbd"
-                  title="map"
-                  scrolling="no"
-                  frameBorder="0"
-                  width="100%"
-                  height="300px"
-                  className=""
-                  loading="lazy"
-                />
-              </div> */
-}

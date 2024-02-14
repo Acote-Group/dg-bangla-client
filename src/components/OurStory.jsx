@@ -10,18 +10,16 @@ export default function OurStory() {
           DG Bangla&apos;s Success Story
         </h1>
         <p className="mt-4 text-[18px] leading-[28px]">
-          Since 2012, we have made significant paces and are advancing rapidly.
-          Presently, we present ourselves as an experienced and diverse company
-          offering comprehensive property design and construction solutions,
-          while also expanding into electrical works, equipment & spare parts
-          importing, supply, and servicing.
+          From humble beginnings in 2012, we've grown into a powerhouse! At
+          present, we're not just experienced property design and construction
+          experts, but also handle electrical works, equipment, and even service
+          them!
         </p>
         <p className="mt-4 text-[18px] leading-[28px]">
-          We have been taking a leading role in providing construction services
-          with an uncompromised commitment to Quality, Health, Safety, and
-          Environment. We do this through the combination of an open
-          relationship with our employees based on mutual trust, transparency,
-          accountability, and discipline
+          We're leading the way in quality construction, putting health, safety,
+          and the environment first. How do we do it? By trusting and empowering
+          our team, fostering transparency, accountability, and a strong work
+          ethic. We're building a better future, brick by brick!
         </p>
       </div>
       <div className="md:w-1/2 mt-8 md:mt-0">

@@ -23,12 +23,12 @@ const Hero = () => {
                   Building Sustainable Futures Worldwide
                 </h1>
                 <h1 className="mt-3 text-sm font-ubuntu text-white dark:text-white text-balance leading-[25px]">
-                  Youth-driven leadership in civil construction and
-                  electro-mechanical engineering, headquartered in Dhaka with a
-                  branch in Chittagong. Specializing in road construction, yard
-                  management, dredging, low-lying area development, and
-                  electrification. Employing heavy earth-moving machinery and
-                  efficient logistics to ensure timely project completion.
+                  DG. Bangla stands as youthful leaders in civil construction
+                  and electro-mechanical engineering, with headquarters in Dhaka
+                  and a branch in Chittagong. Our expertise lies in roadways,
+                  yards, dredging, low land development, and electrification
+                  projects. We employ heavy earth-moving equipment and efficient
+                  logistics to ensure timely project completion.
                 </h1>
 
                 {/* */}

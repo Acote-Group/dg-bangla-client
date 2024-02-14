@@ -8,7 +8,7 @@ export default function AchievementCounter() {
           <div className="font-ubuntu">
             <div className="flex items-end">
               <h1 className="font-ubuntu font-[700] 2xl:text-[180px] md:text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
-                <CountUp end={39}>
+                <CountUp start={0} end={39}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
                       <span ref={countUpRef} />
@@ -103,7 +103,7 @@ export default function AchievementCounter() {
           <div className="font-ubuntu">
             <div className="flex items-end">
               <h1 className="font-ubuntu font-[700] 2xl:text-[180px] md:text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
-                <CountUp end={16}>
+                <CountUp start={0} end={16}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
                       <span ref={countUpRef} />
@@ -198,7 +198,7 @@ export default function AchievementCounter() {
           <div className="font-ubuntu">
             <div className="flex items-end">
               <h1 className="font-ubuntu font-[700] 2xl:text-[180px] md:text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
-                <CountUp end={50}>
+                <CountUp start={0} end={50}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
                       <span ref={countUpRef} />
@@ -293,7 +293,7 @@ export default function AchievementCounter() {
           <div className="font-ubuntu">
             <div className="flex items-end">
               <h1 className="font-ubuntu font-[700] 2xl:text-[180px] md:text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
-                <CountUp end={5}>
+                <CountUp start={0} end={5}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
                       <span ref={countUpRef} />
