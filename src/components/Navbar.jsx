@@ -266,7 +266,7 @@ const Navbar = () => {
                 className="py-3.5 px-6 inline-flex items-center gap-x-2 text-sm font-ubuntu  bg-gradient-to-r from-rose-800 to-rose-600 text-white hover:bg-primary w-fit md:w-auto relative overflow-hidden group hover:bg-gradient-to-r hover:from-red-800 hover:to-pink-600 hover:ring-2 hover:ring-offset-2 hover:ring-red-700 transition-all ease-out duration-300 mr-1"
               >
                 <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                <span className="relative">Contact Us</span>
+                <span className="relative font-semibold">Contact Us</span>
               </Link>
 
               {/* <a

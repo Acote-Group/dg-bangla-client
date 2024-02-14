@@ -4,30 +4,29 @@ import t1 from "../assets/team/t1.png";
 import t2 from "../assets/team/t2.png";
 import t3 from "../assets/team/t3.png";
 import Fade from "react-reveal/Fade";
+import GetConsultation from "../components/GetConsultation";
 
 const Team = () => {
   return (
     <>
       <section className="max-w-[1920px] mx-auto">
         <Navbar />
-        <div className="w-full h-[300px] bg-teamBg bg-cover bg-no-repeat pt-[10rem]">
-          <h1 className="text-4xl md:text-[60px] font-poppins uppercase text-white text-center font-semibold">
-            Management Team
+        <div className="w-full h-[300px] bg-navBg bg-cover bg-no-repeat pt-[8rem]">
+          <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
+            Team
           </h1>
-        </div>
 
-        <div className="container max-w-[1360px] mx-auto mt-[22px] pb-[80px]">
-          <div className="font-openSans font-bold">
+          <div className="font-ubuntu w-fit mx-auto">
             <ol
               className="flex items-center whitespace-nowrap"
               aria-label="Breadcrumb"
             >
-              <li className="inline-flex items-center">
+              <li className="inline-flex items-center gap-2">
                 <Link
-                  className="flex items-center text-gray-500 hover:text-primary focus:outline-none focus:text-primary dark:focus:text-blue-500"
+                  className="flex items-center text-[#8B8B8B] hover:text-primary focus:outline-none focus:text-primary text-[18px] font-[500] leading-[28px]"
                   to="/"
                 >
-                  <svg
+                  {/* <svg
                     className="flex-shrink-0 me-3 h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -41,36 +40,45 @@ const Team = () => {
                   >
                     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                     <polyline points="9 22 9 12 15 12 15 22" />
-                  </svg>
+                  </svg> */}
                   Home
                 </Link>
 
                 <svg
-                  className="flex-shrink-0 mx-2 overflow-visible h-4 w-4 text-primary"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="m9 18 6-6-6-6" />
+                  <path
+                    d="M4.375 3.75L10.625 10L4.375 16.25"
+                    stroke="#A8223B"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M10.625 3.75L16.875 10L10.625 16.25"
+                    stroke="#A8223B"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </li>
+
               <li
-                className="inline-flex items-center font-bold text-primary truncate dark:text-gray-200"
+                className="inline-flex items-center text-white truncate text-[18px] font-[500] leading-[28px] ml-2"
                 aria-current="page"
               >
-                Management Team
+                Team
               </li>
             </ol>
           </div>
         </div>
 
-        <section className="bg-teamBg2 bg-cover bg-no-repeat pt-16 pb-32">
+        <div className="bg-teamBg2 bg-cover bg-no-repeat pt-16 pb-32">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center mb-[25px]">
               <div className="flex justify-center gap-4 items-center">
@@ -140,7 +148,8 @@ const Team = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+        <GetConsultation />
       </section>
     </>
   );

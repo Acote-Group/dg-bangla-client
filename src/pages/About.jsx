@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import waveLine from "../assets/photos/waveLine2.png";
-import AwesomeFacts from "../components/AwesomeFacts";
-import ContactUs from "../components/ContactUs";
 import MileStone from "../components/MileStone";
 import Navbar from "../components/Navbar";
-import OurTeam from "../components/OurTeam";
-import WhyChooseUs from "../components/WhyChooseUs";
+import MsgFromMd from "../components/MsgFromMd";
+import OurStory from "../components/OurStory";
+import OurFuturePlan from "../components/OurFuturePlan";
+import OurClients from "../components/OurClients";
+import GetConsultation from "../components/GetConsultation";
 
 const About = () => {
   return (
@@ -13,24 +13,22 @@ const About = () => {
       <section className="max-w-[1920px] mx-auto">
         <Navbar />
 
-        <div className="w-full h-[300px] bg-aboutBg bg-cover bg-no-repeat pt-[10rem]">
-          <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
-            About Us
+        <div className="w-full h-[300px] bg-navBg bg-cover bg-no-repeat pt-[8rem]">
+          <h1 className="text-[60px] font-ubuntu uppercase text-white text-center font-semibold">
+            About
           </h1>
-        </div>
 
-        <div className="container max-w-[1360px] mx-auto mt-[22px] pb-[80px]">
-          <div className="font-openSans font-bold px-6">
+          <div className="font-ubuntu w-fit mx-auto">
             <ol
               className="flex items-center whitespace-nowrap"
               aria-label="Breadcrumb"
             >
-              <li className="inline-flex items-center">
+              <li className="inline-flex items-center gap-2">
                 <Link
-                  className="flex items-center text-gray-500 hover:text-primary focus:outline-none"
+                  className="flex items-center text-[#8B8B8B] hover:text-primary focus:outline-none focus:text-primary text-[18px] font-[500] leading-[28px]"
                   to="/"
                 >
-                  <svg
+                  {/* <svg
                     className="flex-shrink-0 me-3 h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -44,27 +42,36 @@ const About = () => {
                   >
                     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                     <polyline points="9 22 9 12 15 12 15 22" />
-                  </svg>
+                  </svg> */}
                   Home
                 </Link>
 
                 <svg
-                  className="flex-shrink-0 mx-2 overflow-visible h-4 w-4 text-primary"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="m9 18 6-6-6-6" />
+                  <path
+                    d="M4.375 3.75L10.625 10L4.375 16.25"
+                    stroke="#A8223B"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M10.625 3.75L16.875 10L10.625 16.25"
+                    stroke="#A8223B"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </li>
+
               <li
-                className="inline-flex items-center font-bold text-primary truncate dark:text-gray-200"
+                className="inline-flex items-center text-white truncate text-[18px] font-[500] leading-[28px] ml-2"
                 aria-current="page"
               >
                 About
@@ -73,15 +80,12 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full bg-whyBg bg-cover bg-no-repeat md:py-[80px]">
-          <WhyChooseUs />
-        </div>
-
-        <AwesomeFacts />
-        <OurTeam />
-        <img src={waveLine} alt="" />
+        <MsgFromMd />
+        <OurStory />
+        <OurFuturePlan />
+        <OurClients />
         <MileStone />
-        <ContactUs />
+        <GetConsultation />
       </section>
     </>
   );

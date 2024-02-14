@@ -19,7 +19,7 @@ const Hero = () => {
                   From Foundations to Finishes
                 </h1>
 
-                <h1 className="xl:text-[58px] font-[800] bg-gradient-to-r from-red-500 via-pink-600 to-rose-800 text-transparent bg-clip-text sm:text-4xl lg:text-6xl lg:leading-tight  font-ubuntu">
+                <h1 className="2xl:text-[58px] font-[800] bg-gradient-to-r from-red-500 via-pink-600 to-rose-800 text-transparent bg-clip-text sm:text-4xl lg:text-4xl lg:leading-tight  font-ubuntu">
                   Building Sustainable Futures Worldwide
                 </h1>
                 <h1 className="mt-3 text-sm font-ubuntu text-white dark:text-white text-balance leading-[25px]">

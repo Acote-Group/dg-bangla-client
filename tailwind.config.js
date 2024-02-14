@@ -37,6 +37,8 @@ export default {
         wwaBg: "url('/src/assets/bg/wwa.png')",
         acBg: "url('/src/assets/bg/ac.png')",
         counterBg: "url('/src/assets/bg/counter.png')",
+        consultBg: "url('/src/assets/bg/consultation.png')",
+        navBg: "url('/src/assets/bg/navBg.png')",
         circleBg: "url('/src/assets/photos/banner-bg.jpg')",
         testoBg: "url('/src/assets/photos/testoBg.jpg')",
         whoBg: "url('/src/assets/photos/whoBg.png')",

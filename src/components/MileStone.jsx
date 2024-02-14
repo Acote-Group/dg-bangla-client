@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 const MileStone = () => {
   return (
     <>
-      <section className="bg-gray-100 font-inter max-w-[1920px] mx-auto">
+      <section className="font-ubuntu max-w-[1920px] mx-auto">
         <div className="flex justify-center gap-4 items-center py-6">
           <div className="flex flex-col">
             <hr className="border-t-2 border-primary w-8 ml-auto" />

@@ -47,11 +47,48 @@ const OurClients = () => {
   return (
     <>
       {/* <!-- Clients --> */}
-      <div className="max-w-[1620px] px-4 py-10 sm:px-6 lg:px-8 lg:pt-10 mx-auto h-fit">
+      <section className="max-w-[1920px] px-4 py-10 sm:px-6 lg:px-8 mx-auto">
         {/* <!-- Title --> */}
-        {/* <div className="w-2/3 sm:w-1/2 lg:w-1/3 mx-auto text-center mb-6 text-6xl font-roboto font-bold">
-          <h2 className="text-primary dark:text-gray-400">Our Alliances</h2>
-        </div> */}
+        <div className="mx-auto text-center mb-6 flex items-center gap-[20px] justify-center">
+          <svg
+            width="455"
+            height="9"
+            viewBox="0 0 455 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="454.368"
+              height="1"
+              transform="translate(0 4)"
+              fill="#D7D7D7"
+            />
+            <rect width="9" height="9" fill="#A8223B" />
+            <rect x="445" width="9" height="9" fill="#A8223B" />
+          </svg>
+
+          <h2 className="font-ubuntu uppercase text-[22px] leading-[32px]">
+            MORE THAN 100 PARTNERS TRUST{" "}
+            <span className="text-primary font-[500]">DG Bangla</span>
+          </h2>
+
+          <svg
+            width="455"
+            height="9"
+            viewBox="0 0 455 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              width="454.368"
+              height="1"
+              transform="translate(0 4)"
+              fill="#D7D7D7"
+            />
+            <rect width="9" height="9" fill="#A8223B" />
+            <rect x="445" width="9" height="9" fill="#A8223B" />
+          </svg>
+        </div>
         {/* <!-- End Title --> */}
 
         <Carousel
@@ -144,7 +181,7 @@ const OurClients = () => {
           <img className="" src={i5} />
           <img className="" src={i6} />
         </div> */}
-      </div>
+      </section>
       {/* <!-- End Clients --> */}
     </>
   );

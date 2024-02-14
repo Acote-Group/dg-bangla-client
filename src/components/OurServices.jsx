@@ -41,21 +41,21 @@ const OurServices = () => {
         <div className="my-[60px]">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <a
-              className="flex flex-col group bg-white overflow-hidden transition"
+              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
               href="#"
             >
-              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+              <div className="relative">
                 <img
-                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  className="w-full"
                   src={service1}
                   alt="Image Description"
                 />
               </div>
-              <div className="py-[30px] pb-[50px]">
-                <h3 className="text-lg font-semibold text-primary font-roboto">
+              <div className="py-[30px] px-4">
+                <h3 className="text-lg font-semibold text-primary font-ubuntu">
                   Civil Construction
                 </h3>
-                <p className="mt-1 text-[#767676] font-openSans">
+                <p className="mt-1 text-[#767676] font-ubuntu">
                   Transforming visions into reality, our Civil Construction
                   services lay the foundation for a resilient future in
                   Bangladesh.
@@ -64,21 +64,21 @@ const OurServices = () => {
             </a>
 
             <a
-              className="flex flex-col group bg-white overflow-hidden transition"
+              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
               href="#"
             >
-              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+              <div className="relative">
                 <img
-                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  className="w-full"
                   src={service2}
                   alt="Image Description"
                 />
               </div>
-              <div className="py-[30px] pb-[50px]">
-                <h3 className="text-lg font-semibold text-primary font-roboto">
+              <div className="py-[30px] px-4">
+                <h3 className="text-lg font-semibold text-primary font-ubuntu">
                   Yard & Road Construction
                 </h3>
-                <p className="mt-1 text-[#767676] font-openSans">
+                <p className="mt-1 text-[#767676] font-ubuntu">
                   Navigating the path to progress, our Yard & Road Construction
                   expertise paves the way for connectivity and sustainable
                   development.
@@ -87,44 +87,21 @@ const OurServices = () => {
             </a>
 
             <a
-              className="flex flex-col group bg-white overflow-hidden transition"
+              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
               href="#"
             >
-              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+              <div className="relative">
                 <img
-                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  className="w-full"
                   src={service3}
                   alt="Image Description"
                 />
               </div>
-              <div className="py-[30px] pb-[50px]">
-                <h3 className="text-lg font-semibold text-primary font-roboto">
-                  Dredging & Ground Improvement
-                </h3>
-                <p className="mt-1 text-[#767676] font-openSans">
-                  Shaping landscapes and fortifying foundations, our Dredging &
-                  Ground Improvement services redefine stability and resilience
-                  in every project.
-                </p>
-              </div>
-            </a>
-
-            <a
-              className="flex flex-col group bg-white overflow-hidden transition"
-              href="#"
-            >
-              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
-                <img
-                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                  src={service4}
-                  alt="Image Description"
-                />
-              </div>
-              <div className="py-[30px] pb-[50px]">
-                <h3 className="text-lg font-semibold text-primary font-roboto">
+              <div className="py-[30px] px-4">
+                <h3 className="text-lg font-semibold text-primary font-ubuntu">
                   Electro-Mechanical
                 </h3>
-                <p className="mt-1 text-[#767676] font-openSans">
+                <p className="mt-1 text-[#767676] font-ubuntu">
                   Powering progress with precision, our Electro-Mechanical
                   solutions bring innovation and efficiency to the heart of
                   construction in Bangladesh.
@@ -133,48 +110,70 @@ const OurServices = () => {
             </a>
 
             <a
-              className="flex flex-col group bg-white overflow-hidden transition"
+              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
               href="#"
             >
-              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+              <div className="relative">
                 <img
-                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                  src={service5}
+                  className="w-full"
+                  src={service4}
                   alt="Image Description"
                 />
               </div>
-              <div className="py-[30px] pb-[50px]">
-                <h3 className="text-lg font-semibold text-primary font-roboto">
+              <div className="py-[30px] px-4">
+                <h3 className="text-lg font-semibold text-primary font-ubuntu">
                   Automation
                 </h3>
-                <p className="mt-1 text-[#767676] font-openSans">
+                <p className="mt-1 text-[#767676] font-ubuntu">
                   Embrace the future with our Automation services, where
                   cutting-edge technology meets construction excellence for a
-                  smarter and more efficient built environment.
+                  smart & efficient built environment.
                 </p>
               </div>
             </a>
 
             <a
-              className="flex flex-col group bg-white overflow-hidden transition"
+              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
               href="#"
             >
-              <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] overflow-hidden">
+              <div className="relative">
                 <img
-                  className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                  className="w-full"
+                  src={service5}
+                  alt="Image Description"
+                />
+              </div>
+              <div className="py-[30px] px-4">
+                <h3 className="text-lg font-semibold text-primary font-ubuntu">
+                  River Bank Protection
+                </h3>
+                <p className="mt-1 text-[#767676] font-ubuntu">
+                  Protecting Bangladesh's waterways: Our River Bank Protection
+                  initiatives preserve beauty, prevent erosion, and ensure a
+                  sustainable future.
+                </p>
+              </div>
+            </a>
+
+            <a
+              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
+              href="#"
+            >
+              <div className="relative">
+                <img
+                  className="w-full"
                   src={service6}
                   alt="Image Description"
                 />
               </div>
-              <div className="py-[30px] pb-[50px]">
-                <h3 className="text-lg font-semibold text-primary font-roboto">
-                  River Bank Protection
+              <div className="py-[30px] px-4">
+                <h3 className="text-lg font-semibold text-primary font-ubuntu">
+                  Dredging & Ground Improvement
                 </h3>
-                <p className="mt-1 text-[#767676] font-openSans">
-                  Guardians of Bangladesh&apos;s waterways, our River Bank
-                  Protection initiatives ensure the preservation of natural
-                  beauty and safeguard against erosion, securing a sustainable
-                  future.
+                <p className="mt-1 text-[#767676] font-ubuntu">
+                  Shaping landscapes and fortifying foundations, our Dredging &
+                  Ground Improvement services redefine stability and resilience
+                  in every project.
                 </p>
               </div>
             </a>
