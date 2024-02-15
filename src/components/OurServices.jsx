@@ -6,6 +6,7 @@ import service4 from "../assets/service/service4.png";
 import service5 from "../assets/service/service5.png";
 import service6 from "../assets/service/service6.png";
 import { MoveRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const OurServices = () => {
   return (
@@ -178,9 +179,9 @@ const OurServices = () => {
           </div>
 
           <div className="flex justify-center md:mt-[60px] md:mb-[120px]">
-            <a
+            <Link
               className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mx-auto justify-center"
-              href="/download"
+              to="/services"
             >
               <span className="absolute -end-full transition-all group-hover:end-4">
                 <MoveRight fill="black" />
@@ -189,7 +190,7 @@ const OurServices = () => {
               <span className="uppercase font-medium transition-all group-hover:me-4">
                 Explore More
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { MoveRight } from "lucide-react";
 import Fade from "react-reveal/Fade";
 import banner from "../assets/photos/banner-min.png";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -40,9 +41,9 @@ const Hero = () => {
                     See All Services <MoveRight fill="black" />
                   </button> */}
 
-                  <a
+                  <Link
                     className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring"
-                    href="/download"
+                    to="/services"
                   >
                     <span className="absolute -end-full transition-all group-hover:end-4">
                       <MoveRight fill="black" />
@@ -51,7 +52,7 @@ const Hero = () => {
                     <span className="uppercase font-medium transition-all group-hover:me-4">
                       See All Services
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </Fade>

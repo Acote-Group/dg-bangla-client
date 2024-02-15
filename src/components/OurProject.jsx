@@ -30,6 +30,7 @@ import lp6 from "../assets/lp/lp6.jpg";
 import lp7 from "../assets/lp/lp7.jpg";
 import lp8 from "../assets/lp/lp8.jpg";
 import lp9 from "../assets/lp/lp9.jpg";
+import { Link } from "react-router-dom";
 
 const OurProject = () => {
   return (
@@ -721,9 +722,9 @@ const OurProject = () => {
         </div>
 
         <div className="flex justify-center mt-8 md:mt-[40px]">
-          <a
+          <Link
             className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mx-auto justify-center"
-            href="/download"
+            to="/projects"
           >
             <span className="absolute -end-full transition-all group-hover:end-4">
               <MoveRight fill="black" />
@@ -732,7 +733,7 @@ const OurProject = () => {
             <span className="uppercase font-medium transition-all group-hover:me-4">
               Explore More
             </span>
-          </a>
+          </Link>
         </div>
       </section>
     </>

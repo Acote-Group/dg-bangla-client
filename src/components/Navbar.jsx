@@ -26,7 +26,7 @@ const Navbar = () => {
             <Link to="/">
               <img
                 src={logo}
-                className="flex-none text-xl font-semibold flex-shrink-0"
+                className="w-fit h-8 md:h-[58px]"
                 aria-label="Brand Logo"
               />
             </Link>

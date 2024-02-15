@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="lg:w-1/3 md:mr-[110px]">
             <a rel="noopener noreferrer" href="#" className="">
               <div className="w-auto">
-                <img src={logo} alt="" />
+                <img src={logo} alt="" className="w-fit h-8 md:h-[58px]" />
               </div>
               <span className="block self-center text-sm leading-[25px] font-ubuntu mt-5">
                 DG Bangla: Youth-owned company specializing in Civil
