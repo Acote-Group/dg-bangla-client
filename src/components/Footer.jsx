@@ -19,7 +19,7 @@ const Footer = () => {
               </span>
             </a>
           </div>
-          <div className="grid grid-cols-2 text-sm gap-x-[110px] gap-y-8 lg:w-2/3 sm:grid-cols-3">
+          <div className="grid grid-cols-1 text-sm gap-x-[110px] gap-y-8 lg:w-2/3 sm:grid-cols-3">
             <div className="space-y-3">
               <h3 className="text-[18px] font-[600] leading-[28px]">
                 Headquarter

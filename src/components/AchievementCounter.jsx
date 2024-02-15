@@ -4,10 +4,10 @@ export default function AchievementCounter() {
   return (
     <>
       <section className="bg-counterBg bg-cover bg-no-repeat max-w-[1920px]">
-        <div className="container max-w-[1360px] mx-auto px-4 md:px-6 justify-center md:pt-[220px] md:pb-[262px] md:flex gap-[120px]">
-          <div className="font-ubuntu">
+        <div className="container max-w-[1360px] mx-auto px-4 md:px-6 justify-center md:pt-[220px] md:pb-[262px] pt-16 pb-16 md:flex md:gap-x-[120px] pl-16 md:pl-0">
+          <div className="font-ubuntu mb-6">
             <div className="flex items-end">
-              <h1 className="font-ubuntu font-[700] 2xl:text-[180px] md:text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
+              <h1 className="font-ubuntu font-[700] 2xl:text-[180px] text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
                 <CountUp start={0} end={39}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
@@ -100,9 +100,9 @@ export default function AchievementCounter() {
             </div>
           </div>
 
-          <div className="font-ubuntu">
+          <div className="font-ubuntu mb-6">
             <div className="flex items-end">
-              <h1 className="font-ubuntu font-[700] 2xl:text-[180px] md:text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
+              <h1 className="font-ubuntu font-[700] 2xl:text-[180px] text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
                 <CountUp start={0} end={16}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
@@ -195,9 +195,9 @@ export default function AchievementCounter() {
             </div>
           </div>
 
-          <div className="font-ubuntu">
+          <div className="font-ubuntu mb-6">
             <div className="flex items-end">
-              <h1 className="font-ubuntu font-[700] 2xl:text-[180px] md:text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
+              <h1 className="font-ubuntu font-[700] 2xl:text-[180px] text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
                 <CountUp start={0} end={50}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
@@ -290,9 +290,9 @@ export default function AchievementCounter() {
             </div>
           </div>
 
-          <div className="font-ubuntu">
+          <div className="font-ubuntu mb-6">
             <div className="flex items-end">
-              <h1 className="font-ubuntu font-[700] 2xl:text-[180px] md:text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
+              <h1 className="font-ubuntu font-[700] 2xl:text-[180px] text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
                 <CountUp start={0} end={5}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>

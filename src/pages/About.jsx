@@ -80,7 +80,9 @@ const About = () => {
           </div>
         </div>
 
-        <MsgFromMd />
+        <div className="md:mt-16">
+          <MsgFromMd />
+        </div>
         <OurStory />
         <OurFuturePlan />
         <OurClients />

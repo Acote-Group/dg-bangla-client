@@ -50,7 +50,7 @@ function App() {
           </div>
         }
         className="!bg-primary !w-14 !h-14"
-        style={{ "border-radius": "100px" }}
+        style={{ borderRadius: "100px" }}
       />
     </>
   );

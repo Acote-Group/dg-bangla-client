@@ -64,8 +64,8 @@ export default function OurFuturePlan() {
           <div>
             <img alt="Illustration of mission" className="mx-auto" src={ofp2} />
           </div>
-          <div>
-            <h3 className="text-[32px] font-bold mb-4 leading-[36px] border-b-2 border-primary pb-1 w-fit">
+          <div className="text-right flex flex-col justify-end">
+            <h3 className="text-[32px] font-bold mb-4 leading-[36px] border-b-2 border-primary pb-1 w-fit self-end">
               Our Vision
             </h3>
             <p className="mb-4 text-[24px] leading-[32px]">
@@ -73,10 +73,10 @@ export default function OurFuturePlan() {
               into a leading global engineering, construction, and project
               management company. Our vision encompasses delivering unparalleled
               outcomes to clients, nurturing rewarding professional paths, and
-              creating profitable value. Our journey calls for expanding
-              internationally in engineering, surpassing customer expectations,
-              empowering fulfilling careers, and achieving profitability through
-              exceptional workmanship across all domains.
+              creating profitable value. <br /> <br /> Our journey calls for
+              expanding internationally in engineering, surpassing customer
+              expectations, empowering fulfilling careers, and achieving
+              profitability through exceptional workmanship across all domains.
             </p>
           </div>
         </div>

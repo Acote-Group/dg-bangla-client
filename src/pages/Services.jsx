@@ -8,8 +8,8 @@ const Services = () => {
   return (
     <>
       <section className="max-w-[1920px] mx-auto">
+        <Navbar />
         <div className="w-full h-[300px] bg-navBg bg-cover bg-no-repeat pt-[8rem]">
-          <Navbar />
           <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
             Services
           </h1>

@@ -10,7 +10,7 @@ const GetConsultation = () => {
           {/* Logo stays centered on all screens */}
           <img src={logo} alt="" className="w-auto" />
 
-          <h1 className="font-ubuntu text-white text-[55px] font-[700] text-center md:text-left">
+          <h1 className="font-ubuntu text-white text-[32px] md:text-[55px] font-[700] text-center md:text-left">
             Want To Discuss Your Project?
           </h1>
 

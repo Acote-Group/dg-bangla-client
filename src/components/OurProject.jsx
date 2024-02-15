@@ -35,7 +35,7 @@ const OurProject = () => {
   return (
     <>
       <section className="w-auto max-w-6xl 2xl:max-w-7xl mx-auto my-[120px]">
-        <div className="flex justify-between items-center">
+        <div className="md:flex justify-between items-center">
           <div className="flex justify-center md:justify-start gap-4 items-center">
             <h1 className="font-ubuntu font-[500] text-[38px] tracking-widest">
               <span className="text-primary">Our</span> Projects
@@ -720,7 +720,7 @@ const OurProject = () => {
           </div>
         </div>
 
-        <div className="flex justify-center md:mt-[40px]">
+        <div className="flex justify-center mt-8 md:mt-[40px]">
           <a
             className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mx-auto justify-center"
             href="/download"
