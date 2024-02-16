@@ -6,9 +6,11 @@ const GetConsultation = () => {
   return (
     <>
       <section className="bg-consultBg bg-cover bg-no-repeat max-w-[1920px] mx-auto">
-        <div className="container w-auto max-w-[1360px] mx-auto px-4 md:px-24 2xl:px-0 space-y-6 lg:py-[60px] 2xl:py-[120px]">
+        <div className="container w-auto max-w-[1360px] mx-auto px-4 md:px-24 2xl:px-0 space-y-6 lg:py-[60px] 2xl:py-[120px] py-6 md:py-0">
           {/* Logo stays centered on all screens */}
-          <img src={logo} alt="" className="w-fit h-8 md:h-[58px]" />
+          <div className="w-fit mx-auto md:mx-0">
+            <img src={logo} alt="" className="w-fit h-10 md:h-[58px]" />
+          </div>
 
           <h1 className="font-ubuntu text-white text-[32px] md:text-[55px] font-[700] text-center md:text-left">
             Want To Discuss Your Project?

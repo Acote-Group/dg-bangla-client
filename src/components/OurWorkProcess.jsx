@@ -5,7 +5,7 @@ export default function OurWorkProcess() {
     <>
       <section className="py-12 px-4 md:px-6 lg:px-8 bg-white font-ubuntu">
         <div className="max-w-[1560px] mx-auto">
-          <div className="text-center md:mt-[95px]">
+          <div className="text-center md:mt-16">
             <div className="flex justify-center gap-4 items-center">
               <div className="flex flex-col">
                 <hr className="border-t-2 border-primary w-8 ml-auto" />

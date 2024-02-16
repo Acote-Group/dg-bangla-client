@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import LatestProjects from "../components/LatestProjects";
-import Testimonial from "../components/Testimonial";
-import ContactUs from "../components/ContactUs";
 import OurProject from "../components/OurProject";
 import GetConsultation from "../components/GetConsultation";
 

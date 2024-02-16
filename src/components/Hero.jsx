@@ -15,12 +15,12 @@ const Hero = () => {
           {/* left text field */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 xl:gap-20 md:items-center">
             <Fade left cascade>
-              <div className="md:col-span-1 md:ml-[30px] 2xl:ml-[280px]">
+              <div className="md:col-span-1 md:ml-[30px] 2xl:ml-[280px] mt-8 md:mt-0">
                 <h1 className="text-white font-ubuntu md:mb-[10px]">
                   From Foundations to Finishes
                 </h1>
 
-                <h1 className="2xl:text-[58px] font-[800] bg-gradient-to-r from-red-500 via-pink-600 to-rose-800 text-transparent bg-clip-text sm:text-4xl lg:text-4xl lg:leading-tight  font-ubuntu">
+                <h1 className="2xl:text-[58px] font-[800] bg-gradient-to-r from-red-500 via-pink-600 to-rose-800 text-transparent bg-clip-text text-3xl lg:text-4xl lg:leading-tight  font-ubuntu">
                   Building Sustainable Futures Worldwide
                 </h1>
                 <h1 className="mt-3 text-sm font-ubuntu text-white dark:text-white text-balance leading-[25px]">
@@ -58,7 +58,7 @@ const Hero = () => {
             </Fade>
 
             {/* right image  */}
-            <div className="rounded-sm pt-24">
+            <div className="rounded-sm pt-8 md:pt-24">
               <Fade right>
                 <img className="w-full" src={banner} alt="Image Description" />
               </Fade>

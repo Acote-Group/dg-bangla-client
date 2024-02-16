@@ -4,56 +4,6 @@ import t2 from "../assets/team/t2.png";
 import t3 from "../assets/team/t3.png";
 
 const OurTeam = () => {
-  const people = [
-    {
-      name: "Richard Wagner",
-      role: "Building Worker",
-      picture:
-        "https://fancytailwind.com/static/profile16-3468a6740e58a45b951142454acb94d0.jpg",
-      description:
-        "Harum iusto exercitationem assumenda quas nostrum perspiciatis quos iste sit reprehenderit, libero quae aperiam sapiente delectus, porro tempore minus repellendus ratione distinctio!",
-      facebookURL: "#link",
-      twitterURL: "#link",
-      linkedinURL: "#link",
-      vineURL: "#link",
-    },
-    {
-      name: "Lisa Anderson",
-      role: "Building Worker",
-      picture:
-        "https://fancytailwind.com/static/profile13-9abe52b1e8851f9e4afde349f2789d3e.jpg",
-      description:
-        "Harum iusto exercitationem assumenda quas nostrum perspiciatis quos iste sit reprehenderit, libero quae aperiam sapiente delectus, porro tempore minus repellendus ratione distinctio!",
-      facebookURL: "#link",
-      twitterURL: "#link",
-      linkedinURL: "#link",
-      vineURL: "#link",
-    },
-    {
-      name: "Tommy Atkins",
-      role: "Building Worker",
-      picture:
-        "https://fancytailwind.com/static/profile13-9abe52b1e8851f9e4afde349f2789d3e.jpg",
-      description:
-        "Harum iusto exercitationem assumenda quas nostrum perspiciatis quos iste sit reprehenderit, libero quae aperiam sapiente delectus, porro tempore minus repellendus ratione distinctio!",
-      facebookURL: "#link",
-      twitterURL: "#link",
-      linkedinURL: "#link",
-      vineURL: "#link",
-    },
-    {
-      name: "John Halpern",
-      role: "Designer",
-      picture:
-        "https://fancytailwind.com/static/profile13-9abe52b1e8851f9e4afde349f2789d3e.jpg",
-      description:
-        "Harum iusto exercitationem assumenda quas nostrum perspiciatis quos iste sit reprehenderit, libero quae aperiam sapiente delectus, porro tempore minus repellendus ratione distinctio!",
-      facebookURL: "#link",
-      twitterURL: "#link",
-      linkedinURL: "#link",
-      vineURL: "#link",
-    },
-  ];
   return (
     <>
       <section className="bg-white py-16 px-4">
