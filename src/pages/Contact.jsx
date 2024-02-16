@@ -89,7 +89,7 @@ const Contact = () => {
         <div className="container max-w-[1360px] mx-auto my-16">
           <div className="relative mx-auto w-full max-w-7xl bg-white">
             <div>
-              <h1 className="text-[48px] font-bold text-center">
+              <h1 className="text-[32px] md:text-[48px] font-bold text-center">
                 Let's Talk With Us
               </h1>
             </div>
@@ -186,7 +186,7 @@ const Contact = () => {
                 <div className="mx-auto max-w-xl flex flex-col space-y-2">
                   <div>
                     {/* ::Title Contact Us */}
-                    <h2 className="text-[28px] font-semibold uppercase">
+                    <h2 className="text-[24px] md:text-[28px] font-semibold uppercase">
                       We are here to help you always
                     </h2>
                     {/* ::Text */}
@@ -213,7 +213,7 @@ const Contact = () => {
                       </p>
                     </div>
 
-                    <div>
+                    <div className="mt-6 md:mt-0">
                       <h1 className="text-[24px] font-bold leading-[30px]">
                         Email Address
                       </h1>
@@ -229,7 +229,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="pt-[50px]">
+                  <div className="pt-6 md:pt-[50px]">
                     <h1>Follow Us On</h1>
                     {/* ::Socials */}
                     <div className="flex items-center mt-5">

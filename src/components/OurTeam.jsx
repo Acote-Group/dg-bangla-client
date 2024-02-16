@@ -16,7 +16,7 @@ const OurTeam = () => {
               </div>
 
               <Fade bottom>
-                <h1 className="font-roboto text-[35px] font-[700] uppercase">
+                <h1 className="text-[24px] md:text-[35px] font-[700] uppercase">
                   <span className="text-primary">our</span> team
                 </h1>
               </Fade>

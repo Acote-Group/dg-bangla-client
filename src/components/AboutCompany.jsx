@@ -23,7 +23,7 @@ const AboutCompany = () => {
                   About Company
                   <hr className="border-t-[2px] border-primary w-28" />
                 </div>
-                <h1 className="text-[44px] font-[500] font-ubuntu leading-[65px]">
+                <h1 className="text-[28px] md:text-[44px] font-[500] font-ubuntu md:leading-[65px]">
                   We are Commitment to Innovation <br /> in Construction and
                   Engineering
                 </h1>
@@ -37,7 +37,7 @@ const AboutCompany = () => {
                 </p>
 
                 <Link
-                  className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mt-[40px]"
+                  className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring md:mt-[40px] mt-4"
                   to="/about-us"
                 >
                   <span className="absolute -end-full transition-all group-hover:end-4">

@@ -20,7 +20,7 @@ const OurServices = () => {
             </div>
 
             <Fade bottom>
-              <h1 className="text-[38px] font-[500] font-ubuntu leading-[44px]">
+              <h1 className="text-[28px] md:text-[38px] font-[500] font-ubuntu leading-[44px]">
                 <span className="text-primary">OUR</span> SERVICES
               </h1>
             </Fade>

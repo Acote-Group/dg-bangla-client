@@ -4,9 +4,9 @@ import Fade from "react-reveal/Fade";
 const WhoWeAre = () => {
   return (
     <>
-      <section className="bg-wwaBg bg-no-repeat bg-cover py-16">
+      <section className="bg-wwaBg bg-no-repeat bg-cover py-8 md:py-16">
         <div className="py-4 sm:py-8 max-w-[1280px] mx-auto">
-          <div className="text-center text-2xl sm:text-3xl font-bold uppercase tracking-widest  font-roboto">
+          <div className="text-center text-[28px] md:text-[38px] font-bold uppercase tracking-widest  font-roboto">
             <div className="flex justify-center gap-4 items-center">
               <div className="flex flex-col">
                 <hr className="border-t-2 border-primary w-8 ml-auto" />
@@ -26,9 +26,9 @@ const WhoWeAre = () => {
             </div>
           </div>
 
-          <div className="mt-4 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 justify-between sm:gap-4  px-6 sm:px-4 pb-10">
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 justify-between sm:gap-4  px-6 sm:px-4 pb-10">
             <Fade left cascade>
-              <div className="md:col-span-1 mr-4 mt-16 bg-whoBg bg-cover bg-no-repeat w-auto md:w-[365px] h-auto md:h-[380px]">
+              <div className="md:col-span-1 mr-4 md:mt-16 bg-whoBg bg-cover bg-no-repeat w-auto md:w-[365px] h-auto md:h-[380px]">
                 <div className="p-6">
                   <h2 className="text-[34px] sm:text-2xl font-roboto">
                     Our <span className="font-bold">Mission</span>

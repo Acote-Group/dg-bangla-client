@@ -88,7 +88,7 @@ const Team = () => {
                 </div>
 
                 <Fade bottom>
-                  <h1 className="leading-[44px] text-[38px] font-[700] uppercase">
+                  <h1 className="leading-[44px] text-[28px] md:text-[38px] font-[700] uppercase">
                     <span className="text-primary">Our</span> Team
                   </h1>
                 </Fade>

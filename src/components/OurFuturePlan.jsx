@@ -6,7 +6,7 @@ export default function OurFuturePlan() {
   return (
     <section className="bg-white text-gray-800 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto font-ubuntu">
-        <div className="text-center md:my-[60px]">
+        <div className="text-center my-16 md:my-[60px]">
           <div className="flex justify-center gap-4 items-center">
             <div className="flex flex-col">
               <hr className="border-t-2 border-primary w-8 ml-auto" />
@@ -14,7 +14,7 @@ export default function OurFuturePlan() {
             </div>
 
             <Fade bottom>
-              <h1 className="text-[38px] font-[500] font-ubuntu leading-[44px] uppercase">
+              <h1 className="text-[20px] md:text-[38px] font-[500] font-ubuntu leading-[44px] uppercase">
                 <span className="text-primary">OUR</span> future plan
               </h1>
             </Fade>

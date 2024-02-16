@@ -19,7 +19,7 @@ export default function MsgFromMd() {
                 <div className="font-[700] text-[24px] leading-[27px] italic text-primary md:mb-[15px]">
                   Our Honorable CEO
                 </div>
-                <h1 className="text-[48px] font-[700] leading-[55px] md:mb-[30px]">
+                <h1 className="text-[32px] md:text-[48px] font-[700] leading-[55px] md:mb-[30px]">
                   Message from CEO
                 </h1>
                 <p className="leading-[26px] md:mb-[50px]">
@@ -34,7 +34,7 @@ export default function MsgFromMd() {
                   into reality. Let's build something amazing together!
                 </p>
 
-                <div>
+                <div className="mt-6 md:mt-0">
                   <h1 className="font-[700] text-[25px] leading-[30px]">
                     Md. Arsad Parvez
                   </h1>

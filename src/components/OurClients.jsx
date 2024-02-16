@@ -67,7 +67,7 @@ const OurClients = () => {
             <rect x="445" width="9" height="9" fill="#A8223B" />
           </svg>
 
-          <h2 className="font-ubuntu uppercase text-[22px] leading-[32px]">
+          <h2 className="font-ubuntu uppercase text-[18px] md:text-[22px] md:leading-[32px]">
             MORE THAN 100 PARTNERS TRUST{" "}
             <span className="text-primary font-[500]">DG Bangla</span>
           </h2>

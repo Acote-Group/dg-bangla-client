@@ -13,7 +13,7 @@ export default function OurWorkProcess() {
               </div>
 
               <Fade bottom>
-                <h1 className="text-[38px] font-[500] font-ubuntu leading-[44px] uppercase">
+                <h1 className="text-[18px] md:text-[38px] font-[500] font-ubuntu leading-[44px] uppercase">
                   <span className="text-primary">OUR</span> work process
                 </h1>
               </Fade>
