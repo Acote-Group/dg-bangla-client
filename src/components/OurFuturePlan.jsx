@@ -39,14 +39,14 @@ export default function OurFuturePlan() {
             <h3 className="text-[32px] font-bold mb-4 leading-[36px] border-b-2 border-primary pb-1 w-fit">
               Our Mission
             </h3>
-            <p className="mb-4 text-[24px] leading-[32px]">
+            <p className="mb-4 text-[24px] leading-[32px] text-justify">
               We prioritize the growth of talent and actively engage in
               deliberate efforts within the communities we serve. Our loyal
               commitment to upholding the highest ethical standards is reflected
               in the enduring quality of our projects, consistently meeting and
               exceeding customer expectations.
             </p>
-            <p className="mt-4 text-[24px] leading-[38px]">
+            <p className="mt-4 text-[24px] leading-[38px] text-justify">
               Through our dedication to developing international skills for
               economic empowerment and contributing in the societies where we
               operate, we aim for making a positive and lasting impact.
@@ -68,7 +68,7 @@ export default function OurFuturePlan() {
             <h3 className="text-[32px] font-bold mb-4 leading-[36px] border-b-2 border-primary pb-1 w-fit self-end">
               Our Vision
             </h3>
-            <p className="mb-4 text-[24px] leading-[32px]">
+            <p className="mb-4 text-[24px] leading-[32px] text-justify">
               We started as a grassroots construction service, aiming to evolve
               into a leading global engineering, construction, and project
               management company. Our vision encompasses delivering unparalleled

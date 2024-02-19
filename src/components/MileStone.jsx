@@ -22,14 +22,14 @@ const MileStone = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
-          <div className="w-auto md:w-2/3 mx-auto">
+        <div className="flex justify-center pt-10">
+          <div className="w-auto md:w-2/4 mx-auto">
             <div className="flex flex-row w-full">
               {/* <!-- left col --> */}
 
               <Fade left>
-                <div className="w-2/5 px-2 py-10">
-                  <div className="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+                <div className="w-2/5 px-2 pb-5">
+                  <div className="flex flex-col w-full rounded-lg shadow bg-white px-4 pb-5">
                     <div className="text-gray-600 mb-2 flex justify-between">
                       <div className="font-bold">
                         Electrical & Port Projects
@@ -43,22 +43,22 @@ const MileStone = () => {
                   </div>
                 </div>
               </Fade>
-              {/* <!--line column--> */}
-              <div className="w-1/5  flex justify-center">
+
+              <div className="w-1/5 flex justify-center">
                 <div className="relative flex h-full w-1 bg-primary items-center justify-center">
                   <div className="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-primary leading-none text-center z-10 bg-white">
                     <h1 className="text-black font-inter">2022</h1>
                   </div>
                 </div>
               </div>
-              {/* <!--right column--> */}
-              <div className="w-2/5 px-2 py-10 "></div>
+
+              <div className="w-2/5 px-2 pb-5"></div>
             </div>
 
             <div className="flex flex-row w-full">
               {/* <!-- left col --> */}
 
-              <div className="w-2/5 px-2 py-10"></div>
+              <div className="w-2/5 px-2 pb-5"></div>
               {/* <!--line column--> */}
               <div className="w-1/5  flex justify-center">
                 <div className="relative flex h-full w-1 bg-primary items-center justify-center">
@@ -69,7 +69,7 @@ const MileStone = () => {
               </div>
               {/* <!--right column--> */}
               <Fade right>
-                <div className="w-2/5 px-2 py-10 ">
+                <div className="w-2/5 px-2 pb-5">
                   <div className="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
                     <div className="text-gray-600 mb-2 flex justify-between">
                       <div className="font-bold">New Mega Projects</div>
@@ -87,7 +87,7 @@ const MileStone = () => {
               {/* <!-- left col --> */}
 
               <Fade left>
-                <div className="w-2/5 px-2 py-10">
+                <div className="w-2/5 px-2 pb-5">
                   <div className="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
                     <div className="text-gray-600 mb-2 flex justify-between">
                       <div className="font-bold">Road Works</div>
@@ -108,13 +108,13 @@ const MileStone = () => {
                 </div>
               </div>
               {/* <!--right column--> */}
-              <div className="w-2/5 px-2 py-10 "></div>
+              <div className="w-2/5 px-2 pb-5"></div>
             </div>
 
             <div className="flex flex-row w-full">
               {/* <!-- left col --> */}
 
-              <div className="w-2/5 px-2 py-10"></div>
+              <div className="w-2/5 px-2 pb-5"></div>
               {/* <!--line column--> */}
               <div className="w-1/5  flex justify-center">
                 <div className="relative flex h-full w-1 bg-primary items-center justify-center">
@@ -125,7 +125,7 @@ const MileStone = () => {
               </div>
               {/* <!--right column--> */}
               <Fade right>
-                <div className="w-2/5 px-2 py-10 ">
+                <div className="w-2/5 px-2 pb-5">
                   <div className="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
                     <div className="text-gray-600 mb-2 flex justify-between">
                       <div className="font-bold">Land Port Project</div>
@@ -142,7 +142,7 @@ const MileStone = () => {
               {/* <!-- left col --> */}
 
               <Fade left>
-                <div className="w-2/5 px-2 py-10">
+                <div className="w-2/5 px-2 pt-5">
                   <div className="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
                     <div className="text-gray-600 mb-2 flex justify-between">
                       <div className="font-bold">Starting</div>
@@ -155,15 +155,15 @@ const MileStone = () => {
                 </div>
               </Fade>
               {/* <!--line column--> */}
-              <div className="w-1/5  flex justify-center">
+              <div className="w-1/5 flex justify-center">
                 <div className="relative flex h-full w-1 bg-primary items-center justify-center">
                   <div className="absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-primary leading-none text-center z-10 bg-white">
-                    <h1>2014</h1>
+                    <h1>2012</h1>
                   </div>
                 </div>
               </div>
               {/* <!--right column--> */}
-              <div className="w-2/5 px-2 py-10 "></div>
+              <div className="w-2/5 px-2 py-5"></div>
             </div>
           </div>
         </div>

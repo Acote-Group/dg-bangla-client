@@ -27,7 +27,7 @@ const Footer = () => {
               <div className="space-y-[25px]">
                 <div>
                   <a rel="noopener noreferrer" href="#">
-                    House-456, Road 6, Avenue- 06, Mirpur DOHS
+                    House-456, Road 6, <br /> Avenue- 06, Mirpur DOHS
                   </a>
                 </div>
                 <div className="flex items-center">
@@ -76,7 +76,7 @@ const Footer = () => {
               <div className="space-y-[25px]">
                 <div>
                   <a rel="noopener noreferrer" href="#">
-                    House-456, Road 6, Avenue- 06, Mirpur DOHS
+                    House-456, Road 6, <br /> Avenue- 06, Mirpur DOHS
                   </a>
                 </div>
                 <div className="flex items-center">

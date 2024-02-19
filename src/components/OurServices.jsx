@@ -92,7 +92,7 @@ const OurServices = () => {
               <div className="relative">
                 <img
                   className="w-full"
-                  src={service3}
+                  src={service4}
                   alt="Image Description"
                 />
               </div>
@@ -115,7 +115,7 @@ const OurServices = () => {
               <div className="relative">
                 <img
                   className="w-full"
-                  src={service4}
+                  src={service5}
                   alt="Image Description"
                 />
               </div>
@@ -138,7 +138,7 @@ const OurServices = () => {
               <div className="relative">
                 <img
                   className="w-full"
-                  src={service5}
+                  src={service6}
                   alt="Image Description"
                 />
               </div>
@@ -161,7 +161,7 @@ const OurServices = () => {
               <div className="relative">
                 <img
                   className="w-full"
-                  src={service6}
+                  src={service3}
                   alt="Image Description"
                 />
               </div>

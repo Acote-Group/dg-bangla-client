@@ -9,13 +9,13 @@ export default function OurStory() {
         <h1 className="mt-4 text-[44px] font-[500] leading-[65px]">
           DG Bangla&apos;s Success Story
         </h1>
-        <p className="mt-4 text-[18px] leading-[28px]">
+        <p className="mt-4 text-[18px] leading-[28px] text-justify">
           From humble beginnings in 2012, we've grown into a powerhouse! At
           present, we're not just experienced property design and construction
           experts, but also handle electrical works, equipment, and even service
           them!
         </p>
-        <p className="mt-4 text-[18px] leading-[28px]">
+        <p className="mt-4 text-[18px] leading-[28px] text-justify">
           We're leading the way in quality construction, putting health, safety,
           and the environment first. How do we do it? By trusting and empowering
           our team, fostering transparency, accountability, and a strong work

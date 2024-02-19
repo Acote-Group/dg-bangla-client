@@ -57,7 +57,7 @@ export default function OurWorkProcess() {
               <p className="text-gray-600 text-center leading-[26px]">
                 Time to assemble your dream team! We work together on
                 blueprints, materials, and design choices, bringing your vision
-                to life on paper
+                to life on paper.
               </p>
             </div>
             <div className="flex flex-col items-center p-4 border w-fit hover:relative hover:after:absolute hover:after:top-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary">
@@ -70,7 +70,7 @@ export default function OurWorkProcess() {
               <p className="text-gray-600 text-center leading-[26px]">
                 Now's the exciting part! Our team gets to work, meticulously
                 constructing your project while carefully managing the budget
-                and maximizing value
+                and maximizing value.
               </p>
             </div>
             <div className="flex flex-col items-center p-4 border w-fit hover:relative hover:after:absolute hover:after:top-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary">

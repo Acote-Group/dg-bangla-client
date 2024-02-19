@@ -111,12 +111,12 @@ const Navbar = () => {
               >
                 Team
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 className="text-white font-ubuntu md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/contact"
               >
                 Contact
-              </NavLink>
+              </NavLink> */}
 
               {/* <div>
                 <button

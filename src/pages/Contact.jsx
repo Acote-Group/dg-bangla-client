@@ -190,7 +190,7 @@ const Contact = () => {
                       We are here to help you always
                     </h2>
                     {/* ::Text */}
-                    <p className="text-gray-800 mt-4">
+                    <p className="text-gray-800 mt-4 text-justify">
                       DG Bangla isn't just any company. We're a young, dynamic
                       force in the civil construction and electro-mechanical
                       engineering space, making waves in roadways, yards,
@@ -224,7 +224,6 @@ const Contact = () => {
                       >
                         <Mail className="mr-2 w-5 text-gray-400" />
                         info@dg-bangla.com <br />
-                        info.dgbangla@gmail.com
                       </a>
                     </div>
                   </div>
