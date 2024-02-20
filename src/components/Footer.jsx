@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <>
-      <footer className="px-4 bg-black text-white font-ubuntu">
+      <footer className="px-4 bg-black text-white font-ubuntu w-auto max-w-[1920px] mx-auto">
         <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3 md:mr-[110px]">
             <a rel="noopener noreferrer" href="#" className="">
@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="block self-center text-sm leading-[25px] font-ubuntu mt-5">
                 DG Bangla: Youth-owned company specializing in Civil
                 Construction, Electro-Mechanical Engineering, based in Dhaka
-                with a branch in Chittagong.
+                with a branch in Chattogram.
               </span>
             </a>
           </div>

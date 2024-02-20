@@ -15,7 +15,7 @@ const Hero = () => {
           {/* left text field */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 xl:gap-20 md:items-center">
             <Fade left cascade>
-              <div className="md:col-span-1 md:ml-[30px] 2xl:ml-[280px] mt-8 md:mt-16">
+              <div className="md:col-span-1 md:ml-[30px] lg:ml-[100px] xl:ml-[150px] 2xl:ml-[270px] mt-8 md:mt-16 lg:mt-24">
                 <h1 className="text-white font-ubuntu md:mb-[10px]">
                   From Foundations to Finishes
                 </h1>
@@ -23,10 +23,10 @@ const Hero = () => {
                 <h1 className="2xl:text-[58px] font-[800] bg-gradient-to-r from-red-500 via-pink-600 to-rose-800 text-transparent bg-clip-text text-3xl lg:text-4xl lg:leading-tight  font-ubuntu">
                   Building Sustainable Futures Worldwide
                 </h1>
-                <h1 className="mt-3 text-sm font-ubuntu text-white dark:text-white text-balance leading-[25px]">
+                <h1 className="mt-3 text-sm font-ubuntu text-white dark:text-white text-justify leading-[25px]">
                   DG. Bangla stands as youthful leaders in civil construction
                   and electro-mechanical engineering, with headquarters in Dhaka
-                  and a branch in Chittagong. Our expertise lies in roadways,
+                  and a branch in Chattogram. Our expertise lies in roadways,
                   yards, dredging, low land development, and electrification
                   projects. We employ heavy earth-moving equipment and efficient
                   logistics to ensure timely project completion.

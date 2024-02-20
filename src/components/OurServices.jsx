@@ -56,7 +56,7 @@ const OurServices = () => {
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
                   Civil Construction
                 </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu">
+                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   Transforming dreams into reality, we build the foundations for
                   a strong and resilient Bangladesh.
                 </p>
@@ -78,7 +78,7 @@ const OurServices = () => {
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
                   Yard & Road Construction
                 </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu">
+                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   Connecting communities and paving the way for progress with
                   our expertise in yard and road construction.
                 </p>
@@ -100,7 +100,7 @@ const OurServices = () => {
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
                   Electro-Mechanical
                 </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu">
+                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   Lighting up the future with precision, our electro-mechanical
                   solutions are at the heart of efficient and innovative
                   construction.
@@ -123,7 +123,7 @@ const OurServices = () => {
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
                   Automation
                 </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu">
+                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   Embrace the future with smart buildings! Our automation
                   services integrate cutting-edge technology with construction
                   excellence.
@@ -143,7 +143,7 @@ const OurServices = () => {
                 />
               </div>
               <div className="py-[30px] px-4">
-                <h3 className="text-lg font-semibold text-primary font-ubuntu">
+                <h3 className="text-lg font-semibold text-primary font-ubuntu text-justify">
                   River Bank Protection
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu">
@@ -169,7 +169,7 @@ const OurServices = () => {
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
                   Dredging & Ground Improvement
                 </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu">
+                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   From shaping landscapes to strengthening foundations, we
                   ensure stability and resilience with our dredging and ground
                   improvement services.
@@ -321,7 +321,7 @@ export default OurServices;
                 </h1>
                 <p className="font-openSans text-white text-[12px]">
                   DG. Bangla has worked and successfully completed the
-                  Maintenance Dredging Project under Chittagong Port Authority
+                  Maintenance Dredging Project under Chattogram Port Authority
                   to restore.
                 </p>
 

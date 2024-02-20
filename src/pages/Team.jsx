@@ -13,7 +13,7 @@ const Team = () => {
         <Navbar />
         <div className="w-full h-[300px] bg-navBg bg-cover bg-no-repeat pt-[8rem]">
           <h1 className="text-[60px] font-poppins uppercase text-white text-center font-semibold">
-            Team
+            Management
           </h1>
 
           <div className="font-ubuntu w-fit mx-auto">
@@ -72,7 +72,7 @@ const Team = () => {
                 className="inline-flex items-center text-white truncate text-[18px] font-[500] leading-[28px] ml-2"
                 aria-current="page"
               >
-                Team
+                Management
               </li>
             </ol>
           </div>
@@ -89,7 +89,7 @@ const Team = () => {
 
                 <Fade bottom>
                   <h1 className="leading-[44px] text-[28px] md:text-[38px] font-[700] uppercase">
-                    <span className="text-primary">Our</span> Team
+                    <span className="text-primary">Our</span> Management
                   </h1>
                 </Fade>
 
@@ -135,7 +135,7 @@ const Team = () => {
                     Proprietor Engr. Arsad Parvez
                   </h3>
                   <p className="text-[#6E6E6E] group-hover:text-white">
-                    CEO & Founder
+                    MD & Founder
                   </p>
                 </div>
               </div>

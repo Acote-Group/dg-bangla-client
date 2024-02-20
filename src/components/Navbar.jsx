@@ -17,7 +17,7 @@ const Navbar = () => {
   // });
   return (
     <>
-      <header className="flex flex-wrap sm:justify-start sm:flex-col w-full md:fixed md:z-50 md:top-0 bg-black">
+      <header className="flex flex-wrap sm:justify-start sm:flex-col md:fixed md:z-50 md:top-0 bg-black w-full max-w-[1920px] mx-auto">
         <nav
           className="relative max-w-[1360px] w-full mx-auto py-3 px-4 md:flex md:items-center md:justify-between md:py-[20px] md:px-0 lg:px-6 2xl:px-0 xl:mx-auto"
           aria-label="Global"
@@ -109,7 +109,7 @@ const Navbar = () => {
                 className="text-white font-ubuntu md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"
                 to="/team"
               >
-                Team
+                Management
               </NavLink>
               {/* <NavLink
                 className="text-white font-ubuntu md:py-[10px] hover:text-primary aria-[current=page]:text-red-700 md:aria-[current=page]:border-b-4 aria-[current=page]:border-primary aria-[current=page]:font-[700]"

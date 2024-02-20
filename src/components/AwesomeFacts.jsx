@@ -17,7 +17,7 @@ const AwesomeFacts = () => {
                 roadways, yards, dredging, low land development, Electriﬁcation
                 through means of heavy earth moving equipment/machinery and
                 logistics, having Registered Ofﬁce at Dhaka and Branch Ofﬁce at
-                Chittagong. We have been taking a leading role in providing
+                Chattogram. We have been taking a leading role in providing
                 construction services with an uncompromised commitment to
                 Quality, Health, Safety, and Environment. We do this through the
                 combination of an open relationship with our employees based on

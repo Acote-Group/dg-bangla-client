@@ -12,7 +12,7 @@ export default {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1536px",
+      "2xl": "1620px",
     },
     container: {
       padding: {
@@ -38,6 +38,7 @@ export default {
         acBg: "url('/src/assets/bg/ac.png')",
         counterBg: "url('/src/assets/bg/counter.png')",
         consultBg: "url('/src/assets/bg/consultation.png')",
+        mileBg: "url('/src/assets/bg/mileBg.png')",
         navBg: "url('/src/assets/bg/navBg.png')",
         circleBg: "url('/src/assets/photos/banner-bg.jpg')",
         testoBg: "url('/src/assets/photos/testoBg.jpg')",

@@ -3,7 +3,7 @@ import VisibilitySensor from "react-visibility-sensor";
 export default function AchievementCounter() {
   return (
     <>
-      <section className="bg-counterBg bg-cover bg-no-repeat max-w-[1920px]">
+      <section className="bg-counterBg bg-cover bg-no-repeat max-w-[1920px] mx-auto">
         <div className="container max-w-[1360px] mx-auto px-4 md:px-6 justify-center md:pt-[220px] md:pb-[262px] pt-16 pb-16 md:flex md:gap-x-[120px] pl-16 md:pl-0">
           <div className="font-ubuntu mb-6">
             <div className="flex items-end">

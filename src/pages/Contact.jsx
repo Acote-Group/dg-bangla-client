@@ -196,7 +196,7 @@ const Contact = () => {
                       engineering space, making waves in roadways, yards,
                       dredging, low land development, and electrification. With
                       heavy machinery, logistics know-how, and offices in Dhaka
-                      and Chittagong, we're equipped to tackle any
+                      and Chattogram, we're equipped to tackle any
                       infrastructure challenge Bangladesh throws our way.
                     </p>
                   </div>

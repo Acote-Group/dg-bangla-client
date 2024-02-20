@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 const WhoWeAre = () => {
   return (
     <>
-      <section className="bg-wwaBg bg-no-repeat bg-cover py-8 md:py-16">
+      <section className="bg-wwaBg bg-no-repeat bg-cover py-8 md:py-16 max-w-[1920px] mx-auto">
         <div className="py-4 sm:py-8 max-w-[1280px] mx-auto">
           <div className="text-center text-[28px] md:text-[38px] font-bold uppercase tracking-widest  font-roboto mb-[50px]">
             <div className="flex justify-center gap-4 items-center">
