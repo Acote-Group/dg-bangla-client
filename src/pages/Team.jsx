@@ -107,8 +107,8 @@ const Team = () => {
             </div>
 
             {/* 1st portion  */}
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 w-fit mx-auto ">
-              <div className="text-center group transition">
+            <div className="mt-10 flex flex-wrap justify-center gap-x-8">
+              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
                   <img
                     alt="MD. Mr. Parvez"
@@ -126,7 +126,7 @@ const Team = () => {
                 </div>
               </div>
 
-              <div className="text-center group transition">
+              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
                   <img
                     alt="Mrs. Dilruba Akhter"
@@ -144,7 +144,7 @@ const Team = () => {
                 </div>
               </div>
 
-              <div className="text-center group transition">
+              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
                   <img
                     alt="MD. Mr. Parvez"
@@ -161,10 +161,46 @@ const Team = () => {
                   </p>
                 </div>
               </div>
+
+              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
+                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
+                  <img
+                    alt="MD. Mr. Parvez"
+                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                    src={t1}
+                  />
+                </div>
+                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
+                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
+                    Name
+                  </h3>
+                  <p className="text-[#6E6E6E] group-hover:text-white">
+                    GM Finance
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
+                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
+                  <img
+                    alt="MD. Mr. Parvez"
+                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                    src={t1}
+                  />
+                </div>
+                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
+                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
+                    Name
+                  </h3>
+                  <p className="text-[#6E6E6E] group-hover:text-white">
+                    AGM Business Development
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* 2nd portion  */}
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 w-1/2 gap-x-8 mx-auto justify-center">
+            {/* <div className="mt-10 grid grid-cols-1 md:grid-cols-2 w-1/2 gap-x-8 mx-auto justify-center">
               <div className="text-center group transition">
                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
                   <img
@@ -200,7 +236,7 @@ const Team = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <GetConsultation />
