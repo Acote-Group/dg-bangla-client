@@ -4,7 +4,6 @@ import service2 from "../assets/service/service2.png";
 import service3 from "../assets/service/service3.png";
 import service4 from "../assets/service/service4.png";
 import service5 from "../assets/service/service5.png";
-import service6 from "../assets/service/service6.png";
 import { MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -54,7 +53,7 @@ const OurServices = () => {
               </div>
               <div className="py-[30px] px-4">
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Civil Construction
+                  Civil Work
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   Transforming dreams into reality, we build the foundations for
@@ -76,7 +75,7 @@ const OurServices = () => {
               </div>
               <div className="py-[30px] px-4">
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Yard & Road Construction
+                  Fire Fighting
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   Connecting communities and paving the way for progress with
@@ -98,7 +97,7 @@ const OurServices = () => {
               </div>
               <div className="py-[30px] px-4">
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Electro-Mechanical
+                  Electrical Work
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   Lighting up the future with precision, our electro-mechanical
@@ -121,7 +120,7 @@ const OurServices = () => {
               </div>
               <div className="py-[30px] px-4">
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Automation
+                  Automation Work
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   Embrace the future with smart buildings! Our automation
@@ -131,7 +130,7 @@ const OurServices = () => {
               </div>
             </a>
 
-            <a
+            {/* <a
               className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
               href="#"
             >
@@ -152,7 +151,7 @@ const OurServices = () => {
                   sustainable future.
                 </p>
               </div>
-            </a>
+            </a> */}
 
             <a
               className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
@@ -167,7 +166,7 @@ const OurServices = () => {
               </div>
               <div className="py-[30px] px-4">
                 <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Dredging & Ground Improvement
+                  Dredging Work
                 </h3>
                 <p className="mt-1 text-[#767676] font-ubuntu text-justify">
                   From shaping landscapes to strengthening foundations, we

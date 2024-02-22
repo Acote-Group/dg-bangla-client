@@ -53,16 +53,24 @@ export default function OurFuturePlan() {
             </p>
           </div>
           <div>
-            <img
-              alt="Illustration of future plan"
-              className="mx-auto"
-              src={ofp1}
-            />
+            <Fade right>
+              <img
+                alt="Illustration of future plan"
+                className="mx-auto"
+                src={ofp1}
+              />
+            </Fade>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-12">
           <div>
-            <img alt="Illustration of mission" className="mx-auto" src={ofp2} />
+            <Fade left>
+              <img
+                alt="Illustration of mission"
+                className="mx-auto"
+                src={ofp2}
+              />
+            </Fade>
           </div>
           <div className="text-right flex flex-col justify-end">
             <h3 className="text-[32px] font-bold mb-4 leading-[36px] border-b-2 border-primary pb-1 w-fit self-end">

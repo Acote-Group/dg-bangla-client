@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import t1 from "../assets/team/t1.png";
-import t2 from "../assets/team/t2.png";
-import t3 from "../assets/team/t3.png";
+import t1 from "../assets/team/kaka.png";
+import t2 from "../assets/team/kaki.png";
 import Fade from "react-reveal/Fade";
 import GetConsultation from "../components/GetConsultation";
 
@@ -107,31 +106,18 @@ const Team = () => {
               </p>
             </div>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 w-fit mx-auto">
-              <div className="text-center bg-[#FBFBFB] mt-6">
-                <img
-                  alt="Dilruba Akhter"
-                  className="mx-auto object-cover"
-                  src={t1}
-                />
-                <div className="border-l-8 border-primary py-4 text-start pl-8 hover:bg-primary hover:text-white group">
-                  <h3 className="text-xl font-semibold font-roboto">
-                    Dilruba Akhter
-                  </h3>
-                  <p className="text-[#6E6E6E] group-hover:text-white">
-                    HR, Admin
-                  </p>
+            {/* 1st portion  */}
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 w-fit mx-auto ">
+              <div className="text-center group transition">
+                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
+                  <img
+                    alt="MD. Mr. Parvez"
+                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                    src={t1}
+                  />
                 </div>
-              </div>
-
-              <div className="text-center pb-4">
-                <img
-                  alt="Engr. Arsad Parvez"
-                  className="mx-auto object-cover"
-                  src={t2}
-                />
-                <div className="border-l-8 border-primary py-4 text-start pl-8 hover:bg-primary hover:text-white group">
-                  <h3 className="text-xl font-semibold font-roboto">
+                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
+                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
                     Proprietor Engr. Arsad Parvez
                   </h3>
                   <p className="text-[#6E6E6E] group-hover:text-white">
@@ -140,19 +126,77 @@ const Team = () => {
                 </div>
               </div>
 
-              <div className="text-center bg-[#FBFBFB] pb-4 mt-6">
-                <img
-                  alt="Md. Saiful Islam"
-                  className="mx-auto object-cover"
-                  src={t3}
-                />
-
-                <div className="border-l-8 border-primary py-4 text-start pl-8 hover:bg-primary hover:text-white group">
-                  <h3 className="text-xl font-semibold font-roboto">
-                    Md. Saiful Islam
+              <div className="text-center group transition">
+                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
+                  <img
+                    alt="Mrs. Dilruba Akhter"
+                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                    src={t2}
+                  />
+                </div>
+                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
+                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
+                    Dilruba Akhter
                   </h3>
                   <p className="text-[#6E6E6E] group-hover:text-white">
-                    Finance & Accounts
+                    Chairman
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center group transition">
+                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
+                  <img
+                    alt="MD. Mr. Parvez"
+                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                    src={t1}
+                  />
+                </div>
+                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
+                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
+                    Name
+                  </h3>
+                  <p className="text-[#6E6E6E] group-hover:text-white">
+                    GM Construction
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 2nd portion  */}
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 w-1/2 gap-x-8 mx-auto justify-center">
+              <div className="text-center group transition">
+                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
+                  <img
+                    alt="MD. Mr. Parvez"
+                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                    src={t1}
+                  />
+                </div>
+                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
+                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
+                    Name
+                  </h3>
+                  <p className="text-[#6E6E6E] group-hover:text-white">
+                    GM Finance
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center group transition">
+                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
+                  <img
+                    alt="MD. Mr. Parvez"
+                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                    src={t1}
+                  />
+                </div>
+                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
+                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
+                    Name
+                  </h3>
+                  <p className="text-[#6E6E6E] group-hover:text-white">
+                    AGM Business Development
                   </p>
                 </div>
               </div>

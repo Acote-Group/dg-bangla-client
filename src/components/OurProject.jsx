@@ -71,7 +71,7 @@ const OurProject = () => {
               aria-controls="horizontal-scroll-tab-2"
               role="tab"
             >
-              Commercial <span className="hidden md:block">&nbsp;</span>/
+              Civil Work <span className="hidden md:block">&nbsp;</span>/
             </button>
             <button
               type="button"
@@ -81,7 +81,7 @@ const OurProject = () => {
               aria-controls="horizontal-scroll-tab-3"
               role="tab"
             >
-              Education <span className="hidden md:block">&nbsp;</span>/
+              Electrical Work <span className="hidden md:block">&nbsp;</span>/
             </button>
             <button
               type="button"
@@ -91,7 +91,7 @@ const OurProject = () => {
               aria-controls="horizontal-scroll-tab-4"
               role="tab"
             >
-              Hospital <span className="hidden md:block">&nbsp;</span>/
+              Fire Fighting <span className="hidden md:block">&nbsp;</span>/
             </button>
 
             <button
@@ -102,7 +102,18 @@ const OurProject = () => {
               aria-controls="horizontal-scroll-tab-5"
               role="tab"
             >
-              Residential
+              Automation Work <span className="hidden md:block">&nbsp;</span>/
+            </button>
+
+            <button
+              type="button"
+              className="hs-tab-active:font-semibold hs-tab-active:text-primary py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent whitespace-nowrap hover:text-primary focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none text-sm md:text-base font-semibold"
+              id="horizontal-scroll-tab-item-5"
+              data-hs-tab="#horizontal-scroll-tab-5"
+              aria-controls="horizontal-scroll-tab-5"
+              role="tab"
+            >
+              Dredging Work
             </button>
           </div>
         </div>

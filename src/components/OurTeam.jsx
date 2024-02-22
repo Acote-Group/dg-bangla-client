@@ -7,7 +7,7 @@ const OurTeam = () => {
   return (
     <>
       <section className="bg-white py-16 px-4">
-        <div className="max-w-6xl mx-auto font-roboto">
+        <div className="max-w-6xl mx-auto font-ubuntu">
           <div className="text-center">
             <div className="flex justify-center gap-4 items-center">
               <div className="flex flex-col">
@@ -47,7 +47,7 @@ const OurTeam = () => {
                   <h3 className="text-lg font-medium text-gray-800">
                     Dilruba Akhter
                   </h3>
-                  <p className="text-gray-600">HR, Admin</p>
+                  <p className="text-gray-600">Chairman</p>
                 </div>
               </div>
             </Fade>
@@ -87,21 +87,6 @@ const OurTeam = () => {
                 </div>
               </div>
             </Fade>
-
-            {/* <div className="flex flex-col items-start bg-[#f2f2f2]">
-              <img alt="Richard Wagner" className="w-fit" src={w1} />
-              <div className="flex space-x-2 px-[20px] bg-[#1A1A1A] w-full p-[20px]">
-                <FacebookIcon className="text-white" />
-                <LinkedinIcon className="text-white" />
-                <TwitterIcon className="text-white" />
-              </div>
-              <div className="p-[20px] text-start">
-                <h3 className="text-lg font-medium text-gray-800 uppercase">
-                  john halpern
-                </h3>
-                <p className="text-gray-600 font-openSans">Building Worker</p>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>

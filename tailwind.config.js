@@ -15,6 +15,7 @@ export default {
       "2xl": "1620px",
     },
     container: {
+      center: true,
       padding: {
         DEFAULT: "1rem",
         sm: "2rem",

@@ -30,17 +30,17 @@ const MileStone = () => {
               {/* <!-- left col --> */}
 
               <Fade left>
-                <div className="w-2/5 pb-10 relative mt-10">
+                <div className="w-2/5 relative">
                   <div className="flex items-center">
                     <div className="flex flex-col w-full rounded-lg shadow border-r-[5px] border-primary px-4 py-4 bg-white group-hover:bg-primary group-hover:text-white">
-                      <div className="mb-2 flex justify-between">
+                      <div className="flex justify-between">
                         <div className="font-bold text-[22px] leading-[25px]">
                           <h1>Electrical & Port Projects</h1>
                           <hr className="bg-gradient-to-r from-rose-600 to-white group-hover:bg-gradient-to-l h-[2px] mt-[5px]" />
                         </div>
                         <div className="flex flex-row"></div>
                       </div>
-                      <div className="text-[20px] leading-[23px]">
+                      <div className="text-[20px] leading-[23px] mt-2">
                         Electrical works, Fire Fighting works have been started,
                         Payra Port, Chattogram Port.
                       </div>
@@ -53,7 +53,7 @@ const MileStone = () => {
 
               <div className="flex justify-center">
                 <div className="relative flex h-full w-2 bg-primary items-center justify-center">
-                  <div className="absolute flex flex-col justify-center h-28 w-28 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
+                  <div className="absolute flex flex-col justify-center h-32 w-32 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
                     <div className="w-20 h-20 border-[3px] border-primary rounded-full flex flex-col items-center justify-center mx-auto group-hover:bg-primary">
                       <h1 className="text-primary group-hover:text-white font-ubuntu text-[20px] font-bold">
                         2022
@@ -63,17 +63,17 @@ const MileStone = () => {
                 </div>
               </div>
 
-              <div className="w-2/5 px-2 pb-10"></div>
+              <div className="w-2/5 px-2"></div>
             </div>
 
             <div className="flex flex-row w-full justify-center group">
               {/* <!-- left col --> */}
 
-              <div className="w-2/5 px-2 pb-10"></div>
+              <div className="w-2/5 px-2 py-5"></div>
               {/* <!--line column--> */}
               <div className="flex justify-center">
                 <div className="relative flex h-full w-2 bg-primary items-center justify-center">
-                  <div className="absolute flex flex-col justify-center h-28 w-28 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
+                  <div className="absolute flex flex-col justify-center h-32 w-32 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
                     <div className="w-20 h-20 border-[3px] border-primary rounded-full flex flex-col items-center justify-center mx-auto group-hover:bg-primary">
                       <h1 className="text-primary group-hover:text-white font-ubuntu text-[20px] font-bold">
                         2021
@@ -84,7 +84,7 @@ const MileStone = () => {
               </div>
               {/* <!--right column--> */}
               <Fade right>
-                <div className="w-2/5 px-2 pb-10 mt-10">
+                <div className="w-2/5 px-2 py-10 mt-10">
                   <div className="flex items-center flex-row-reverse">
                     <div className="flex flex-col w-full rounded-lg shadow border-l-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">
@@ -109,7 +109,7 @@ const MileStone = () => {
               {/* <!-- left col --> */}
 
               <Fade left>
-                <div className="w-2/5 px-2 pb-10 mt-10">
+                <div className="w-2/5 px-2 pb-5 mt-5">
                   <div className="flex items-center">
                     <div className="flex flex-col w-full rounded-lg shadow border-r-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">
@@ -132,7 +132,7 @@ const MileStone = () => {
               {/* <!--line column--> */}
               <div className="flex justify-center">
                 <div className="relative flex h-full w-2 bg-primary items-center justify-center">
-                  <div className="absolute flex flex-col justify-center h-28 w-28 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
+                  <div className="absolute flex flex-col justify-center h-32 w-32 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
                     <div className="w-20 h-20 border-[3px] border-primary rounded-full flex flex-col items-center justify-center mx-auto group-hover:bg-primary">
                       <h1 className="text-primary group-hover:text-white font-ubuntu text-[20px] font-bold">
                         2019
@@ -152,7 +152,7 @@ const MileStone = () => {
               {/* <!--line column--> */}
               <div className="flex justify-center">
                 <div className="relative flex h-full w-2 bg-primary items-center justify-center">
-                  <div className="absolute flex flex-col justify-center h-28 w-28 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
+                  <div className="absolute flex flex-col justify-center h-32 w-32 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
                     <div className="w-20 h-20 border-[3px] border-primary rounded-full flex flex-col items-center justify-center mx-auto group-hover:bg-primary">
                       <h1 className="text-primary group-hover:text-white font-ubuntu text-[20px] font-bold">
                         2017
@@ -209,7 +209,7 @@ const MileStone = () => {
               {/* <!--line column--> */}
               <div className="flex justify-center">
                 <div className="relative flex h-full w-2 bg-primary items-center justify-center">
-                  <div className="absolute flex flex-col justify-center h-28 w-28 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
+                  <div className="absolute flex flex-col justify-center h-32 w-32 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
                     <div className="w-20 h-20 border-[3px] border-primary rounded-full flex flex-col items-center justify-center mx-auto group-hover:bg-primary">
                       <h1 className="text-primary group-hover:text-white font-ubuntu text-[20px] font-bold">
                         2012
