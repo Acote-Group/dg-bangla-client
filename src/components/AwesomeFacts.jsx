@@ -12,7 +12,7 @@ const AwesomeFacts = () => {
                 About DG Bangla
               </h1>
               <p className="mt-4 text-sm md:text-base font-openSans">
-                DG. Bangla is a rapidly growing, youth owned company in the ﬁeld
+                DG Bangla is a rapidly growing, youth owned company in the ﬁeld
                 of Civil Construction and Electro-Mechanical Engineering in
                 roadways, yards, dredging, low land development, Electriﬁcation
                 through means of heavy earth moving equipment/machinery and

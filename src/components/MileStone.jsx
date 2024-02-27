@@ -35,14 +35,14 @@ const MileStone = () => {
                     <div className="flex flex-col w-full rounded-lg shadow border-r-[5px] border-primary px-4 py-4 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="flex justify-between">
                         <div className="font-bold text-[22px] leading-[25px]">
-                          <h1>Electrical & Port Projects</h1>
+                          <h1>Electrical & Firefighting</h1>
                           <hr className="bg-gradient-to-r from-rose-600 to-white group-hover:bg-gradient-to-l h-[2px] mt-[5px]" />
                         </div>
                         <div className="flex flex-row"></div>
                       </div>
-                      <div className="text-[20px] leading-[23px] mt-2">
-                        Electrical works, Fire Fighting works have been started,
-                        Payra Port, Chattogram Port.
+                      <div className="text-[20px] leading-[23px] mt-2 text-justify">
+                        Started Electrical & Fire Fighting works in Payra &
+                        Chattogram Port.
                       </div>
                     </div>
 
@@ -89,13 +89,16 @@ const MileStone = () => {
                     <div className="flex flex-col w-full rounded-lg shadow border-l-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">
                         <div className="font-bold text-[22px] leading-[25px]">
-                          <h1>New Mega Projects</h1>
+                          <h1>
+                            Dredging, Protection, Construction: PWD & Sheba
+                          </h1>
                           <hr className="bg-gradient-to-r from-rose-600 to-white group-hover:bg-gradient-to-l h-[2px] mt-[5px]" />
                         </div>
                       </div>
-                      <div className="text-[20px] leading-[23px]">
-                        Dredging works, river bank protection, Building
-                        construction, PWD, Sheba Authority.
+                      <div className="text-[20px] leading-[23px] text-justify">
+                        Engaged in dredging operations, river bank protection,
+                        building construction, and projects with both the Public
+                        Works Department (PWD) and Sheba Authority.
                       </div>
                     </div>
 
@@ -114,14 +117,15 @@ const MileStone = () => {
                     <div className="flex flex-col w-full rounded-lg shadow border-r-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">
                         <div className="font-bold text-[22px] leading-[25px]">
-                          <h1>Road Works</h1>
+                          <h1>Road Construction & Treatment Plant via EPC</h1>
                           <hr className="bg-gradient-to-r from-rose-600 to-white h-[2px] mt-[5px] group-hover:bg-gradient-to-l" />
                         </div>
                         <div className="flex flex-row"></div>
                       </div>
-                      <div className="text-[20px] leading-[23px]">
-                        We did road works, EPC contract for fecal treatment
-                        plant.
+                      <div className="text-[20px] leading-[23px] text-justify">
+                        Started Road construction projects and executed an EPC
+                        (Engineering, Procurement, and Construction) contract
+                        for a fecal treatment plant.
                       </div>
                     </div>
 
@@ -172,8 +176,8 @@ const MileStone = () => {
                           <hr className="bg-gradient-to-r from-primary to-white h-[2px] mt-[5px] group-hover:bg-gradient-to-l" />
                         </div>
                       </div>
-                      <div className="text-[20px] leading-[23px]">
-                        Working with Bangladesh Land Port Authority.
+                      <div className="text-[20px] leading-[23px] text-justify">
+                        Collaborated with the Bangladesh Land Port Authority.
                       </div>
                     </div>
 
@@ -197,8 +201,8 @@ const MileStone = () => {
                         </div>
                         <div className="flex flex-row"></div>
                       </div>
-                      <div className="text-[20px] leading-[23px]">
-                        Civil Works Started As a Main Contractor.
+                      <div className="text-[20px] leading-[23px] text-justify">
+                        Civil construction has commenced as the main contractor.
                       </div>
                     </div>
 

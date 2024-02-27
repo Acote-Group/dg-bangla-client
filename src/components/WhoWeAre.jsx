@@ -1,3 +1,4 @@
+import { HashLink } from "react-router-hash-link";
 import worker from "../assets/photos/worker.png";
 import Fade from "react-reveal/Fade";
 
@@ -5,7 +6,7 @@ const WhoWeAre = () => {
   return (
     <>
       <section className="bg-wwaBg bg-no-repeat bg-cover py-8 md:py-16 max-w-[1920px] mx-auto">
-        <div className="py-4 sm:py-8 max-w-[1280px] mx-auto">
+        <div className="py-4 sm:py-8 max-w-[1280px] mx-auto font-ubuntu">
           <div className="text-center text-[28px] md:text-[38px] font-bold uppercase tracking-widest  font-roboto mb-[50px]">
             <div className="flex justify-center gap-4 items-center">
               <div className="flex flex-col">
@@ -28,12 +29,12 @@ const WhoWeAre = () => {
 
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 justify-between sm:gap-4 px-6 sm:px-4 pb-10">
             <Fade left>
-              <div className="md:col-span-1 mr-4 bg-whoBg bg-cover bg-no-repeat w-auto md:w-[365px] h-auto md:h-[380px]">
+              <div className="md:col-span-1 mr-4 w-auto md:w-[365px] h-auto md:h-[380px]">
                 <div className="p-6">
                   <h2 className="text-[34px] sm:text-2xl font-roboto">
                     Our <span className="font-bold">Mission</span>
                   </h2>
-                  <p className="mt-2 sm:mt-4 text-justify font-poppins text-sm">
+                  <p className="mt-2 sm:mt-4 text-justify font-poppins text-sm line-clamp-[10]">
                     We prioritize the growth of talent and actively engage in
                     deliberate efforts within the communities we serve. Our
                     loyal commitment to upholding the highest ethical standards
@@ -51,9 +52,13 @@ const WhoWeAre = () => {
                     <li>› Project quality focus</li>
                     <li>› Performance measurement</li>
                   </ul>
-                  <button className="inline-flex items-center justify-between rounded-md text-sm font-medium h-10 px-4 py-2 mt-4 sm:mt-6 float-right hover:text-primary font-poppins">
+                  <HashLink
+                    smooth
+                    to="/about-us#mission"
+                    className="inline-flex items-center justify-between rounded-md text-sm font-medium h-10 px-4 py-2 mt-4 sm:mt-6 float-right hover:text-primary font-poppins"
+                  >
                     Read More ›
-                  </button>
+                  </HashLink>
                 </div>
 
                 <svg
@@ -77,12 +82,12 @@ const WhoWeAre = () => {
             </div>
 
             <Fade right>
-              <div className="md:col-span-1 mr-4 bg-whoBg bg-cover bg-no-repeat w-auto md:w-[365px] h-auto md:h-[380px]">
+              <div className="md:col-span-1 mr-4 w-auto md:w-[365px] h-auto md:h-[380px]">
                 <div className="p-6">
                   <h2 className="text-[34px] sm:text-2xl font-roboto">
                     Our <span className="font-bold">Vision</span>
                   </h2>
-                  <p className="mt-2 sm:mt-4 text-justify font-poppins text-sm">
+                  <p className="mt-2 sm:mt-4 text-justify font-poppins text-sm line-clamp-[10]">
                     We started as a grassroots construction service, aiming to
                     evolve into a leading global engineering, construction, and
                     project management company. Our vision encompasses
@@ -100,9 +105,13 @@ const WhoWeAre = () => {
                     <li>› Balanced approach</li>
                     <li>› Lead consultation</li>
                   </ul>
-                  <button className="inline-flex items-center justify-between rounded-md text-sm font-medium h-10 px-4 py-2 mt-4 sm:mt-6 float-right hover:text-primary font-poppins">
+                  <HashLink
+                    smooth
+                    to="/about-us#mission"
+                    className="inline-flex items-center justify-between rounded-md text-sm font-medium h-10 px-4 py-2 mt-4 sm:mt-6 float-right hover:text-primary font-poppins"
+                  >
                     Read More ›
-                  </button>
+                  </HashLink>
                 </div>
 
                 <svg

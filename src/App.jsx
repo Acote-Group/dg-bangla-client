@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import Services from "./pages/Services";
 import Team from "./pages/Team";
 import NotFound from "./shared/NotFound";
+import Gallery from "./pages/Gallery";
 
 function App() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

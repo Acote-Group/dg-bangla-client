@@ -5,7 +5,7 @@ import ofp2 from "../assets/photos/ofp2.png";
 export default function OurFuturePlan() {
   return (
     <section className="bg-white text-gray-800 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto font-ubuntu">
+      <div className="max-w-7xl mx-auto font-ubuntu" id="mission">
         <div className="text-center my-16 md:my-[60px]">
           <div className="flex justify-center gap-4 items-center">
             <div className="flex flex-col">

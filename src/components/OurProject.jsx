@@ -31,8 +31,12 @@ import lp7 from "../assets/lp/lp7.jpg";
 import lp8 from "../assets/lp/lp8.jpg";
 import lp9 from "../assets/lp/lp9.jpg";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const OurProject = () => {
+  const location = useLocation();
+
+  const project = location.pathname.includes("/project");
   return (
     <>
       <section className="w-auto max-w-6xl 2xl:max-w-7xl mx-auto my-[120px]">
@@ -732,20 +736,22 @@ const OurProject = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-8 md:mt-[40px]">
-          <Link
-            className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mx-auto justify-center"
-            to="/projects"
-          >
-            <span className="absolute -end-full transition-all group-hover:end-4">
-              <MoveRight fill="black" />
-            </span>
+        {project ? null : (
+          <div className="flex justify-center mt-8 md:mt-[40px]">
+            <Link
+              className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mx-auto justify-center"
+              to="/projects"
+            >
+              <span className="absolute -end-full transition-all group-hover:end-4">
+                <MoveRight fill="black" />
+              </span>
 
-            <span className="uppercase font-medium transition-all group-hover:me-4">
-              Explore More
-            </span>
-          </Link>
-        </div>
+              <span className="uppercase font-medium transition-all group-hover:me-4">
+                Explore More
+              </span>
+            </Link>
+          </div>
+        )}
       </section>
     </>
   );

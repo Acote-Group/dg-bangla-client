@@ -16,23 +16,26 @@ export default function MsgFromMd() {
             </div>
 
             <div className="w-full md:w-1/2">
-              <Fade right cascade>
-                <div className="font-[700] text-[24px] leading-[27px] italic text-primary md:mb-[15px]">
-                  Our Honorable MD
-                </div>
-                <h1 className="text-[32px] md:text-[48px] font-[700] leading-[55px] md:mb-[30px]">
+              <Fade right>
+                <div className="font-[700] text-[22px] leading-[27px] italic text-primary md:mb-[15px]">
                   Message from MD
+                </div>
+                <h1 className="text-[24px] md:text-[28px] font-[700] leading-[34px] md:mb-[30px] text-justify">
+                  Engineering Firm with a focus on delivering innovative
+                  solutions! Perpetual technological advancement for a secure
+                  and more practical world!
                 </h1>
                 <p className="leading-[26px] md:mb-[50px] text-justify">
-                  Hey there! At DG Bangla, we're passionate about putting
-                  clients first, not profits. We built our company on top-notch
-                  civil construction, electrical, and automation services, with
-                  the flexibility to handle any project size, from small fixes
-                  to massive builds. <br /> <br /> Our goal? **Happy clients and
-                  long-lasting relationships! ** We pride ourselves on using the
-                  best materials and delivering quality work you can trust.
-                  Whether you have a small fix or a grand vision, we're here to
-                  turn it into reality. Let's build something amazing together!
+                  DG Bangla is a swiftly expanding, youth-driven enterprise
+                  specializing in Civil Construction and Electro-Mechanical
+                  Engineering for projects encompassing roadways, yards,
+                  dredging, low land development, electrification utilizing
+                  robust earth-moving machinery, and comprehensive logistics
+                  solutions. <br /> <br /> DG Bangla will further contribute the
+                  expertise towards driving operational excellence, fostering
+                  client relationships, and spearheading initiatives that
+                  position the organization as a leader in the diverse sectors
+                  of Construction, Technology, and Maritime Infrastructure.
                 </p>
 
                 <div className="mt-6 md:mt-0">
@@ -57,7 +60,7 @@ export default function MsgFromMd() {
             </div>
 
             <div className="w-full md:w-1/2 md:-mb-10">
-              <Fade right cascade>
+              <Fade right>
                 {/* <div className="font-[700] text-[24px] leading-[27px] italic text-primary md:mb-[15px]">
                   Our Honorable MD
                 </div> */}

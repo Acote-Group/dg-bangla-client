@@ -98,7 +98,7 @@ const Team = () => {
                 </div>
               </div>
 
-              <p className="text-center mt-2 normal-case w-[80%] mx-auto">
+              <p className="text-center mt-2 normal-case w-[60%] mx-auto">
                 A dynamic group of dedicated professionals driven by passion and
                 expertise. With a shared commitment to excellence, our team
                 brings a diverse range of skills and experiences to the table,
@@ -107,8 +107,8 @@ const Team = () => {
             </div>
 
             {/* 1st portion  */}
-            <div className="mt-10 flex flex-wrap justify-center gap-x-8">
-              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
+            <div className="mt-10 flex flex-wrap justify-center gap-12">
+              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
                   <img
                     alt="MD. Mr. Parvez"
@@ -126,7 +126,7 @@ const Team = () => {
                 </div>
               </div>
 
-              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
+              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
                   <img
                     alt="Mrs. Dilruba Akhter"
@@ -144,7 +144,7 @@ const Team = () => {
                 </div>
               </div>
 
-              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
+              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
                   <img
                     alt="MD. Mr. Parvez"
@@ -162,7 +162,7 @@ const Team = () => {
                 </div>
               </div>
 
-              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
+              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
                   <img
                     alt="MD. Mr. Parvez"
@@ -180,7 +180,7 @@ const Team = () => {
                 </div>
               </div>
 
-              <div className="text-center group transition w-full p-4 sm:w-1/2 md:w-1/4">
+              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
                 <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
                   <img
                     alt="MD. Mr. Parvez"
@@ -239,6 +239,7 @@ const Team = () => {
             </div> */}
           </div>
         </div>
+
         <GetConsultation />
       </section>
     </>

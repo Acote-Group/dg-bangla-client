@@ -15,6 +15,14 @@
   mix-blend-mode: color-burn;
 }
 
+/* .jusText {
+  text-align: justify;
+  text-justify: distribute;
+  text-align-last: left;
+  color: #bc1888;
+  overflow-wrap: break-word;
+} */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
