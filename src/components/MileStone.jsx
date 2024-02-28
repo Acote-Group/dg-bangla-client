@@ -89,9 +89,7 @@ const MileStone = () => {
                     <div className="flex flex-col w-full rounded-lg shadow border-l-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">
                         <div className="font-bold text-[22px] leading-[25px]">
-                          <h1>
-                            Dredging, Protection, Construction: PWD & Sheba
-                          </h1>
+                          <h1>Projects From PWD & Sheba</h1>
                           <hr className="bg-gradient-to-r from-rose-600 to-white group-hover:bg-gradient-to-l h-[2px] mt-[5px]" />
                         </div>
                       </div>
@@ -117,7 +115,7 @@ const MileStone = () => {
                     <div className="flex flex-col w-full rounded-lg shadow border-r-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">
                         <div className="font-bold text-[22px] leading-[25px]">
-                          <h1>Road Construction & Treatment Plant via EPC</h1>
+                          <h1>Road Construction & Treatment Plant</h1>
                           <hr className="bg-gradient-to-r from-rose-600 to-white h-[2px] mt-[5px] group-hover:bg-gradient-to-l" />
                         </div>
                         <div className="flex flex-row"></div>
