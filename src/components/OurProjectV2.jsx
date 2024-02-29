@@ -2,37 +2,61 @@ import { useState } from "react";
 import p1 from "../assets/project/p1.png";
 import p2 from "../assets/project/p2.png";
 import p3 from "../assets/project/p3.png";
-// import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ProjectCard from "./ProjectCard";
+import { SkeletonLoader } from "../shared/SkeletonLoader";
 
 export default function OurProjectV2() {
   const [items, setItems] = useState([]);
   const [hasMore, setHasMore] = useState(true);
   const [index, setIndex] = useState(2);
+  const [cats, setCats] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("https://backend.dg-bangla.com/api/v1/project/get/all")
-      .then((res) => setItems(res.data?.data))
-      .catch((err) => console.log(err));
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/project/get/all"
+        );
+        setItems(res.data?.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
   }, []);
 
-  const fetchMoreData = () => {
-    axios
-      .get(`https://backend.dg-bangla.com/api/v1/project/get/all`)
-      .then((res) => {
-        setItems((prevItems) => [...prevItems, ...res.data.data]);
+  const fetchMoreData = async () => {
+    try {
+      const res = await axios.get(
+        `https://backend.dg-bangla.com/api/v1/project/get/all`
+      );
+      setItems((prevItems) => [...prevItems, ...res.data.data]);
 
-        res.data.length > 0 ? setHasMore(true) : setHasMore(false);
-      })
-      .catch((err) => console.log(err));
+      res.data.length > 0 ? setHasMore(true) : setHasMore(false);
+    } catch (err) {
+      console.log(err);
+    }
 
     setIndex((prevIndex) => prevIndex + 1);
   };
 
+  const categoryData = async (searchParam) => {
+    setLoading(true);
+    try {
+      const response = await axios.get(
+        `https://backend.dg-bangla.com/api/v1/category/search?name=${searchParam}`
+      );
+      setCats(response.data?.data[0]?.projects || []);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <>
       <section className="w-auto max-w-[1460px] mx-auto my-[120px]">
@@ -70,6 +94,7 @@ export default function OurProjectV2() {
               data-hs-tab="#horizontal-scroll-tab-2"
               aria-controls="horizontal-scroll-tab-2"
               role="tab"
+              onClick={() => categoryData("civil")}
             >
               Civil Work <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -80,6 +105,7 @@ export default function OurProjectV2() {
               data-hs-tab="#horizontal-scroll-tab-3"
               aria-controls="horizontal-scroll-tab-3"
               role="tab"
+              onClick={() => categoryData("electrical")}
             >
               Electrical Work <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -90,6 +116,7 @@ export default function OurProjectV2() {
               data-hs-tab="#horizontal-scroll-tab-4"
               aria-controls="horizontal-scroll-tab-4"
               role="tab"
+              onClick={() => categoryData("fire")}
             >
               Fire Fighting <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -101,6 +128,7 @@ export default function OurProjectV2() {
               data-hs-tab="#horizontal-scroll-tab-5"
               aria-controls="horizontal-scroll-tab-5"
               role="tab"
+              onClick={() => categoryData("auto")}
             >
               Automation Work <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -108,10 +136,11 @@ export default function OurProjectV2() {
             <button
               type="button"
               className="hs-tab-active:font-semibold hs-tab-active:text-primary py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent whitespace-nowrap hover:text-primary focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none text-sm md:text-base font-semibold"
-              id="horizontal-scroll-tab-item-5"
-              data-hs-tab="#horizontal-scroll-tab-5"
-              aria-controls="horizontal-scroll-tab-5"
+              id="horizontal-scroll-tab-item-6"
+              data-hs-tab="#horizontal-scroll-tab-6"
+              aria-controls="horizontal-scroll-tab-6"
               role="tab"
+              onClick={() => categoryData("dredging")}
             >
               Dredging Work
             </button>
@@ -151,126 +180,18 @@ export default function OurProjectV2() {
             aria-labelledby="horizontal-scroll-tab-item-2"
             className="hidden grid grid-cols-2 justify-center gap-12 mx-auto"
           >
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p1}
-                    alt="Dredging Works at Karnofuli River"
-                  />
+            {loading ? (
+              <>
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p2}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p3}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p3}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
+              </>
+            ) : (
+              cats.map((item) => <ProjectCard data={item} key={item._id} />)
+            )}
           </div>
 
           {/* tab-3  */}
@@ -280,126 +201,18 @@ export default function OurProjectV2() {
             role="tabpanel"
             aria-labelledby="horizontal-scroll-tab-item-3"
           >
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p1}
-                    alt="Dredging Works at Karnofuli River"
-                  />
+            {loading ? (
+              <>
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p2}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p3}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p3}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
+              </>
+            ) : (
+              cats.map((item) => <ProjectCard data={item} key={item._id} />)
+            )}
           </div>
 
           {/* tab-4  */}
@@ -409,255 +222,60 @@ export default function OurProjectV2() {
             role="tabpanel"
             aria-labelledby="horizontal-scroll-tab-item-4"
           >
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p1}
-                    alt="Dredging Works at Karnofuli River"
-                  />
+            {loading ? (
+              <>
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p2}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p3}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p3}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
+              </>
+            ) : (
+              cats.map((item) => <ProjectCard data={item} key={item._id} />)
+            )}
           </div>
 
           {/* tab-5  */}
           <div
-            id="horizontal-scroll-tab-4"
+            id="horizontal-scroll-tab-5"
             className="hidden grid grid-cols-2 justify-center gap-12 max-w-[1460px] mx-auto"
             role="tabpanel"
-            aria-labelledby="horizontal-scroll-tab-item-4"
+            aria-labelledby="horizontal-scroll-tab-item-5"
           >
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p1}
-                    alt="Dredging Works at Karnofuli River"
-                  />
+            {loading ? (
+              <>
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
+                <div className="">
+                  <SkeletonLoader />
+                </div>
+              </>
+            ) : (
+              cats.map((item) => <ProjectCard data={item} key={item._id} />)
+            )}
+          </div>
 
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
+          {/* tab-6  */}
+          <div
+            id="horizontal-scroll-tab-6"
+            className="hidden grid grid-cols-2 justify-center gap-12 max-w-[1460px] mx-auto"
+            role="tabpanel"
+            aria-labelledby="horizontal-scroll-tab-item-6"
+          >
+            {loading ? (
+              <>
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p2}
-                    alt="Dredging Works at Karnofuli River"
-                  />
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p3}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
-              data-v0-t="card"
-            >
-              <div className="md:flex h-[320px]">
-                <div className="md:flex-shrink-0">
-                  <img
-                    className="h-48 w-full object-cover md:h-full md:w-96"
-                    src={p3}
-                    alt="Dredging Works at Karnofuli River"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="uppercase tracking-wide text-lg font-semibold">
-                    Dredging Works at Karnofuli River
-                  </div>
-                  <p className="block mt-2 text-xs leading-tight font-medium text-[#737373] hover:underline">
-                    The "Dredging Works at Karnofuli River" undertaken by DG
-                    Bangla Construction Company involved the excavation and
-                    removal of sediment, debris, and other materials from the
-                    riverbed to improve navigability, ensure proper water flow,
-                    and mitigate flooding risks.
-                  </p>
-
-                  <button className="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 mt-10 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded">
-                    Read More
-                  </button>
-                </div>
-              </div>
-            </div>
+              </>
+            ) : (
+              cats.map((item) => <ProjectCard data={item} key={item._id} />)
+            )}
           </div>
         </div>
       </section>

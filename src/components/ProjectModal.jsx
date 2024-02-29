@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 
 export default function ProjectModal({ data }) {
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <Carousel
@@ -63,7 +63,9 @@ export default function ProjectModal({ data }) {
       </Carousel>
       <div className="font-ubuntu flex justify-between">
         <div className="bg-primary text-white text-center w-1/3">
-          <p className="text-start ml-4 py-2">Civil Work (2022-2023)</p>
+          <p className="text-start ml-4 py-2">
+            {data?.category} ({data?.duration})
+          </p>
           <hr />
           <h1 className="text-xl font-semibold text-start ml-4 mt-6">
             {data?.title}
