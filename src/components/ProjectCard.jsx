@@ -26,7 +26,7 @@ export default function ProjectCard({ data }) {
         className="rounded-lg border text-card-foreground max-w-md mx-auto overflow-hidden bg-white shadow-lg md:max-w-2xl font-ubuntu"
         data-v0-t="card"
       >
-        <div className="md:flex h-[350px] items-center">
+        <div className="md:flex md:h-[350px] items-center">
           <div className="md:flex-shrink-0">
             <img
               className="h-48 w-full object-cover md:h-lvh md:w-96 flex-shrink-0"

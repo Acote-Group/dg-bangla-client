@@ -57,23 +57,25 @@ export default function ProjectModal({ data }) {
           <img
             src={image}
             key={index}
-            className="w-full h-[400px] object-contain"
+            className="w-full md:h-[400px] object-contain"
           />
         ))}
       </Carousel>
-      <div className="font-ubuntu flex justify-between">
-        <div className="bg-primary text-white text-center w-1/3">
+      <div className="font-ubuntu md:flex justify-between">
+        <div className="bg-primary text-white text-center md:w-1/3">
           <p className="text-start ml-4 py-2">
             {data?.category} ({data?.duration})
           </p>
           <hr />
-          <h1 className="text-xl font-semibold text-start ml-4 mt-6">
+          <h1 className="md:text-xl font-semibold text-start ml-4 md:mt-6">
             {data?.title}
           </h1>
         </div>
-        <div className="w-2/3 p-4">
+        <div className="md:w-2/3 p-4">
           <h1 className="text-[20px] font-bold leading-5">Overview</h1>
-          <p className="mt-2 leading-5 text-justify">{data?.overview}</p>
+          <p className="mt-2 md:leading-5 text-justify text-sm md:text-base overflow-hidden">
+            {data?.overview}
+          </p>
         </div>
       </div>
     </>

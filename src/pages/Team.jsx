@@ -1,11 +1,26 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import t1 from "../assets/team/kaka.png";
-import t2 from "../assets/team/kaki.png";
 import Fade from "react-reveal/Fade";
 import GetConsultation from "../components/GetConsultation";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const Team = () => {
+  const { isPending, data } = useQuery({
+    queryKey: ["teamData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/management/get/all"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
   return (
     <>
       <section className="max-w-[1920px] mx-auto">
@@ -107,96 +122,43 @@ const Team = () => {
             </div>
 
             {/* 1st portion  */}
+
             <div className="mt-10 flex flex-wrap justify-center gap-12">
-              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
-                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
-                  <img
-                    alt="MD. Mr. Parvez"
-                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
-                    src={t1}
-                  />
+              {isPending ? (
+                <div className="flex flex-col justify-center">
+                  <div
+                    className="animate-spin inline-block size-24 border-[3px] border-current border-t-transparent text-primary rounded-full mx-auto"
+                    role="status"
+                    aria-label="loading"
+                  >
+                    <span className="sr-only">Loading...</span>
+                  </div>
                 </div>
-                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
-                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
-                    Proprietor Engr. Arsad Parvez
-                  </h3>
-                  <p className="text-[#6E6E6E] group-hover:text-white">
-                    MD & Founder
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
-                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
-                  <img
-                    alt="Mrs. Dilruba Akhter"
-                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
-                    src={t2}
-                  />
-                </div>
-                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
-                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
-                    Dilruba Akhter
-                  </h3>
-                  <p className="text-[#6E6E6E] group-hover:text-white">
-                    Chairman
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
-                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
-                  <img
-                    alt="MD. Mr. Parvez"
-                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
-                    src={t1}
-                  />
-                </div>
-                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
-                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
-                    Name
-                  </h3>
-                  <p className="text-[#6E6E6E] group-hover:text-white">
-                    GM Construction
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
-                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
-                  <img
-                    alt="MD. Mr. Parvez"
-                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
-                    src={t1}
-                  />
-                </div>
-                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
-                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
-                    Name
-                  </h3>
-                  <p className="text-[#6E6E6E] group-hover:text-white">
-                    GM Finance
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
-                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
-                  <img
-                    alt="MD. Mr. Parvez"
-                    className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
-                    src={t1}
-                  />
-                </div>
-                <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
-                  <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
-                    Name
-                  </h3>
-                  <p className="text-[#6E6E6E] group-hover:text-white">
-                    AGM Business Development
-                  </p>
-                </div>
-              </div>
+              ) : (
+                <>
+                  {[...data].reverse().map((team) => (
+                    <>
+                      <div className="text-center group transition w-full sm:w-1/2 md:w-1/4">
+                        <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[100%] overflow-hidden">
+                          <img
+                            alt="MD. Mr. Parvez"
+                            className="mx-auto object-cover size-full absolute top-0 start-0 group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                            src={team?.image}
+                          />
+                        </div>
+                        <div className="border-l-8 border-[#081922] py-4 text-start pl-8 group-hover:bg-[#081922] group-hover:text-white group group-hover:border-primary">
+                          <h3 className="text-[22px] leading-[24px] font-bold font-ubuntu">
+                            {team?.name}
+                          </h3>
+                          <p className="text-[#6E6E6E] group-hover:text-white">
+                            {team?.designation}
+                          </p>
+                        </div>
+                      </div>
+                    </>
+                  ))}
+                </>
+              )}
             </div>
 
             {/* 2nd portion  */}

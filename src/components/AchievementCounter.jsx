@@ -1,6 +1,23 @@
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 export default function AchievementCounter() {
+  const { data } = useQuery({
+    queryKey: ["counterData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/all-overview/get"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
   return (
     <>
       <section className="bg-counterBg bg-cover bg-no-repeat max-w-[1920px] mx-auto">
@@ -8,7 +25,7 @@ export default function AchievementCounter() {
           <div className="font-ubuntu mb-6">
             <div className="flex items-end">
               <h1 className="font-ubuntu font-[700] 2xl:text-[180px] text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
-                <CountUp start={0} end={39}>
+                <CountUp start={0} end={data?.completedProjects}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
                       <span ref={countUpRef} />
@@ -103,7 +120,7 @@ export default function AchievementCounter() {
           <div className="font-ubuntu mb-6">
             <div className="flex items-end">
               <h1 className="font-ubuntu font-[700] 2xl:text-[180px] text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
-                <CountUp start={0} end={16}>
+                <CountUp start={0} end={data?.ongoingProjects}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
                       <span ref={countUpRef} />
@@ -198,7 +215,7 @@ export default function AchievementCounter() {
           <div className="font-ubuntu mb-6">
             <div className="flex items-end">
               <h1 className="font-ubuntu font-[700] 2xl:text-[180px] text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
-                <CountUp start={0} end={50}>
+                <CountUp start={0} end={data?.employee}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
                       <span ref={countUpRef} />
@@ -293,7 +310,7 @@ export default function AchievementCounter() {
           <div className="font-ubuntu mb-6">
             <div className="flex items-end">
               <h1 className="font-ubuntu font-[700] 2xl:text-[180px] text-[90px] bg-gradient-to-r from-rose-800 to-rose-600 bg-clip-text text-transparent leading-none">
-                <CountUp start={0} end={5}>
+                <CountUp start={0} end={data?.achievement}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start}>
                       <span ref={countUpRef} />

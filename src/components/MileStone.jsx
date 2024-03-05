@@ -3,8 +3,8 @@ import Fade from "react-reveal/Fade";
 const MileStone = () => {
   return (
     <>
-      <section className="font-ubuntu max-w-[1920px] mx-auto bg-mileBg bg-cover bg-no-repeat">
-        <div className="flex justify-center gap-4 items-center py-6">
+      <section className="font-ubuntu max-w-[1920px] mx-auto bg-gray-200">
+        <div className="flex justify-center gap-4 items-center pt-12 pb-6">
           <div className="flex flex-col">
             <hr className="border-t-2 border-primary w-8 ml-auto" />
             <hr className="border-t-2 border-primary w-5 mt-3 ml-auto" />
@@ -84,7 +84,7 @@ const MileStone = () => {
               </div>
               {/* <!--right column--> */}
               <Fade right>
-                <div className="w-2/5 px-2 py-10 mt-10">
+                <div className="w-2/5 px-2 py-10 ">
                   <div className="flex items-center flex-row-reverse">
                     <div className="flex flex-col w-full rounded-lg shadow border-l-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">

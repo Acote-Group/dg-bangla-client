@@ -1,8 +1,25 @@
 import { HashLink } from "react-router-hash-link";
 import worker from "../assets/photos/worker.png";
 import Fade from "react-reveal/Fade";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const WhoWeAre = () => {
+  const { data } = useQuery({
+    queryKey: ["whoData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/about/get"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
   return (
     <>
       <section className="bg-wwaBg bg-no-repeat bg-cover py-8 md:py-16 max-w-[1920px] mx-auto">
@@ -35,15 +52,7 @@ const WhoWeAre = () => {
                     Our <span className="font-bold">Mission</span>
                   </h2>
                   <p className="mt-2 sm:mt-4 text-justify font-poppins text-sm line-clamp-[10]">
-                    We prioritize the growth of talent and actively engage in
-                    deliberate efforts within the communities we serve. Our
-                    loyal commitment to upholding the highest ethical standards
-                    is reflected in the enduring quality of our projects,
-                    consistently meeting and exceeding customer expectations.
-                    Through our dedication to developing international skills
-                    for economic empowerment and contributing in the societies
-                    where we operate, we aim for making a positive and lasting
-                    impact.
+                    {data?.descriptionMission}
                   </p>
                   <ul className="mt-4 sm:mt-6 space-y-1 sm:space-y-2 font-poppins text-sm font-[500]">
                     <li>› Developing local skills</li>
@@ -88,15 +97,7 @@ const WhoWeAre = () => {
                     Our <span className="font-bold">Vision</span>
                   </h2>
                   <p className="mt-2 sm:mt-4 text-justify font-poppins text-sm line-clamp-[10]">
-                    We started as a grassroots construction service, aiming to
-                    evolve into a leading global engineering, construction, and
-                    project management company. Our vision encompasses
-                    delivering unparalleled outcomes to clients, nurturing
-                    rewarding professional paths, and creating profitable value.
-                    Our journey calls for expanding internationally in
-                    engineering, surpassing customer expectations, empowering
-                    fulfilling careers, and achieving profitability through
-                    exceptional workmanship across all domains.
+                    {data?.descriptionVission}
                   </p>
                   <ul className="mt-4 sm:mt-6 space-y-1 sm:space-y-2 font-poppins text-sm font-[500]">
                     <li>› Customer centric focus</li>

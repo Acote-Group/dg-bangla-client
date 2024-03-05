@@ -1,8 +1,25 @@
 import { Fade } from "react-reveal";
 import ofp1 from "../assets/photos/ofp1.png";
 import ofp2 from "../assets/photos/ofp2.png";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 export default function OurFuturePlan() {
+  const { data } = useQuery({
+    queryKey: ["whoData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/about/get"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
   return (
     <section className="bg-white text-gray-800 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto font-ubuntu" id="mission">
@@ -39,18 +56,14 @@ export default function OurFuturePlan() {
             <h3 className="text-[32px] font-bold mb-4 leading-[36px] border-b-2 border-primary pb-1 w-fit">
               Our Mission
             </h3>
-            <p className="mb-4 text-[24px] leading-[32px] text-justify">
-              We prioritize the growth of talent and actively engage in
-              deliberate efforts within the communities we serve. Our loyal
-              commitment to upholding the highest ethical standards is reflected
-              in the enduring quality of our projects, consistently meeting and
-              exceeding customer expectations.
+            <p className="mb-4 text-[24px] leading-[38px] text-justify">
+              {data?.descriptionMission}
             </p>
-            <p className="mt-4 text-[24px] leading-[38px] text-justify">
+            {/* <p className="mt-4 text-[24px] leading-[32px] text-justify">
               Through our dedication to developing international skills for
               economic empowerment and contributing in the societies where we
               operate, we aim for making a positive and lasting impact.
-            </p>
+            </p> */}
           </div>
           <div>
             <Fade right>
@@ -76,15 +89,8 @@ export default function OurFuturePlan() {
             <h3 className="text-[32px] font-bold mb-4 leading-[36px] border-b-2 border-primary pb-1 w-fit self-end">
               Our Vision
             </h3>
-            <p className="mb-4 text-[24px] leading-[32px] text-justify">
-              We started as a grassroots construction service, aiming to evolve
-              into a leading global engineering, construction, and project
-              management company. Our vision encompasses delivering unparalleled
-              outcomes to clients, nurturing rewarding professional paths, and
-              creating profitable value. <br /> <br /> Our journey calls for
-              expanding internationally in engineering, surpassing customer
-              expectations, empowering fulfilling careers, and achieving
-              profitability through exceptional workmanship across all domains.
+            <p className="mb-4 text-[24px] leading-[38px] text-justify">
+              {data?.descriptionVission}
             </p>
           </div>
         </div>

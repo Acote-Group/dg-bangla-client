@@ -1,20 +1,61 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { Mail } from "lucide-react";
-// import { useRef } from "react";
+import toast from "react-hot-toast";
 import { MapPin } from "lucide-react";
 import { MoveRight } from "lucide-react";
+import { useState } from "react";
+import axios from "axios";
 
 const Contact = () => {
-  // const nameRef = useRef();
-  // const emailRef = useRef();
-  // const messageRef = useRef();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    msg: "",
+  });
 
-  const handleSubmit = (e) => {
+  const handleChange = (evt) => {
+    const name = evt.target.name;
+    let value = evt.target.value;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    /* 
-    Do something here !
-    */
+    const toastId = toast.promise(
+      axios.post(
+        "https://backend.dg-bangla.com/api/v1/contact-us/send-email",
+        formData
+      ),
+      {
+        loading: "Sending Message...",
+        success: "Message Sent Successfully",
+        error: "Something went wrong! 😢",
+      },
+      {
+        success: {
+          duration: 5000,
+          // icon: "🔥",
+        },
+      }
+    );
+
+    try {
+      await toastId;
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        msg: "",
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <>
@@ -105,9 +146,13 @@ const Contact = () => {
                   <h1 className="font-bold">Full Name</h1>
                   <div className="relative">
                     <input
-                      type="email"
+                      type="text"
                       className="peer py-3 px-4 ps-11 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-700 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
                       placeholder="Enter Your Name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
                     />
                     <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none">
                       <svg
@@ -135,6 +180,10 @@ const Contact = () => {
                       type="email"
                       className="peer py-3 px-4 ps-11 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-700 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
                       placeholder="Enter Your Email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
                     />
                     <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none">
                       <svg
@@ -156,6 +205,39 @@ const Contact = () => {
                     </div>
                   </div>
 
+                  <h1 className="font-bold">Subject</h1>
+                  {/* ::subject Input */}
+                  <div className="relative">
+                    <input
+                      type="text"
+                      className="peer py-3 px-4 ps-11 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-700 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
+                      placeholder="Write a Subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                    />
+                    <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none ps-4 peer-disabled:opacity-50 peer-disabled:pointer-events-none">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="icon icon-tabler icon-tabler-book-2 flex-shrink-0 w-4 h-4 text-gray-500"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="#597e8d"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z" />
+                        <path d="M19 16h-12a2 2 0 0 0 -2 2" />
+                        <path d="M9 8h6" />
+                      </svg>
+                    </div>
+                  </div>
+
                   <h1 className="font-bold">Message</h1>
                   {/* ::Message Input */}
                   <div className="col-span-full">
@@ -163,12 +245,19 @@ const Contact = () => {
                       className="py-3 px-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-700 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600"
                       rows="10"
                       placeholder="Write Your Message..."
+                      name="msg"
+                      value={formData.msg}
+                      onChange={handleChange}
+                      required
                     ></textarea>
                   </div>
 
                   {/* ::Submit Button */}
                   <div>
-                    <button className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mt-[10px]">
+                    <button
+                      className="group relative inline-flex items-center overflow-hidden bg-gradient-to-r from-rose-700 to-rose-500 px-8 py-3.5 text-white focus:outline-none focus:ring mt-[10px]"
+                      type="submit"
+                    >
                       <span className="absolute -end-full transition-all group-hover:end-4">
                         <MoveRight fill="black" />
                       </span>
@@ -207,7 +296,7 @@ const Contact = () => {
                         Office Address
                       </h1>
                       {/* ::Address */}
-                      <p className="leading-5 inline-flex items-center mt-4">
+                      <p className="leading-5 inline-flex mt-4">
                         <MapPin className="mr-2 w-5 text-gray-400" />
                         House-456, Road 6 <br /> Avenue- 06, Mirpur DOHS
                       </p>

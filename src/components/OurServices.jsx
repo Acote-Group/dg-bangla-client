@@ -1,17 +1,29 @@
 import Fade from "react-reveal/Fade";
-import service1 from "../assets/service/service1.png";
-import service2 from "../assets/service/service2.png";
-import service3 from "../assets/service/service3.png";
-import service4 from "../assets/service/service4.png";
-import service5 from "../assets/service/service5.png";
 import { MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const OurServices = () => {
   const location = useLocation();
-
   const services = location.pathname.includes("/services");
+
+  const { isPending, data } = useQuery({
+    queryKey: ["serviceData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/service/get/all"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
   return (
     <>
       <section className="container max-w-[1360px] mx-auto mt-[22px]">
@@ -43,143 +55,46 @@ const OurServices = () => {
         </div>
 
         <div className="my-[60px]">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <a
-              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
-              href="#"
-            >
-              <div className="relative">
-                <img
-                  className="w-full h-[235px] object-cover"
-                  src={service1}
-                  alt="Image Description"
-                />
+          {isPending ? (
+            <div className="flex flex-col justify-center">
+              <div
+                className="animate-spin inline-block size-24 border-[3px] border-current border-t-transparent text-primary rounded-full mx-auto"
+                role="status"
+                aria-label="loading"
+              >
+                <span className="sr-only">Loading...</span>
               </div>
-              <div className="py-[30px] px-4">
-                <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Civil Work
-                </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
-                  Transforming dreams into reality, we build the foundations for
-                  a strong and resilient Bangladesh.
-                </p>
+            </div>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 justify-center">
+                {data?.map((service) => (
+                  <>
+                    <a
+                      className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
+                      href="#"
+                    >
+                      <div className="relative">
+                        <img
+                          className="w-full h-[235px] object-cover"
+                          src={service?.image}
+                          alt={service?.title}
+                        />
+                      </div>
+                      <div className="py-[30px] px-4">
+                        <h3 className="text-lg font-semibold text-primary font-ubuntu">
+                          {service?.title}
+                        </h3>
+                        <p className="mt-1 text-[#767676] font-ubuntu text-justify">
+                          {service?.overview}
+                        </p>
+                      </div>
+                    </a>
+                  </>
+                ))}
               </div>
-            </a>
-
-            <a
-              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
-              href="#"
-            >
-              <div className="relative">
-                <img
-                  className="w-full h-[235px] object-cover"
-                  src={service2}
-                  alt="Image Description"
-                />
-              </div>
-              <div className="py-[30px] px-4">
-                <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Fire Fighting
-                </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
-                  Connecting communities and paving the way for progress with
-                  our expertise in yard and road construction.
-                </p>
-              </div>
-            </a>
-
-            <a
-              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
-              href="#"
-            >
-              <div className="relative">
-                <img
-                  className="w-full h-[235px] object-cover"
-                  src={service4}
-                  alt="Image Description"
-                />
-              </div>
-              <div className="py-[30px] px-4">
-                <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Electrical Work
-                </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
-                  Lighting up the future with precision, our electro-mechanical
-                  solutions are at the heart of efficient and innovative
-                  construction.
-                </p>
-              </div>
-            </a>
-
-            <a
-              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
-              href="#"
-            >
-              <div className="relative">
-                <img
-                  className="w-full h-[235px] object-cover"
-                  src={service5}
-                  alt="Image Description"
-                />
-              </div>
-              <div className="py-[30px] px-4">
-                <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Automation Work
-                </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
-                  Embrace the future with smart buildings! Our automation
-                  services integrate cutting-edge technology with construction
-                  excellence.
-                </p>
-              </div>
-            </a>
-
-            {/* <a
-              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
-              href="#"
-            >
-              <div className="relative">
-                <img
-                  className="w-full"
-                  src={service6}
-                  alt="Image Description"
-                />
-              </div>
-              <div className="py-[30px] px-4">
-                <h3 className="text-lg font-semibold text-primary font-ubuntu text-justify">
-                  River Bank Protection
-                </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu">
-                  Safeguarding Bangladesh's most vital arteries, our river bank
-                  protection initiatives preserve beauty and ensure a
-                  sustainable future.
-                </p>
-              </div>
-            </a> */}
-
-            <a
-              className=" bg-white hover:shadow-lg hover:relative hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:w-full hover:after:h-1 hover:after:bg-primary"
-              href="#"
-            >
-              <div className="relative">
-                <img
-                  className="w-full h-[235px] object-cover"
-                  src={service3}
-                  alt="Image Description"
-                />
-              </div>
-              <div className="py-[30px] px-4">
-                <h3 className="text-lg font-semibold text-primary font-ubuntu">
-                  Dredging Work
-                </h3>
-                <p className="mt-1 text-[#767676] font-ubuntu text-justify">
-                  From shaping landscapes to strengthening foundations, we
-                  ensure stability and resilience with our dredging and ground
-                  improvement services.
-                </p>
-              </div>
-            </a>
-          </div>
+            </>
+          )}
 
           {services ? null : (
             <div className="flex justify-center md:mt-[60px] md:mb-[120px]">

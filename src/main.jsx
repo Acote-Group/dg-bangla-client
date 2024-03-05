@@ -5,6 +5,7 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./shared/ScrollToTop";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "react-hot-toast";
 
 const queryClient = new QueryClient();
 
@@ -18,5 +19,7 @@ root.render(
         <App />
       </BrowserRouter>
     </QueryClientProvider>
+
+    <Toaster />
   </React.StrictMode>
 );

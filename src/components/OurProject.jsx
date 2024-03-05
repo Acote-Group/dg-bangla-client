@@ -32,11 +32,38 @@ import lp8 from "../assets/lp/lp8.jpg";
 import lp9 from "../assets/lp/lp9.jpg";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
 const OurProject = () => {
   const location = useLocation();
-
   const project = location.pathname.includes("/project");
+
+  const [cats, setCats] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const categoryData = async (searchParam = "all") => {
+    setLoading(true);
+    try {
+      const response = await axios.get(
+        `https://backend.dg-bangla.com/api/v1/category/search?name=${
+          searchParam || "all"
+        }`
+      );
+      setCats(response.data?.data[0]?.projects || []);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    categoryData();
+  }, []);
+
+  console.log(cats);
   return (
     <>
       <section className="w-auto max-w-6xl 2xl:max-w-7xl mx-auto my-[120px]">
@@ -64,6 +91,7 @@ const OurProject = () => {
               data-hs-tab="#horizontal-scroll-tab-1"
               aria-controls="horizontal-scroll-tab-1"
               role="tab"
+              onClick={() => categoryData("all")}
             >
               All Projects <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -74,6 +102,7 @@ const OurProject = () => {
               data-hs-tab="#horizontal-scroll-tab-2"
               aria-controls="horizontal-scroll-tab-2"
               role="tab"
+              onClick={() => categoryData("civil")}
             >
               Civil Work <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -84,6 +113,7 @@ const OurProject = () => {
               data-hs-tab="#horizontal-scroll-tab-3"
               aria-controls="horizontal-scroll-tab-3"
               role="tab"
+              onClick={() => categoryData("electrical")}
             >
               Electrical Work <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -94,6 +124,7 @@ const OurProject = () => {
               data-hs-tab="#horizontal-scroll-tab-4"
               aria-controls="horizontal-scroll-tab-4"
               role="tab"
+              onClick={() => categoryData("fire")}
             >
               Fire Fighting <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -105,6 +136,7 @@ const OurProject = () => {
               data-hs-tab="#horizontal-scroll-tab-5"
               aria-controls="horizontal-scroll-tab-5"
               role="tab"
+              onClick={() => categoryData("auto")}
             >
               Automation Work <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -112,10 +144,11 @@ const OurProject = () => {
             <button
               type="button"
               className="hs-tab-active:font-semibold hs-tab-active:text-primary py-4 px-1 inline-flex items-center gap-x-2 border-b-2 border-transparent whitespace-nowrap hover:text-primary focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none text-sm md:text-base font-semibold"
-              id="horizontal-scroll-tab-item-5"
-              data-hs-tab="#horizontal-scroll-tab-5"
-              aria-controls="horizontal-scroll-tab-5"
+              id="horizontal-scroll-tab-item-6"
+              data-hs-tab="#horizontal-scroll-tab-6"
+              aria-controls="horizontal-scroll-tab-6"
               role="tab"
+              onClick={() => categoryData("dredging")}
             >
               Dredging Work
             </button>
@@ -124,127 +157,34 @@ const OurProject = () => {
 
         <div className="mt-[60px] gap-6 md:flex font-ubuntu">
           {/* tab-1  */}
-          <div className="ms-3">
-            <div
-              id="horizontal-scroll-tab-1"
-              role="tabpanel"
-              aria-labelledby="horizontal-scroll-tab-item-1"
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center mx-auto w-1/2 md:w-full mt-6 md:mt-0 relative"
-            >
-              <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-                <img
-                  src={lp1}
-                  className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30"
-                  alt=""
-                />
+          <div
+            id="horizontal-scroll-tab-1"
+            role="tabpanel"
+            aria-labelledby="horizontal-scroll-tab-item-1"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center mx-auto w-1/2 md:w-full mt-6 md:mt-0 relative"
+          >
+            {cats?.slice(0, 6).map((cat) => (
+              <>
+                <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
+                  <img
+                    src={cat?.images[0]}
+                    className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30"
+                    alt=""
+                  />
 
-                <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                    <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                      Residential
-                    </button>
-                    <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                      Ansar Barrack at BSC Yard
-                    </h1>
+                  <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
+                      <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
+                        {cat?.category}
+                      </button>
+                      <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
+                        {cat?.title}
+                      </h1>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-                <img
-                  src={lp2}
-                  className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30"
-                  alt=""
-                />
-
-                <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                    <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                      Commercial
-                    </button>
-                    <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                      Land Development at Bay Terminal
-                    </h1>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-                <img
-                  src={lp3}
-                  className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                  alt=""
-                />
-
-                <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                    <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                      Commercial
-                    </button>
-                    <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                      Govrakura Land Port Ofﬁce complex
-                    </h1>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-                <img
-                  src={lp4}
-                  className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                  alt=""
-                />
-
-                <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                    <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                      Residential
-                    </button>
-                    <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                      Govrakura Land Port Yard
-                    </h1>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-                <img
-                  src={lp5}
-                  className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                  alt=""
-                />
-
-                <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                    <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                      Commercial
-                    </button>
-                    <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                      Govrakura Land Port Gate
-                    </h1>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-                <img
-                  src={lp6}
-                  className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                  alt=""
-                />
-
-                <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                    <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                      Commercial
-                    </button>
-                    <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                      Laldiya Boundary wall
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </>
+            ))}
           </div>
 
           {/* tab-2  */}
@@ -254,119 +194,28 @@ const OurProject = () => {
             aria-labelledby="horizontal-scroll-tab-item-2"
             className="hidden grid grid-cols-1 md:grid-cols-3 gap-6 justify-center mx-auto w-1/2 md:w-full mt-6 md:mt-0"
           >
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp7}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
+            {cats?.slice(0, 6).map((cat) => (
+              <>
+                <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
+                  <img
+                    src={cat?.images[0]}
+                    className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30"
+                    alt=""
+                  />
 
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
+                  <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
+                      <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
+                        {cat?.category}
+                      </button>
+                      <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
+                        {cat?.title}
+                      </h1>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp8}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Level Checking for yard
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp9}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    PPFT Land Development_1
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp10}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    PPFT Land Development_2
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp11}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Land Development by Sand Pile
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp12}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Boring works for Earthing System
-                  </h1>
-                </div>
-              </div>
-            </div>
+              </>
+            ))}
           </div>
 
           {/* tab-3  */}
@@ -376,119 +225,28 @@ const OurProject = () => {
             role="tabpanel"
             aria-labelledby="horizontal-scroll-tab-item-3"
           >
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp13}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
+            {cats?.slice(0, 6).map((cat) => (
+              <>
+                <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
+                  <img
+                    src={cat?.images[0]}
+                    className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30"
+                    alt=""
+                  />
 
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
+                  <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
+                      <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
+                        {cat?.category}
+                      </button>
+                      <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
+                        {cat?.title}
+                      </h1>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp14}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp15}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp16}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp17}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp18}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
+              </>
+            ))}
           </div>
 
           {/* tab-4  */}
@@ -498,119 +256,28 @@ const OurProject = () => {
             role="tabpanel"
             aria-labelledby="horizontal-scroll-tab-item-4"
           >
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp19}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
+            {cats?.slice(0, 6).map((cat) => (
+              <>
+                <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
+                  <img
+                    src={cat?.images[0]}
+                    className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30"
+                    alt=""
+                  />
 
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
+                  <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
+                      <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
+                        {cat?.category}
+                      </button>
+                      <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
+                        {cat?.title}
+                      </h1>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp11}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp21}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp22}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp23}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp24}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
+              </>
+            ))}
           </div>
 
           {/* tab-5  */}
@@ -620,119 +287,59 @@ const OurProject = () => {
             role="tabpanel"
             aria-labelledby="horizontal-scroll-tab-item-5"
           >
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp25}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
+            {cats?.slice(0, 6).map((cat) => (
+              <>
+                <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
+                  <img
+                    src={cat?.images[0]}
+                    className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30"
+                    alt=""
+                  />
 
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
+                  <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
+                      <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
+                        {cat?.category}
+                      </button>
+                      <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
+                        {cat?.title}
+                      </h1>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </>
+            ))}
+          </div>
 
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp26}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
+          {/* tab-6  */}
+          <div
+            id="horizontal-scroll-tab-6"
+            className="hidden grid grid-cols-1 md:grid-cols-3 gap-6 justify-center mx-auto w-1/2 md:w-full mt-6 md:mt-0"
+            role="tabpanel"
+            aria-labelledby="horizontal-scroll-tab-item-6"
+          >
+            {cats?.slice(0, 6).map((cat) => (
+              <>
+                <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
+                  <img
+                    src={cat?.images[0]}
+                    className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30"
+                    alt=""
+                  />
 
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
+                  <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
+                      <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
+                        {cat?.category}
+                      </button>
+                      <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
+                        {cat?.title}
+                      </h1>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp27}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp28}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp29}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gradient-to-r from-red-800 to-red-600 group">
-              <img
-                src={lp30}
-                className="w-auto md:w-[465px] md:h-[330px] object-cover group-hover:opacity-30 "
-                alt=""
-              />
-
-              <div className="absolute left-0 right-0 top-0 h-full w-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100 p-6">
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
-                  <button className="font-[500] bg-[#A8223B] px-7 py-2 border border-white rounded-full text-white w-fit">
-                    Commercial
-                  </button>
-                  <h1 className="text-white font-[700] text-[25px] leasding-[36px] mt-[10px]">
-                    Electro-mechanical Works at PCT
-                  </h1>
-                </div>
-              </div>
-            </div>
+              </>
+            ))}
           </div>
         </div>
 
