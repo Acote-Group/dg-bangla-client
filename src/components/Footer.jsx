@@ -1,9 +1,41 @@
-// import { Link } from "react-router-dom";
-import logo from "../assets/photos/logo.png";
+import { useQuery } from "@tanstack/react-query";
 import map from "../assets/photos/map.png";
+import axios from "axios";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const { data } = useQuery({
+    queryKey: ["basicData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/data/info-get"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
+
+  const { data: sData } = useQuery({
+    queryKey: ["socialData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/data/social-get"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
   return (
     <>
       <footer className="px-4 bg-black text-white font-ubuntu w-auto max-w-[1920px] mx-auto">
@@ -11,12 +43,14 @@ const Footer = () => {
           <div className="lg:w-1/3 md:mr-[110px]">
             <a rel="noopener noreferrer" href="#" className="">
               <div className="w-auto">
-                <img src={logo} alt="" className="w-fit h-8 md:h-[58px]" />
+                <img
+                  src={data?.logo}
+                  alt=""
+                  className="w-fit h-8 md:h-[58px]"
+                />
               </div>
               <span className="block self-center text-sm leading-[25px] font-ubuntu mt-5">
-                DG Bangla: Youth-owned company specializing in Civil
-                Construction, Electro-Mechanical Engineering, based in Dhaka
-                with a branch in Chattogram.
+                {data?.details}
               </span>
             </a>
           </div>
@@ -28,7 +62,7 @@ const Footer = () => {
               <div className="space-y-[25px]">
                 <div>
                   <a rel="noopener noreferrer" href="#">
-                    House-456, Road 6, <br /> Avenue- 06, Mirpur DOHS
+                    {data?.address}
                   </a>
                 </div>
                 <div className="flex items-center">
@@ -63,7 +97,7 @@ const Footer = () => {
                       call us 24/7
                     </h1>
                     <h2 className="font-[500] text-[18px] leading-[26px]">
-                      +880244806615
+                      {data?.pNumber}
                     </h2>
                   </div>
                 </div>
@@ -85,8 +119,9 @@ const Footer = () => {
               <div className="flex justify-start space-x-3">
                 {/* facebook  */}
                 <a
+                  target="_blank"
                   rel="noopener noreferrer"
-                  href="#"
+                  href={sData?.facebook}
                   title="Facebook"
                   className="flex items-center p-1"
                 >
@@ -107,8 +142,9 @@ const Footer = () => {
 
                 {/* twitter  */}
                 <a
+                  target="_blank"
                   rel="noopener noreferrer"
-                  href="#"
+                  href={sData?.twitter}
                   title="Twitter"
                   className="flex items-center p-1"
                 >
@@ -130,9 +166,10 @@ const Footer = () => {
                 {/* linkedin  */}
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  href={sData?.linkedin}
                   title="Instagram"
                   className="flex items-center p-1"
+                  target="_blank"
                 >
                   <svg
                     width="24"
@@ -152,9 +189,10 @@ const Footer = () => {
                 {/* whatsApp  */}
                 <a
                   rel="noopener noreferrer"
-                  href="#"
-                  title="Instagram"
+                  href={sData?.whatsapp}
+                  title="whatsApp"
                   className="flex items-center p-1"
+                  target="_blank"
                 >
                   <svg
                     width="24"

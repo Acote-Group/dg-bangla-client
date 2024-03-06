@@ -1,21 +1,8 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import l1 from "../assets/clients/l1.jpg";
-import l10 from "../assets/clients/l10.png";
-import l2 from "../assets/clients/l2.jpg";
-import l3 from "../assets/clients/l3.jpg";
-import l4 from "../assets/clients/l4.jpg";
-import l5 from "../assets/clients/l5.jpg";
-import l6 from "../assets/clients/l6.png";
-import l7 from "../assets/clients/l7.png";
-import l8 from "../assets/clients/l8.png";
-import l9 from "../assets/clients/l9.jpg";
-import i1 from "../assets/clients/p1.jpg";
-import i2 from "../assets/clients/p2.jpg";
-import i3 from "../assets/clients/p3.jpg";
-import i4 from "../assets/clients/p4.jpg";
-import i5 from "../assets/clients/p5.jpg";
-import i6 from "../assets/clients/p6.jpg";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const OurClients = () => {
   const responsive = {
@@ -44,6 +31,23 @@ const OurClients = () => {
       partialVisibilityGutter: 30,
     },
   };
+
+  const { data } = useQuery({
+    queryKey: ["partnersData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/partners/get/all"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
+
   return (
     <>
       {/* <!-- Clients --> */}
@@ -68,7 +72,7 @@ const OurClients = () => {
           </svg>
 
           <h2 className="font-ubuntu uppercase text-[18px] md:text-[22px] md:leading-[32px]">
-            MORE THAN 100 PARTNERS TRUST{" "}
+            MORE THAN 100 PARTNERS TRUST
             <span className="text-primary font-[500]">DG Bangla</span>
           </h2>
 
@@ -97,7 +101,7 @@ const OurClients = () => {
           autoPlay
           autoPlaySpeed={3}
           centerMode={false}
-          className="photos "
+          className="photos"
           containerClass="container-with-dots"
           customTransition="all 3s linear"
           dotListClass=""
@@ -122,12 +126,15 @@ const OurClients = () => {
           swipeable
           transitionDuration={3000}
         >
-          <img className="" src={i1} />
-          <img className="" src={i2} />
-          <img className="" src={i3} />
-          <img className="" src={i4} />
-          <img className="" src={i5} />
-          <img className="" src={i6} />
+          {data ? (
+            data?.images1?.map((image, index) => (
+              <img src={image} alt="" key={index} />
+            ))
+          ) : (
+            <>
+              <img src={l1} className="hidden" />
+            </>
+          )}
         </Carousel>
 
         <Carousel
@@ -161,26 +168,16 @@ const OurClients = () => {
           swipeable
           transitionDuration={3000}
         >
-          <img className="" src={l1} />
-          <img className="" src={l2} />
-          <img className="" src={l3} />
-          <img className="" src={l4} />
-          <img className="" src={l5} />
-          <img className="" src={l6} />
-          <img className="" src={l7} />
-          <img className="" src={l8} />
-          <img className="" src={l9} />
-          <img className="" src={l10} />
+          {data ? (
+            data?.images2?.map((image, index) => (
+              <img src={image} alt="" key={index} />
+            ))
+          ) : (
+            <>
+              <img src={l1} className="hidden" />
+            </>
+          )}
         </Carousel>
-
-        {/* <div className="flex justify-center gap-4 photos">
-          <img className="" src={i1} />
-          <img className="" src={i2} />
-          <img className="" src={i3} />
-          <img className="" src={i4} />
-          <img className="" src={i5} />
-          <img className="" src={i6} />
-        </div> */}
       </section>
       {/* <!-- End Clients --> */}
     </>

@@ -6,6 +6,7 @@ import { MapPin } from "lucide-react";
 import { MoveRight } from "lucide-react";
 import { useState } from "react";
 import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -57,6 +58,38 @@ const Contact = () => {
       console.log(error);
     }
   };
+
+  const { data } = useQuery({
+    queryKey: ["basicData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/data/info-get"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
+
+  const { data: sData } = useQuery({
+    queryKey: ["socialData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/data/social-get"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
   return (
     <>
       <section className="max-w-[1920px] mx-auto">
@@ -290,15 +323,15 @@ const Contact = () => {
                     </p>
                   </div>
 
-                  <div className="md:flex pt-[40px] font-ubuntu gap-x-[80px]">
+                  <div className="md:flex pt-[40px] font-ubuntu">
                     <div>
                       <h1 className="text-[24px] font-bold leading-[30px]">
                         Office Address
                       </h1>
                       {/* ::Address */}
-                      <p className="leading-5 inline-flex mt-4">
-                        <MapPin className="mr-2 w-5 text-gray-400" />
-                        House-456, Road 6 <br /> Avenue- 06, Mirpur DOHS
+                      <p className="leading-5 inline-flex mt-4 w-[60%]">
+                        <MapPin className="mr-2 w-5 text-gray-400 flex-shrink-0" />
+                        {data?.address}
                       </p>
                     </div>
 
@@ -312,7 +345,7 @@ const Contact = () => {
                         className="inline-flex items-center leading-5 mt-4"
                       >
                         <Mail className="mr-2 w-5 text-gray-400" />
-                        info@dg-bangla.com <br />
+                        {data?.email}
                       </a>
                     </div>
                   </div>
@@ -323,9 +356,11 @@ const Contact = () => {
                     <div className="flex items-center mt-5">
                       {/* :Twitter */}
                       <a
-                        href="#twitter"
+                        href={sData?.twitter}
+                        target="_blank"
                         className="m-1.5 w-8 h-8 inline-flex justify-center items-center shadow-sm rounded-full bg-[#1DA1F2] text-white filter hover:brightness-125"
                         style={{ backgroundColor: "#1DA1F2" }}
+                        rel="noreferrer"
                       >
                         {/* ::twitter svg */}
                         <svg
@@ -338,9 +373,11 @@ const Contact = () => {
                       </a>
                       {/* :FACEBOOK */}
                       <a
-                        href="#facebook"
+                        href={sData?.facebook}
+                        target="_blank"
                         className="m-1.5 w-8 h-8 inline-flex justify-center items-center shadow-sm rounded-full bg-[#4267B2] text-white filter hover:brightness-125"
                         style={{ backgroundColor: "#4267B2" }}
+                        rel="noreferrer"
                       >
                         {/* ::facebook svg */}
                         <svg
@@ -353,8 +390,10 @@ const Contact = () => {
                       </a>
                       {/* :Instagram */}
                       <a
-                        href="#instagrap"
+                        href={sData?.instagram}
+                        target="_blank"
                         className="m-1.5 w-8 h-8 inline-flex justify-center items-center shadow-sm rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 text-white filter hover:brightness-125"
+                        rel="noreferrer"
                       >
                         {/* ::instagram svg */}
                         <svg
@@ -368,8 +407,10 @@ const Contact = () => {
 
                       {/* :Linkedin */}
                       <a
-                        href="#instagrap"
+                        href={sData?.linkedin}
+                        target="_blank"
                         className="m-1.5 w-8 h-8 inline-flex justify-center items-center shadow-sm rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 text-white filter hover:brightness-125"
+                        rel="noreferrer"
                       >
                         <svg
                           width="40"
