@@ -1,10 +1,27 @@
 import { MoveRight } from "lucide-react";
 import Fade from "react-reveal/Fade";
-import banner from "../assets/photos/banner-min.png";
+// import banner from "../assets/photos/banner-min.png";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 const Hero = () => {
+  const { data } = useQuery({
+    queryKey: ["bannerData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/banner/banner-get"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
   return (
     <>
       <section className="max-w-[1920px] mx-auto bg-banner-bg bg-cover bg-no-repeat">
@@ -17,19 +34,14 @@ const Hero = () => {
             <Fade left>
               <div className="md:col-span-1 md:ml-[30px] lg:ml-[100px] xl:ml-[150px] 2xl:ml-[270px] mt-8 md:mt-16 lg:mt-24">
                 <h1 className="text-white font-ubuntu md:mb-[10px]">
-                  From Foundations to Finishes
+                  {data?.subTitle}
                 </h1>
 
                 <h1 className="2xl:text-[58px] font-[800] bg-gradient-to-r from-red-500 via-pink-600 to-rose-800 text-transparent bg-clip-text text-3xl lg:text-4xl lg:leading-tight  font-ubuntu">
-                  Building Sustainable Futures Worldwide
+                  {data?.title}
                 </h1>
                 <h1 className="mt-3 text-sm font-ubuntu text-white dark:text-white text-justify leading-[25px]">
-                  DG Bangla stands as youthful leaders in civil construction and
-                  electro-mechanical engineering, with headquarters in Dhaka and
-                  a branch in Chattogram. Our expertise lies in roadways, yards,
-                  dredging, low land development, and electrification projects.
-                  We employ heavy earth-moving equipment and efficient logistics
-                  to ensure timely project completion.
+                  {data?.details}
                 </h1>
 
                 {/* */}
@@ -50,7 +62,7 @@ const Hero = () => {
                     </span>
 
                     <span className="uppercase font-medium transition-all group-hover:me-4">
-                      See All Services
+                      All Services
                     </span>
                   </Link>
                 </div>
@@ -60,7 +72,11 @@ const Hero = () => {
             {/* right image  */}
             <div className="rounded-sm pt-8 md:pt-24">
               <Fade right>
-                <img className="w-full" src={banner} alt="Image Description" />
+                <img
+                  className="w-auto h-auto 2xl:w-[1000px] 2xl:h-[775px]"
+                  src={data?.image}
+                  alt="Image Description"
+                />
               </Fade>
             </div>
           </div>

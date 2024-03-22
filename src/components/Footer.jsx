@@ -108,9 +108,13 @@ const Footer = () => {
               <h3 className="text-[18px] font-[600] leading-[28px]">
                 Our Office
               </h3>
-              <div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://maps.app.goo.gl/sLF5BzkBKLbKfVA5A"
+              >
                 <img src={map} alt="" />
-              </div>
+              </a>
             </div>
             <div className="space-y-3">
               <h3 className="text-[18px] font-[600] leading-[28px]">

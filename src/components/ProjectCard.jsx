@@ -29,7 +29,7 @@ export default function ProjectCard({ data }) {
         <div className="md:flex md:h-[350px] items-center">
           <div className="md:flex-shrink-0">
             <img
-              className="h-48 w-full object-cover md:h-lvh md:w-96 flex-shrink-0"
+              className="h-48 w-full object-cover md:h-fit md:w-96 flex-shrink-0"
               src={data?.images[0]}
               alt="Dredging Works at Karnofuli River"
             />

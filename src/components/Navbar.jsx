@@ -1,20 +1,26 @@
-import logo from "../assets/photos/logo.png";
+import { useQuery } from "@tanstack/react-query";
+// import logo from "../assets/photos/logo.png";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Navbar = () => {
-  // window.addEventListener("scroll", function () {
-  //   var navbar = document.querySelector("header");
-  //   if (window.scrollY > 0) {
-  //     navbar.style.backgroundColor = "black";
-  //     // navbar.style.paddingTop = "10px";
-  //     // navbar.style.paddingBottom = "10px";
-  //   } else {
-  //     navbar.style.backgroundColor = "transparent";
-  //     // navbar.style.paddingTop = "30px";
-  //     // navbar.style.paddingBottom = "30px";
-  //   }
-  // });
+  const { data } = useQuery({
+    queryKey: ["basicData"],
+    queryFn: async () => {
+      try {
+        const response = await axios.get(
+          "https://backend.dg-bangla.com/api/v1/data/info-get"
+        );
+
+        return response.data?.data;
+      } catch (error) {
+        // Handle errors here
+        throw new Error("Network response was not ok");
+      }
+    },
+  });
+
   return (
     <>
       <header className="flex flex-wrap sm:justify-start sm:flex-col md:fixed md:z-50 md:top-0 bg-black w-full max-w-[1920px] mx-auto">
@@ -25,7 +31,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <Link to="/">
               <img
-                src={logo}
+                src={data?.logo}
                 className="w-fit h-8 md:h-[58px]"
                 aria-label="Brand Logo"
               />

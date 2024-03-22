@@ -11,9 +11,9 @@ export default function OurStory() {
         </h1>
         <p className="mt-4 text-[18px] leading-[28px] text-justify">
           From humble beginnings in 2012, we've grown into a powerhouse! At
-          present, we're not just experienced property design and construction
-          experts, but also handle electrical works, equipment, and even service
-          them!
+          present, we're not just experienced in property design and
+          construction experts, but also handle electrical works, equipment, and
+          even service them!
         </p>
         <p className="mt-4 text-[18px] leading-[28px] text-justify">
           We're leading the way in quality construction, putting health, safety,

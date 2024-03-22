@@ -24,7 +24,7 @@ const WhoWeAre = () => {
     <>
       <section className="bg-wwaBg bg-no-repeat bg-cover py-8 md:py-16 max-w-[1920px] mx-auto">
         <div className="py-4 sm:py-8 max-w-[1280px] mx-auto font-ubuntu">
-          <div className="text-center text-[28px] md:text-[38px] font-bold uppercase tracking-widest  font-roboto mb-[50px]">
+          <div className="text-center text-[28px] md:text-[38px] uppercase tracking-widest  font-roboto mb-[50px] font-[500]">
             <div className="flex justify-center gap-4 items-center">
               <div className="flex flex-col">
                 <hr className="border-t-2 border-primary w-8 ml-auto" />

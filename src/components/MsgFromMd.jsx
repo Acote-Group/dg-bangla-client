@@ -69,24 +69,25 @@ export default function MsgFromMd() {
                 </h1>
                 <p className="leading-[26px] md:mb-[50px] text-justify">
                   Our company embodies progress, driven by a visionary spirit,
-                  and innovative thinking. and unwavering dedication. Emerging
-                  from humble origins, we've emerged as leaders m urban
-                  development, reshaping skylines and redefining landscapes with
-                  our daring projects. <br /> <br /> At our core lies an
-                  unrelenting pursuit of excellence. We cultivate an environment
-                  of innovation where creativity flourishes and boundaries are
+                  innovative thinking, and unwavering dedication. Emerging from
+                  humble origins, we've emerged as leaders in urban development,
+                  reshaping skylines and redefining landscapes with our daring
+                  projects. <br /> <br /> At our core lies an unrelenting
+                  pursuit of excellence. We cultivate an environment of
+                  innovation where creativity flourishes and boundaries are
                   pushed. Whether it's pioneering architectural designs or
                   sustainable infrastructure, we set the bar for excellence in
-                  every endeavor. Yet our influence extends beyond mere
-                  structures. We serve as agents of change, igniting growth and
-                  advocating for community development. Nth each project, the
-                  aim is to enrich both the physical environment and the Wes of
-                  those fl serves, creating inclusive spaces that foster
-                  connection, opportunity, and prosperity. <br /> <br /> As we
-                  look ahead, lets continue to embrace innovation, upholding our
-                  commitment to excellence. integrity. and social
-                  responsibility. Lets remain mindful of the profound impact our
-                  work has on the world, ensuring a brighter tomorrow for all.
+                  every endeavor. <br /> <br /> Yet our influence extends beyond
+                  mere structures. We serve as agents of change, igniting growth
+                  and advocating for community development. With each project,
+                  our aim is to enrich both the physical environment and the
+                  lives of those it serves, creating inclusive spaces that
+                  foster connection, opportunity, and prosperity. <br /> <br />{" "}
+                  As we look ahead, let's continue to embrace innovation,
+                  upholding our commitment to excellence, integrity, and social
+                  responsibility. Let's remain mindful of the profound impact
+                  our work has on the world, ensuring a brighter tomorrow for
+                  all.
                 </p>
               </Fade>
             </div>

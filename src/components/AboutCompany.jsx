@@ -19,11 +19,17 @@ const AboutCompany = () => {
 
             <div className="w-full md:w-1/2 space-y-5 font-ubuntu">
               <div>
-                <div className="font-ubuntu font-[700] text-[18px] uppercase leading-[25px]">
-                  About Company
-                  <hr className="border-t-[2px] border-primary w-28" />
+                <div className="flex justify-center md:justify-start gap-4 items-center">
+                  <h1 className="font-ubuntu font-[500] text-[38px] leading-[44px]">
+                    <span className="text-primary">About</span> Company
+                  </h1>
+
+                  <div className="flex flex-col ">
+                    <hr className="border-t-2 border-primary w-8" />
+                    <hr className="border-t-2 border-primary w-5 mt-3" />
+                  </div>
                 </div>
-                <h1 className="text-[28px] 2xl:text-[45px] font-[500] font-ubuntu 2xl:leading-[65px] lg:w-3/4 2xl:w-full mt-[25px] text-justify">
+                <h1 className="text-[28px] 2xl:text-[30px] font-[500] font-ubuntu 2xl:leading-[44px] lg:w-3/4 2xl:w-full mt-[25px] text-justify">
                   We are committed to innovating in construction and
                   engineering.
                 </h1>
