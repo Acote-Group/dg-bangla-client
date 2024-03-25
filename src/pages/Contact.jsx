@@ -324,13 +324,13 @@ const Contact = () => {
                     </p>
                   </div>
 
-                  <div className="md:flex pt-[40px] font-ubuntu">
+                  <div className="grid grid-cols-1 md:grid-cols-2 pt-[40px] font-ubuntu w-full gap-10">
                     <div>
                       <h1 className="text-[24px] font-bold leading-[30px]">
                         Office Address
                       </h1>
                       {/* ::Address */}
-                      <p className="leading-5 inline-flex mt-4 w-[60%]">
+                      <p className="leading-5 inline-flex mt-4">
                         <MapPin className="mr-2 w-5 text-gray-400 flex-shrink-0" />
                         {data?.address}
                       </p>

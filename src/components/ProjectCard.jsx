@@ -60,7 +60,7 @@ export default function ProjectCard({ data }) {
         style={customStyles}
         contentLabel="Project Details"
       >
-        <ProjectModal data={data} />
+        <ProjectModal data={data} onClose={handleCloseModal} />
       </Modal>
     </>
   );

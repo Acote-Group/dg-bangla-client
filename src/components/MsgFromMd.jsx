@@ -26,16 +26,17 @@ export default function MsgFromMd() {
                   and more practical world!
                 </h1>
                 <p className="leading-[26px] md:mb-[50px] text-justify">
-                  DG Bangla is a swiftly expanding, youth-driven enterprise
-                  specializing in Civil Construction and Electro-Mechanical
-                  Engineering for projects encompassing roadways, yards,
-                  dredging, low land development, electrification utilizing
-                  robust earth-moving machinery, and comprehensive logistics
-                  solutions. <br /> <br /> DG Bangla will further contribute the
-                  expertise towards driving operational excellence, fostering
-                  client relationships, and spearheading initiatives that
-                  position the organization as a leader in the diverse sectors
-                  of Construction, Technology, and Maritime Infrastructure.
+                  DG Bangla Engineering Ltd. is a swiftly expanding,
+                  youth-driven enterprise specializing in Civil Construction and
+                  Electro-Mechanical Engineering for projects encompassing
+                  roadways, yards, dredging, low land development,
+                  electrification utilizing robust earth-moving machinery, and
+                  comprehensive logistics solutions. <br /> <br /> DG Bangla
+                  will further contribute the expertise towards driving
+                  operational excellence, fostering client relationships, and
+                  spearheading initiatives that position the organization as a
+                  leader in the diverse sectors of Construction, Technology, and
+                  Maritime Infrastructure.
                 </p>
 
                 <div className="mt-6 md:mt-0">

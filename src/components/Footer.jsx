@@ -65,7 +65,7 @@ const Footer = () => {
                     {data?.address}
                   </a>
                 </div>
-                <div className="flex items-center">
+                <div className="flex">
                   <svg
                     width="41"
                     height="42"
@@ -97,7 +97,16 @@ const Footer = () => {
                       call us 24/7
                     </h1>
                     <h2 className="font-[500] text-[18px] leading-[26px]">
-                      {data?.pNumber}
+                      +880244806615
+                    </h2>
+                    <h2 className="font-[500] text-[18px] leading-[26px]">
+                      +8801332533454
+                    </h2>
+                    <h2 className="font-[500] text-[18px] leading-[26px]">
+                      +8801332533442
+                    </h2>
+                    <h2 className="font-[500] text-[18px] leading-[26px]">
+                      +8801332533441
                     </h2>
                   </div>
                 </div>

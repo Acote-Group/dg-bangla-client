@@ -47,10 +47,10 @@ const OurServices = () => {
           </div>
 
           <p className="text-center font-ubuntu text-[#767676] mx-auto mt-6 text-sm font-normal w-[80%] leading-[24px]">
-            DG-Bangla isn't just raising skylines - we're shaping the future of
-            Bangladesh's business landscape. From state-of-the-art office towers
-            to innovative logistics centers, we deliver commercial projects that
-            empower businesses and communities.
+            DG Bangla Engineering Ltd. isn't just raising skylines - we're
+            shaping the future of Bangladesh's business landscape. From
+            state-of-the-art office towers to innovative logistics centers, we
+            deliver commercial projects that empower businesses and communities.
           </p>
         </div>
 

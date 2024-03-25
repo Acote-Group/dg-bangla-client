@@ -3,10 +3,27 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import Modal from "react-modal";
+import ProjectModal from "./ProjectModal";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    width: "50%",
+    padding: "0%",
+  },
+};
 
 export default function GalleryCompo() {
   const [cats, setCats] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [img, setImg] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const categoryData = async (searchParam = "all") => {
     setLoading(true);
@@ -27,6 +44,15 @@ export default function GalleryCompo() {
   useEffect(() => {
     categoryData();
   }, []);
+
+  const handleOpenModal = (cat) => {
+    setIsOpen(true);
+    setImg(cat);
+  };
+  const handleCloseModal = () => {
+    setIsOpen(false);
+    console.log("clicked");
+  };
   return (
     <>
       <Navbar />
@@ -204,13 +230,17 @@ export default function GalleryCompo() {
               <>
                 {cats?.map((cat) => (
                   <>
-                    <div>
+                    <a
+                      key={cat?._id}
+                      onClick={() => handleOpenModal(cat)}
+                      className="cursor-pointer"
+                    >
                       <img
                         src={cat?.images[0]}
                         className="w-[410px] h-[320px] object-cover"
                         alt=""
                       />
-                    </div>
+                    </a>
                   </>
                 ))}
               </>
@@ -225,13 +255,17 @@ export default function GalleryCompo() {
           >
             {cats?.map((cat) => (
               <>
-                <div>
+                <a
+                  key={cat?._id}
+                  onClick={() => handleOpenModal(cat)}
+                  className="cursor-pointer"
+                >
                   <img
                     src={cat?.images[0]}
                     className="w-[410px] h-[320px] object-cover"
                     alt=""
                   />
-                </div>
+                </a>
               </>
             ))}
           </div>
@@ -244,13 +278,17 @@ export default function GalleryCompo() {
           >
             {cats?.map((cat) => (
               <>
-                <div>
+                <a
+                  key={cat?._id}
+                  onClick={() => handleOpenModal(cat)}
+                  className="cursor-pointer"
+                >
                   <img
                     src={cat?.images[0]}
                     className="w-[410px] h-[320px] object-cover"
                     alt=""
                   />
-                </div>
+                </a>
               </>
             ))}
           </div>
@@ -263,13 +301,17 @@ export default function GalleryCompo() {
           >
             {cats?.map((cat) => (
               <>
-                <div>
+                <a
+                  key={cat?._id}
+                  onClick={() => handleOpenModal(cat)}
+                  className="cursor-pointer"
+                >
                   <img
                     src={cat?.images[0]}
                     className="w-[410px] h-[320px] object-cover"
                     alt=""
                   />
-                </div>
+                </a>
               </>
             ))}
           </div>
@@ -282,13 +324,17 @@ export default function GalleryCompo() {
           >
             {cats?.map((cat) => (
               <>
-                <div>
+                <a
+                  key={cat?._id}
+                  onClick={() => handleOpenModal(cat)}
+                  className="cursor-pointer"
+                >
                   <img
                     src={cat?.images[0]}
                     className="w-[410px] h-[320px] object-cover"
                     alt=""
                   />
-                </div>
+                </a>
               </>
             ))}
           </div>
@@ -301,18 +347,32 @@ export default function GalleryCompo() {
           >
             {cats?.map((cat) => (
               <>
-                <div>
+                <a
+                  key={cat?._id}
+                  onClick={() => handleOpenModal(cat)}
+                  className="cursor-pointer"
+                >
                   <img
                     src={cat?.images[0]}
                     className="w-[410px] h-[320px] object-cover"
                     alt=""
                   />
-                </div>
+                </a>
               </>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Modal */}
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={handleCloseModal}
+        style={customStyles}
+        contentLabel="Project Details"
+      >
+        <ProjectModal data={img} onClose={handleCloseModal} />
+      </Modal>
     </>
   );
 }

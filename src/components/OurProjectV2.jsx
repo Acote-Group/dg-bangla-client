@@ -1,51 +1,20 @@
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
 import ProjectCard from "./ProjectCard";
 import { SkeletonLoader } from "../shared/SkeletonLoader";
 
 export default function OurProjectV2() {
-  const [items, setItems] = useState([]);
-  const [hasMore, setHasMore] = useState(true);
-  const [index, setIndex] = useState(2);
   const [cats, setCats] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          "https://backend.dg-bangla.com/api/v1/project/get/all"
-        );
-        setItems(res.data?.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
-
-  const fetchMoreData = async () => {
-    try {
-      const res = await axios.get(
-        `https://backend.dg-bangla.com/api/v1/project/get/all`
-      );
-      setItems((prevItems) => [...prevItems, ...res.data.data]);
-
-      res.data.length > 0 ? setHasMore(true) : setHasMore(false);
-    } catch (err) {
-      console.log(err);
-    }
-
-    setIndex((prevIndex) => prevIndex + 1);
-  };
-
-  const categoryData = async (searchParam) => {
+  const categoryData = async (searchParam = "all") => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://backend.dg-bangla.com/api/v1/category/search?name=${searchParam}`
+        `https://backend.dg-bangla.com/api/v1/category/search?name=${
+          searchParam || "all"
+        }`
       );
       setCats(response.data?.data[0]?.projects || []);
     } catch (error) {
@@ -54,6 +23,10 @@ export default function OurProjectV2() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    categoryData();
+  }, []);
   return (
     <>
       <section className="w-auto max-w-[1460px] mx-auto my-[120px]">
@@ -81,6 +54,7 @@ export default function OurProjectV2() {
               data-hs-tab="#horizontal-scroll-tab-1"
               aria-controls="horizontal-scroll-tab-1"
               role="tab"
+              onClick={() => categoryData("all")}
             >
               All Projects <span className="hidden md:block">&nbsp;</span>/
             </button>
@@ -149,25 +123,21 @@ export default function OurProjectV2() {
           <div
             id="horizontal-scroll-tab-1"
             role="tabpanel"
-            aria-labelledby="horizontal-scroll-tab-item-1"
-            className=""
+            aria-labelledby="horizontal-scroll-tab-item-2"
+            className="grid grid-cols-1 md:grid-cols-2 justify-center gap-12 mx-auto"
           >
-            <InfiniteScroll
-              dataLength={items.length}
-              next={fetchMoreData}
-              hasMore={hasMore}
-              loader={
-                <div className="flex justify-center">
-                  <h1 className="text-4xl text-primary font-semibold font-ubuntu">
-                    Loading...
-                  </h1>
+            {loading ? (
+              <>
+                <div className="">
+                  <SkeletonLoader />
                 </div>
-              }
-              className="grid grid-cols-1 md:grid-cols-2 justify-center gap-12 mx-auto"
-            >
-              {items &&
-                items.map((item) => <ProjectCard data={item} key={item._id} />)}
-            </InfiniteScroll>
+                <div className="">
+                  <SkeletonLoader />
+                </div>
+              </>
+            ) : (
+              cats.map((item) => <ProjectCard data={item} key={item._id} />)
+            )}
           </div>
 
           {/* tab-2  */}
