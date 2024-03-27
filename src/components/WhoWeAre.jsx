@@ -1,5 +1,5 @@
 import { HashLink } from "react-router-hash-link";
-import worker from "../assets/photos/worker.png";
+import worker from "../assets/photos/whoImg.png";
 import Fade from "react-reveal/Fade";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";

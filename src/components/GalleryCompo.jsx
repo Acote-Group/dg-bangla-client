@@ -5,6 +5,9 @@ import axios from "axios";
 import { useEffect } from "react";
 import Modal from "react-modal";
 import ProjectModal from "./ProjectModal";
+import img1 from "../assets/project/pic1.jpg";
+import img2 from "../assets/project/pic2.jpg";
+import img3 from "../assets/project/pic3.jpg";
 
 const customStyles = {
   content: {
@@ -51,7 +54,6 @@ export default function GalleryCompo() {
   };
   const handleCloseModal = () => {
     setIsOpen(false);
-    console.log("clicked");
   };
   return (
     <>
@@ -243,6 +245,21 @@ export default function GalleryCompo() {
                     </a>
                   </>
                 ))}
+                <img
+                  src={img1}
+                  className="w-[410px] h-[320px] object-cover"
+                  alt=""
+                />
+                <img
+                  src={img2}
+                  className="w-[410px] h-[320px] object-cover"
+                  alt=""
+                />
+                <img
+                  src={img3}
+                  className="w-[410px] h-[320px] object-cover"
+                  alt=""
+                />
               </>
             )}
           </div>

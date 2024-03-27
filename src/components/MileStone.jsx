@@ -89,7 +89,7 @@ const MileStone = () => {
                     <div className="flex flex-col w-full rounded-lg shadow border-l-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">
                         <div className="font-bold text-[22px] leading-[25px]">
-                          <h1>Projects From PWD & Sheba</h1>
+                          <h1>Building Construction Works</h1>
                           <hr className="bg-gradient-to-r from-rose-600 to-white group-hover:bg-gradient-to-l h-[2px] mt-[5px]" />
                         </div>
                       </div>
@@ -170,7 +170,7 @@ const MileStone = () => {
                     <div className="flex flex-col w-full rounded-lg shadow border-l-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">
                         <div className="font-bold text-[22px] leading-[25px]">
-                          <h1>Land Port Project</h1>
+                          <h1>Infrustructure & Rcc open yard</h1>
                           <hr className="bg-gradient-to-r from-primary to-white h-[2px] mt-[5px] group-hover:bg-gradient-to-l" />
                         </div>
                       </div>
@@ -194,13 +194,15 @@ const MileStone = () => {
                     <div className="flex flex-col w-full rounded-lg shadow border-r-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
                       <div className="mb-2 flex justify-between">
                         <div className="font-bold text-[22px] leading-[25px]">
-                          <h1>Starting</h1>
+                          <h1>Automation Works</h1>
                           <hr className="bg-gradient-to-r from-rose-600 to-white h-[2px] mt-[5px] group-hover:bg-gradient-to-l" />
                         </div>
                         <div className="flex flex-row"></div>
                       </div>
                       <div className="text-[20px] leading-[23px] text-justify">
-                        Civil construction has commenced as the main contractor.
+                        Revolutionized Industries through Innovative Automation
+                        Solutions for Enhanced Efficiency and
+                        Streamlined Operations.
                       </div>
                     </div>
 
@@ -214,7 +216,7 @@ const MileStone = () => {
                   <div className="absolute flex flex-col justify-center h-32 w-32 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
                     <div className="w-20 h-20 border-[3px] border-primary rounded-full flex flex-col items-center justify-center mx-auto group-hover:bg-primary">
                       <h1 className="text-primary group-hover:text-white font-ubuntu text-[20px] font-bold">
-                        2012
+                        2017
                       </h1>
                     </div>
                   </div>
@@ -222,6 +224,44 @@ const MileStone = () => {
               </div>
               {/* <!--right column--> */}
               <div className="w-2/5 px-2 py-5"></div>
+            </div>
+
+            <div className="flex flex-row w-full justify-center group">
+              {/* <!-- left col --> */}
+
+              <div className="w-2/5 px-2 py-10"></div>
+              {/* <!--line column--> */}
+              <div className="flex justify-center">
+                <div className="relative flex h-full w-2 bg-primary items-center justify-center">
+                  <div className="absolute flex flex-col justify-center h-32 w-32 rounded-full border leading-none text-center z-10 shadow-md shadow-red-400/40 bg-white">
+                    <div className="w-20 h-20 border-[3px] border-primary rounded-full flex flex-col items-center justify-center mx-auto group-hover:bg-primary">
+                      <h1 className="text-primary group-hover:text-white font-ubuntu text-[20px] font-bold">
+                        2012
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* <!--right column--> */}
+              <Fade right>
+                <div className="w-2/5 px-2 py-10">
+                  <div className="flex items-center flex-row-reverse">
+                    <div className="flex flex-col w-full rounded-lg shadow border-l-[5px] border-primary px-4 py-5 bg-white group-hover:bg-primary group-hover:text-white">
+                      <div className="mb-2 flex justify-between">
+                        <div className="font-bold text-[22px] leading-[25px]">
+                          <h1>Starting</h1>
+                          <hr className="bg-gradient-to-r from-primary to-white h-[2px] mt-[5px] group-hover:bg-gradient-to-l" />
+                        </div>
+                      </div>
+                      <div className="text-[20px] leading-[23px] text-justify">
+                        Civil construction has commenced as the main contractor.
+                      </div>
+                    </div>
+
+                    <div className="w-32 bg-primary h-1 flex items-center"></div>
+                  </div>
+                </div>
+              </Fade>
             </div>
           </div>
         </div>

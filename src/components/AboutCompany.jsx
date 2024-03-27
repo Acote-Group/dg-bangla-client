@@ -1,5 +1,5 @@
 import { MoveRight } from "lucide-react";
-import builder from "../assets/photos/worker2.png";
+import builder from "../assets/photos/about.png";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 
