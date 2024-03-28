@@ -1,5 +1,5 @@
-import md from "../assets/photos/mdPic.png";
-import chairman from "../assets/photos/chairman.png";
+import md from "../assets/photos/kaka2.jpg";
+import chairman from "../assets/photos/kaki.png";
 import { Fade } from "react-reveal";
 export default function MsgFromMd() {
   return (

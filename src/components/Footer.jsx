@@ -120,7 +120,7 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://maps.app.goo.gl/sLF5BzkBKLbKfVA5A"
+                href="https://maps.app.goo.gl/hCvbibQeHqtxc1Rr9"
               >
                 <img src={map} alt="" />
               </a>
