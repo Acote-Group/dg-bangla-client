@@ -9,7 +9,7 @@ import WhoWeAre from "../components/WhoWeAre";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Hero />
       <WhoWeAre />
       <AboutCompany />
@@ -18,7 +18,7 @@ const Home = () => {
       <OurProject />
       <OurClients />
       <GetConsultation />
-    </>
+    </div>
   );
 };
 

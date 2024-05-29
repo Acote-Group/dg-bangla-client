@@ -316,8 +316,8 @@ const Contact = () => {
                       DG Bangla Engineering Ltd. isn't just any company. We're a
                       young, dynamic force in the civil construction and
                       electro-mechanical engineering space, making waves in
-                      roadways, yards, dredging, low land development, and
-                      electrification. With heavy machinery, logistics know-how,
+                      roadways, yards, dredging, low land development and
+                      electrification. With heavy machinery, logistics know-how
                       and offices in Dhaka and Chattogram, we're equipped to
                       tackle any infrastructure challenge Bangladesh throws our
                       way.

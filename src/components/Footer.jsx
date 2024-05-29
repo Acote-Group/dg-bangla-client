@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 text-sm gap-x-[110px] gap-y-8 lg:w-2/3 sm:grid-cols-3">
             <div className="space-y-3">
               <h3 className="text-[18px] font-[600] leading-[28px]">
-                Sales Office
+                Corporate Office
               </h3>
               <div className="space-y-[25px]">
                 <div>
@@ -114,8 +114,8 @@ const Footer = () => {
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-[18px] font-[600] leading-[28px]">
-                Our Office
+              <h3 className="text-[18px] font-[600] leading-[28px] mb-4">
+                Corporate Office
               </h3>
               <a
                 target="_blank"
@@ -154,7 +154,7 @@ const Footer = () => {
                 </a>
 
                 {/* twitter  */}
-                <a
+                {/* <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href={sData?.twitter}
@@ -174,7 +174,7 @@ const Footer = () => {
                       fill="white"
                     />
                   </svg>
-                </a>
+                </a> */}
 
                 {/* linkedin  */}
                 <a

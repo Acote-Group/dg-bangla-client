@@ -163,7 +163,7 @@ export default function GalleryCompo() {
                 aria-controls="vertical-tab-with-border-2"
                 onClick={() => categoryData("civil")}
               >
-                Civil Work
+                Construction
               </button>
               <button
                 type="button"
@@ -196,7 +196,7 @@ export default function GalleryCompo() {
                 role="tab"
                 onClick={() => categoryData("auto")}
               >
-                Automation Work
+                Automation
               </button>
               <button
                 type="button"
@@ -207,7 +207,7 @@ export default function GalleryCompo() {
                 role="tab"
                 onClick={() => categoryData("dredging")}
               >
-                Dredging Work
+                Dredging
               </button>
             </nav>
           </div>

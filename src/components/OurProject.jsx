@@ -73,7 +73,7 @@ const OurProject = () => {
               role="tab"
               onClick={() => categoryData("civil")}
             >
-              Civil Work <span className="hidden md:block">&nbsp;</span>/
+              Construction <span className="hidden md:block">&nbsp;</span>/
             </button>
             <button
               type="button"
@@ -84,7 +84,7 @@ const OurProject = () => {
               role="tab"
               onClick={() => categoryData("electrical")}
             >
-              Electrical Work <span className="hidden md:block">&nbsp;</span>/
+              Electrical <span className="hidden md:block">&nbsp;</span>/
             </button>
             <button
               type="button"
@@ -107,7 +107,7 @@ const OurProject = () => {
               role="tab"
               onClick={() => categoryData("auto")}
             >
-              Automation Work <span className="hidden md:block">&nbsp;</span>/
+              Automation <span className="hidden md:block">&nbsp;</span>/
             </button>
 
             <button
@@ -119,7 +119,7 @@ const OurProject = () => {
               role="tab"
               onClick={() => categoryData("dredging")}
             >
-              Dredging Work
+              Dredging
             </button>
           </div>
         </div>

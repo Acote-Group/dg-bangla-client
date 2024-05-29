@@ -1,7 +1,7 @@
-import story from "../assets/photos/storyPic.png";
+import story from "../assets/photos/success.png";
 export default function OurStory() {
   return (
-    <section className="container mx-auto px-4 py-8 md:flex md:items-center md:justify-between gap-12 font-ubuntu max-w-[1460px]">
+    <section className="container mx-auto px-4 py-8 md:flex md:items-center md:justify-between md:gap-32 font-ubuntu max-w-[1460px]">
       <div className="md:w-1/2">
         <h2 className="text-lg font-bold tracking-wide border-b-4 border-primary w-fit pb-1">
           Our Story
@@ -23,7 +23,7 @@ export default function OurStory() {
         </p>
       </div>
       <div className="md:w-1/2 mt-8 md:mt-0">
-        <img alt="DG Bangla Excavator" className="w-full h-auto" src={story} />
+        <img alt="DG Bangla Excavator" className="w-fit h-auto" src={story} />
       </div>
     </section>
   );
